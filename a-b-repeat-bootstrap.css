@@ -27,6 +27,7 @@
 
 /* player view: */
 #audioPlayer { width:100%; }
+#wavesurferTarget { margin-bottom:5px; }
 #files {visibility: hidden; position: absolute;}
 /* #repeatControl button {
 	width: 66px; padding:0 6px;

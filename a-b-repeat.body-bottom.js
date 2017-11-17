@@ -53,8 +53,7 @@ canPlay: false, // is set by event from player, after audio file has been loaded
 playTime: 0, // currently displayed play time (position in seconds)
 aTime: -1, bTime: -1,
 currentPresetDesc: '', // loop name of currently active "favorite" / "preset" (loop)
-presetList: [],
-jumpList: [],
+presetList: [], // preset loops, loaded from single track data (or managed manually)
 fileInfo: {
 	'title': 'Drag &amp; drop files or click &quot;Open file...&quot;',
 	'url': false,
@@ -112,7 +111,9 @@ openMeta: function(url) {
 	
 	$.getJSON(url)
 	.done(function(data) { 
-		if (document.abplayer.printEvents) console.log(data);
+		var o = document.abplayer;
+	
+		if (o.printEvents) console.log(data);
 		// track successful opening:
 		_paq.push(['trackEvent', 'Top', 'openTrack', o.fileInfo.title]);
 
@@ -124,7 +125,8 @@ openMeta: function(url) {
 		$("#filename").html(o.fileInfo.title);
 		
 		// wavesurfer: init
-		document.abplayer.canPlay = false;
+		o.canPlay = false;
+		o.wavesurfer.clearRegions();
 		o.wavesurfer.load(o.fileInfo.url);
 		
 		// try to restore the latest active preset:
@@ -388,13 +390,36 @@ updateABButtons: function() {
 
 // events section:
 registerCanPlay: function() {
-	if (document.abplayer.printEvents) console.log('canPlay');
+	var o = document.abplayer;
 	
-	document.abplayer.canPlay = true;
+	if (o.printEvents) console.log('canPlay');
+	
+	// update wavesurfer (graphical) sections:
+	o.wavesurfer.clearRegions();
+	$.each(
+		o.presetList,
+		function(index, preset) {
+			var c = o.ui.regionColors.DEFAULT;
+			if (o.ui.regionColors[preset.type]) {
+				c = o.ui.regionColors[preset.type];
+			}
+			o.wavesurfer.addRegion({
+				id: preset.desc,
+				start: preset.t0,
+				end: preset.t1,
+				loop: false,
+				drag: false, // TODO: default would be true, but needs to be handled...
+				resize: false, // TODO: dito
+				color: 'rgba('+c.r+','+c.g+','+c.b+','+c.alpha+')'
+			});
+		}
+	);
+	
+	o.canPlay = true;
 	$("#busyIndicator").hide();
 	
-	document.abplayer.enableControls();
-	document.abplayer.repeatAB(); // try to autoplay (implicitly calls play at pos t=0 if no aTime is set)
+	o.enableControls();
+	o.repeatAB(); // try to autoplay (implicitly calls play at pos t=0 if no aTime is set)
 },
 registerProgress: function() {
 	// update current play time display:
@@ -449,6 +474,12 @@ formatTime: function (secondsIn) {
 
 // document.abplayer.ui
 document.abplayer.ui = {
+	regionColors: {
+		DEFAULT: {r: 125, g: 194, b: 255, alpha: 0.2},
+		verse: {r: 255, g: 241, b: 125, alpha: 0.2},
+		chorus: {r: 255, g: 125, b: 125, alpha: 0.2},
+		bridge: {r: 162, g: 255, b: 162, alpha: 0.2}
+	},
 	clickOpenMeta: function(url) {
 		// TODO: loading... message, show player only on success.
 		document.abplayer.openMeta(url);
@@ -474,6 +505,8 @@ document.abplayer.ui = {
 		
 		// document.abplayer.audio.pause(); // audio element
 		document.abplayer.stop();
+		
+		document.abplayer.wavesurfer.clearRegions();
 		
 		setTimeout(function(){ document.abplayer.register = true; }, 500);
 		
@@ -604,7 +637,7 @@ document.abplayer.trackselection = {
 		while (arraySum(targetCounts) < matches.length) {
 			targetCounts[cursor] ++;
 			cursor = (cursor + 1) % targets.length;
-		} console.log(targetCounts);
+		}
 		// the first two columns must have an equal number of entries, otherwise the 2-column layout for MD screens breaks ugly:
 		if (targets.length >= 4) {
 			if (targetCounts[0] > targetCounts[1]) {
@@ -616,7 +649,7 @@ document.abplayer.trackselection = {
 					targetCounts[3] --;
 				}
 			}
-		} console.log(targetCounts);
+		}
 		
 		
 		cursor = 0;
@@ -644,6 +677,14 @@ document.abplayer.trackselection = {
 };
 
 
+
+function arraySum(a) {
+	var sum = 0;
+	for (var i=0; i<a.length; i++) {
+		sum += a[i];
+	}
+	return sum;
+}
 
 // ===========================================================================
 // *** below: legacy features, would need work...
@@ -694,13 +735,4 @@ function handleDragOver(evt) {
 	evt.preventDefault();
 	evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
 	$("body").addClass("dragover");
-}
-
-
-function arraySum(a) {
-	var sum = 0;
-	for (var i=0; i<a.length; i++) {
-		sum += a[i];
-	}
-	return sum;
 }

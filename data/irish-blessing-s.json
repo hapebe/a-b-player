@@ -4,11 +4,11 @@
 	"tempo": "(1/4 = ca. 62)",
 	"url": "audio/An-Irish-Blessing-S.mp3",
 	"presets": [
-		{"t0":2,"t1":19,"desc":"1. Strophe A","measure":1},
-		{"t0":12,"t1":35,"desc":"1. Strophe B","measure":5},
-		{"t0":28,"t1":73,"desc":"1. Refrain","measure":9},
+		{"t0":2,"t1":19,"desc":"1. Strophe A","measure":1,"type":"verse"},
+		{"t0":12,"t1":35,"desc":"1. Strophe B","measure":5,"type":"verse"},
+		{"t0":28,"t1":73,"desc":"1. Refrain","measure":9,"type":"chorus"},
 		{"t0":73,"t1":141,"desc":"2. Strophe (komplett)","measure":1},
-		{"t0":143,"t1":183,"desc":"SOPRAN 2: Refrain","measure":9}
+		{"t0":143,"t1":183,"desc":"SOPRAN 2: Refrain","measure":9,"type":"chorus"}
 	],
 	"trackset": [
 		{"S":"irish-blessing-s"},
