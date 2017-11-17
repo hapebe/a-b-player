@@ -2,15 +2,15 @@
 	"title": "Bye, Bye Blackbird SOPRAN",
 	"url": "audio/Bye, Bye Blackbird-Sopran.mp3",
 	"presets": [
-		{"t0":5,"t1":20,"desc":"1. Strophe, Zeile 1"}, 
-		{"t0":19,"t1":34,"desc":"1. Strophe, Zeile 2"}, 
-		{"t0":33,"t1":49,"desc":"1. Bridge (Vokal)"}, 
-		{"t0":47,"t1":61,"desc":"1.Strophe Schlussphrase"},
-		{"t0":65,"t1":80,"desc":"2. Strophe, Zeile 1"},
-		{"t0":79,"t1":94,"desc":"2. Strophe, Zeile 2"}, 
-		{"t0":93,"t1":108,"desc":"2. Bridge (Piano)"}, 
-		{"t0":107,"t1":117,"desc":"2.Strophe Schlussphrase"}, 
-		{"t0":114,"t1":139,"desc":"Refrain/Schluss"}
+		{"t0":5,"t1":20,"desc":"1. Strophe, Zeile 1","type":"verse"},
+		{"t0":19,"t1":34,"desc":"1. Strophe, Zeile 2","type":"verse"},
+		{"t0":33,"t1":49,"desc":"1. Bridge (Vokal)","type":"bridge"},
+		{"t0":47,"t1":61,"desc":"1.Strophe Schlussphrase","type":"chorus"},
+		{"t0":65,"t1":80,"desc":"2. Strophe, Zeile 1","type":"verse"},
+		{"t0":79,"t1":94,"desc":"2. Strophe, Zeile 2","type":"verse"},
+		{"t0":93,"t1":108,"desc":"2. Bridge (Piano)","type":"bridge"}, 
+		{"t0":107,"t1":117,"desc":"2.Strophe Schlussphrase","type":"chorus"},
+		{"t0":114,"t1":139,"desc":"Refrain/Schluss","type":"chorus"}
 	],
 	"trackset": [
 		{"S":"bbbb-s"},

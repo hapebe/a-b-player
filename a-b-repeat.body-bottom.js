@@ -113,7 +113,7 @@ openMeta: function(url) {
 	.done(function(data) { 
 		var o = document.abplayer;
 	
-		if (o.printEvents) console.log(data);
+		if (o.printEvents) console.log('meta data received: ', data);
 		// track successful opening:
 		_paq.push(['trackEvent', 'Top', 'openTrack', o.fileInfo.title]);
 
