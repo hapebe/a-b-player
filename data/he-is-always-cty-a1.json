@@ -1,0 +1,20 @@
+{
+	"title": "He Is Always Close To You ALT 1",
+	"url": "audio/He Is Always Close To You-Alt1.mp3",
+	"presets": [
+		{"t0":3,"t1":40,"desc":"Intro [A]","measure":1},
+		{"t0":31,"t1":70,"desc":"Intro [B]","measure":17},
+		{"t0":63,"t1":94,"desc":"Strophe, Teil 1 [C]","measure":34},
+		{"t0":84,"t1":109,"desc":"Strophe, Teil 2","measure":47},
+		{"t0":100,"t1":123,"desc":"Bridge [D]","measure":55},
+		{"t0":115,"t1":155,"desc":"Chorus Schleife [E]","measure":62},
+		{"t0":146,"t1":176,"desc":"Coda / Outro Schleife","measure":73}
+	],
+	"trackset": [
+		{"S":"he-is-always-cty-s"},
+		{"A1":"he-is-always-cty-a1"},
+		{"A2":"he-is-always-cty-a2"},
+		{"T":"he-is-always-cty-t"},
+		{"SATB":"he-is-always-cty-satb"}
+	]
+}

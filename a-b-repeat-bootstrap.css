@@ -1,0 +1,186 @@
+.row-vspace { margin-top:1.0em; }
+.no-side-padding { padding-left:0; padding-right:0; }
+.dragover {background:#94c3e4;}
+
+/* track selection view: */
+.btn-default.btn-xmas {
+	background-color:#fad4de;
+	border-color:#c95f78;
+	color:#620319;
+}
+.btn-default.btn-xmas:hover {
+	background-color:#f2a0b4;
+	border-color:#c95f78;
+	color:#620319;
+}
+.btn-default.btn-kammerchor {
+	background-color:#cccccc;
+	border-color:#777;
+	/* color:#620319; */
+}
+.btn-default.btn-kammerchor:hover {
+	background-color:#d7d7d7;
+	border-color:#bbb;
+	/* color:#620319; */
+}
+#trackSelection1 button:first-child, #trackSelection2 button:first-child  { margin-top:5px; }
+
+/* player view: */
+#audioPlayer { width:100%; }
+#files {visibility: hidden; position: absolute;}
+/* #repeatControl button {
+	width: 66px; padding:0 6px;
+	border:1px solid #b6d9ed; background:#fff;
+	line-height:25px; cursor: pointer;
+} */
+#repeatControl.enabled button:hover { background:#339ad6; color:white; }
+
+/* #favorlist_ul { border:1px solid #f0f0f0; padding:5px 5px; min-height:50px;} */
+#favorlist_ul li { /* list-style-type:none; */ cursor: pointer;}
+#presetListLarge .list-group-item { padding: 5px 15px; }
+/*
+#tips { float: right; }
+#tips li { font-size:0.8em;}
+#tips li a {color:#888; text-decoration:none;} 
+*/
+
+/* presets which are not active, but would match the current playback position: */
+.currentPresetMatch:not(.active) {
+	background-color: #b2dbff;
+}
+
+
+/* *************** */
+/* Busy Indicator: */
+/* *************** */
+
+/* Absolute Center Spinner */
+.busyIndicator {
+  z-index: 999;
+  overflow: show;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  height: 2em; width: 2em;
+}
+
+/* Transparent Overlay */
+.busyIndicator:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.busyIndicator:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.busyIndicator:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em; height: 1em; 
+  margin-top: -0.5em;
+  -webkit-animation: spinner 1500ms infinite linear;
+  -moz-animation: spinner 1500ms infinite linear;
+  -ms-animation: spinner 1500ms infinite linear;
+  -o-animation: spinner 1500ms infinite linear;
+  animation: spinner 1500ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 
+	rgba(0, 0, 0, 0.75) 1.5em 0 0 0, 
+	rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, 
+	rgba(0, 0, 0, 0.75) 0 1.5em 0 0, 
+	rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, 
+	rgba(0, 0, 0, 0.75) -1.5em 0 0 0, 
+	rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, 
+	rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, 
+	rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+  box-shadow: 
+	rgba(0, 0, 0, 0.75) 1.5em 0 0 0, 
+	rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, 
+	rgba(0, 0, 0, 0.75) 0 1.5em 0 0, 
+	rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, 
+	rgba(0, 0, 0, 0.75) -1.5em 0 0 0, 
+	rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, 
+	rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, 
+	rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* ********************* */
+/* end of Busy Indicator */
+/* ********************* */

@@ -1,0 +1,16 @@
+{
+	"title": "Will you come and follow me SOPRAN",
+	"url": "audio/Come-and-Follow-S.mp3",
+	"presets": [
+		{"t0":1,"t1":15,"desc":"Teil 1a","measure":1}, 
+		{"t0":11,"t1":25,"desc":"Teil 1b","measure":1}, 
+		{"t0":20,"t1":36,"desc":"Teil 2a","measure":9}, 
+		{"t0":31,"t1":46,"desc":"Teil 2b","measure":17}
+	],
+	"trackset": [
+		{"S":"come-and-follow-s"},
+		{"A":"come-and-follow-a"},
+		{"T":"come-and-follow-t"},
+		{"B":"come-and-follow-b"}
+	]
+}

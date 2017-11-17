@@ -1,0 +1,20 @@
+{
+	"title": "He Is Always Close To You TENOR",
+	"url": "audio/He Is Always Close To You-Tenor.mp3",
+	"presets": [
+		{"t0":4,"t1":40,"desc":"Intro [A]","measure":1},
+		{"t0":33,"t1":68,"desc":"Intro [B]","measure":17},
+		{"t0":63,"t1":91,"desc":"Strophe, Teil 1 [C]","measure":34},
+		{"t0":84,"t1":107,"desc":"Strophe, Teil 2","measure":47},
+		{"t0":98,"t1":121,"desc":"Bridge [D]","measure":55},
+		{"t0":116,"t1":154,"desc":"Chorus Schleife [E]","measure":62},
+		{"t0":140,"t1":173,"desc":"Coda / Outro Schleife","measure":73}
+	],
+	"trackset": [
+		{"S":"he-is-always-cty-s"},
+		{"A1":"he-is-always-cty-a1"},
+		{"A2":"he-is-always-cty-a2"},
+		{"T":"he-is-always-cty-t"},
+		{"SATB":"he-is-always-cty-satb"}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"title": "Ave Verum Corpus SOPRAN",
+	"key": "D major",
+	"tempo": "Adagio (1/4 = ca. 64)",
+	"url": "audio/Ave-Verum-Corpus-S.mp3",
+	"presets": [
+		{"t0":5,"t1":36,"desc":"Teil 1a (Ave, ave...)","measure":3},
+		{"t0":27,"t1":56,"desc":"Teil 1b (vere passum...)","measure":11},
+		{"t0":54,"t1":87,"desc":"Teil 2a (cujus latus...)","measure":22},
+		{"t0":74,"t1":106,"desc":"Teil 2b (esto nobis...)","measure":30},
+		{"t0":97,"t1":123,"desc":"Teil 2c (in mortis...)","measure":37}
+	],
+	"trackset": [
+		{"S":"ave-verum-s"},
+		{"A":"ave-verum-a"},
+		{"T":"ave-verum-t"},
+		{"B":"ave-verum-b"},
+		{"SATB":"ave-verum-piano"}
+	]
+}

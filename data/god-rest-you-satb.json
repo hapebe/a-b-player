@@ -1,0 +1,20 @@
+{
+	"title": "God Rest You Merry, Gentlemen ENSEMBLE",
+	"bpm": "lt. Noten: 140; ausgeführt: ca. 128",
+	"key": "E minor",
+	"dimensions": "19 Takte (Strophe: 4A,4A,4B; Refrain: 4+3), 4 Strophen",
+	"url": "audio/God Rest You Merry, Gentlemen-SATB.mp3",
+	"presets": [
+		{"t0":3,"t1":25,"desc":"Strophe (Klavier)"}, 
+		{"t0":21,"t1":38,"desc":"Refrain (Klavier)"}, 
+		{"t0":38,"t1":61,"desc":"Strophe"}, 
+		{"t0":58,"t1":76,"desc":"Refrain"}
+	],
+	"trackset": [
+		{"S":"god-rest-you-s"},
+		{"A":"god-rest-you-a"},
+		{"T":"god-rest-you-t"},
+		{"B":"god-rest-you-b"},
+		{"SATB":"god-rest-you-satb"}
+	]
+}

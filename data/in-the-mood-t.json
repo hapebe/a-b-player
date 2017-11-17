@@ -1,0 +1,25 @@
+{
+	"title": "In The Mood TENOR Instrumental",
+	"key": "G major",
+	"tempo": "(1/4 = ca. 160, Swing feel)",
+	"url": "audio/In The Mood-tenor.mp3",
+	"presets": [
+		{"t0":0,"t1":21,"desc":"Intro","measure":1},
+		{"t0":15,"t1":51,"desc":"Part A","measure":9},
+		{"t0":46,"t1":82,"desc":"Part B","measure":21},
+		{"t0":77,"t1":102,"desc":"Part C","measure":33},
+		{"t0":97,"t1":122,"desc":"Part D","measure":41},
+		{"t0":117,"t1":131,"desc":"Part E","measure":49},
+		{"t0":127,"t1":152,"desc":"Part F","measure":53},
+		{"t0":142,"t1":169,"desc":"Part G","measure":61},
+		{"t0":226,"t1":265,"desc":"Part K (Coda)","measure":69}
+	],
+	"trackset": [
+		{"S":"in-the-mood-s"},
+		{"A1":"in-the-mood-a1"},
+		{"A2":"in-the-mood-a2"},
+		{"T":"in-the-mood-t"},
+		{"B":"in-the-mood-b"},
+		{"SATB":"in-the-mood-satb"}
+	]
+}

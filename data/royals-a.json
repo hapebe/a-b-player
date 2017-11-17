@@ -1,0 +1,26 @@
+{
+	"title": "Royals ALT",
+	"key": "D minor",
+	"tempo": "Mysterious, 1/4 = ca. 85",
+	"url": "audio/Royals-Alt.mp3",
+	"presets": [
+		{"t0":3,"t1":32,"desc":"Verse 1.1: I've never seen a ...","measure":1},
+		{"t0":29,"t1":47,"desc":"Verse 1.2a: ... gold teeth, Grey Goose, ...","measure":9},
+		{"t0":43,"t1":63,"desc":"Verse 1.2b: ... Crystal, Maybachs, ...","measure":13},
+		{"t0":57,"t1":77,"desc":"Chorus 1a","measure":17},
+		{"t0":72,"t1":93,"desc":"Chorus 1b","measure":21},
+		{"t0":94,"t1":123,"desc":"Verse 2.1: My friends and I...","measure":27},
+		{"t0":119,"t1":137,"desc":"Verse 2.2a: ... gold teeth, Grey Goose, ...","measure":35},
+		{"t0":132,"t1":151,"desc":"Verse 2.2b: ... Crystal, Maybachs, ...","measure":39},
+		{"t0":145,"t1":164,"desc":"Chorus 2a","measure":43},
+		{"t0":159,"t1":179,"desc":"Chorus 2b","measure":47},
+		{"t0":174,"t1":204,"desc":"Bridge","measure":51},
+		{"t0":200,"t1":220,"desc":"Chorus 3a","measure":59},
+		{"t0":214,"t1":233,"desc":"Chorus 3b","measure":63}
+	],
+	"trackset": [
+		{"S":"royals-s"},
+		{"A":"royals-a"},
+		{"T+B":"royals-tb"}
+	]
+}

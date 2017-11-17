@@ -1,0 +1,21 @@
+{
+	"title": "Royals Tenor &amp; Bass",
+	"url": "audio/Royals-Tenor,Bass.mp3",
+	"presets": [
+		{"t0":4,"t1":32,"desc":"Verse 1.2 (gold teeth, Grey Goose, ...)","measure":9},
+		{"t0":29,"t1":45,"desc":"Chorus 1a","measure":17},
+		{"t0":41,"t1":61,"desc":"Chorus 1b","measure":21},
+		{"t0":63,"t1":91,"desc":"Verse 2.1 (My friends and I...)","measure":27},
+		{"t0":86,"t1":117,"desc":"Verse 2.2 (gold teeth, Grey Goose, ...)","measure":35},
+		{"t0":112,"t1":127,"desc":"Chorus 2a","measure":43},
+		{"t0":125,"t1":141,"desc":"Chorus 2b","measure":47},
+		{"t0":138,"t1":169,"desc":"Bridge","measure":51},
+		{"t0":164,"t1":181,"desc":"Chorus 3a","measure":59},
+		{"t0":178,"t1":195,"desc":"Chorus 3b","measure":63}
+	],
+	"trackset": [
+		{"S":"royals-s"},
+		{"A":"royals-a"},
+		{"T+B":"royals-tb"}
+	]
+}

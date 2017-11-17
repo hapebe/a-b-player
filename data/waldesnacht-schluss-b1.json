@@ -1,0 +1,10 @@
+{
+	"title": "Waldesnacht (Schluss) BASS 1",
+	"key": "D major",
+	"tempo": "Etwas langsam. (1/4 = ca. 64)",
+	"url": "audio/Waldesnacht-Schluss-B1.mp3",
+	"presets": [
+		{"t0":3,"t1":36,"desc":"Teil 2b","measure":17}
+	],
+	"trackset": []
+}

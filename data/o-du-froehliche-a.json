@@ -1,0 +1,15 @@
+{
+	"title": "O, du fröhliche ALT",
+	"url": "audio/O du Fröhliche-Alt.mp3",
+	"presets": [
+		{"t0":3,"t1":25,"desc":"Refrain"}, 
+		{"t0":21,"t1":46,"desc":"Strophe(n)"}
+	],
+	"trackset": [
+		{"S1":"o-du-froehliche-s1"},
+		{"S2":"o-du-froehliche-s2"},
+		{"A":"o-du-froehliche-a"},
+		{"T":"o-du-froehliche-t"},
+		{"B":"o-du-froehliche-b"}
+	]
+}

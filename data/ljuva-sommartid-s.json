@@ -1,0 +1,20 @@
+{
+	"title": "I denna ljuva sommartid SOPRAN",
+	"key": "F sharp minor",
+	"tempo": "1/4 = 60",
+	"url": "audio/I-denna-ljuva-sommartid-S.mp3",
+	"sheetMusicURL": "http://www.choralmidisdigest.com/midis/popular%20europea/anonimo-i%20denna%20ljuva%20sommartid.pdf",
+	"presets": [
+		{"t0":1,"t1":28,"desc":"Zeile 1 - I denna ljuva...","measure":1},
+		{"t0":22,"t1":45,"desc":"Zeile 3 - Se, hur i prydning...","measure":7},
+		{"t0":38,"t1":50,"desc":"Schlusszeile - så underbara håvor","measure":12},
+		{"t0":1,"t1":50,"desc":"1. Strophe komplett","measure":1},
+		{"t0":50,"t1":94,"desc":"2. Strophe komplett","measure":1}
+	],
+	"trackset": [
+		{"S":"ljuva-sommartid-s"},
+		{"A":"ljuva-sommartid-a"},
+		{"T":"ljuva-sommartid-t"},
+		{"B":"ljuva-sommartid-b"}
+	]
+}

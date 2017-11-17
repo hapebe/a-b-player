@@ -1,0 +1,17 @@
+{
+	"title": "God Rest You Merry, Gentlemen TENOR",
+	"url": "audio/God Rest You Merry, Gentlemen-Tenor.mp3",
+	"presets": [
+		{"t0":1,"t1":23,"desc":"Strophe (Klavier)"}, 
+		{"t0":20,"t1":36,"desc":"Refrain (Klavier)"}, 
+		{"t0":36,"t1":58,"desc":"Strophe"}, 
+		{"t0":54,"t1":72,"desc":"Refrain"}
+	],
+	"trackset": [
+		{"S":"god-rest-you-s"},
+		{"A":"god-rest-you-a"},
+		{"T":"god-rest-you-t"},
+		{"B":"god-rest-you-b"},
+		{"SATB":"god-rest-you-satb"}
+	]
+}

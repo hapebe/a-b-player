@@ -1,0 +1,26 @@
+{
+	"title": "That Lonesome Road BASS 1",
+	"key": "A major",
+	"tempo": "Medium Country feel, 1/4 = ca. 96",
+	"url": "audio/That Lonesome Road-B1.mp3",
+	"presets": [
+		{"t0":0,"t1":27,"desc":"Chorus part 1","measure":1},
+		{"t0":21,"t1":48,"desc":"Chorus part 2","measure":9},
+		{"t0":44,"t1":72,"desc":"Verse part 1 (If I had stopped to listen...)","measure":17},
+		{"t0":66,"t1":95,"desc":"Verse part 2 (If I had cooled my head...)","measure":26},
+		{"t0":90,"t1":115,"desc":"Verse part 3 (Carry on, ...)","measure":35},
+		{"t0":109,"t1":138,"desc":"Chorus part 1","measure":43},
+		{"t0":131,"t1":157,"desc":"Chorus part 2 (Coda)","measure":9}
+	],
+	"trackset": [
+		{"S":"lonesome-road-s"},
+		{"A1":"lonesome-road-a1"},
+		{"A2":"lonesome-road-a2"},
+		{"T":"lonesome-road-t"},
+		{"B1":"lonesome-road-b1"},
+		{"B1i":"lonesome-road-b1-piano"},
+		{"B2":"lonesome-road-b2"},
+		{"B2i":"lonesome-road-b2-piano"},
+		{"SATB":"lonesome-road-satb"}
+	]
+}

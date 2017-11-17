@@ -1,0 +1,24 @@
+{
+	"title": "Free Your Soul SOPRAN 1",
+	"key": "C major",
+	"tempo": "1/2 = 110",
+	"url": "audio/Free-Your-Soul-S1.mp3",
+	"presets": [
+		{"t0":3,"t1":15,"desc":"Intro","measure":1},
+		{"t0":14,"t1":37,"desc":"A, 1. Strophe","measure":5},
+		{"t0":30,"t1":64,"desc":"B, 1. Refrain","measure":21},
+		{"t0":66,"t1":88,"desc":"A, 2. Strophe","measure":5},
+		{"t0":81,"t1":117,"desc":"B, 2. Refrain","measure":21},
+		{"t0":110,"t1":128,"desc":"C, 1. Vamp","measure":43},
+		{"t0":123,"t1":148,"desc":"D, 1. Bridge","measure":47},
+		{"t0":143,"t1":169,"desc":"E, 2. Bridge","measure":63},
+		{"t0":165,"t1":190,"desc":"F, 3. Strophe","measure":82},
+		{"t0":182,"t1":210,"desc":"G, 3. Refrain","measure":98},
+		{"t0":201,"t1":224,"desc":"H, 2. Vamp","measure":112},
+		{"t0":226,"t1":251,"desc":"I, 3. Vamp","measure":120}
+	],
+	"trackset": [
+		{"S1":"free-your-soul-s1"},
+		{"S2":"free-your-soul-s2"}
+	]
+}

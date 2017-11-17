@@ -1,0 +1,453 @@
+{
+"tracks":[
+	{
+		"title":"Ave Verum Corpus SOPRAN",
+		"dataURL":"ave-verum-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Ave Verum Corpus ALT",
+		"dataURL":"ave-verum-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Ave Verum Corpus TENOR",
+		"dataURL":"ave-verum-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Ave Verum Corpus BASS (INSTRUMENTAL)",
+		"dataURL":"ave-verum-b.json",
+		"part":"B"
+	},
+	{
+		"title":"Ave Verum Corpus INSTRUMENTAL SATB",
+		"dataURL":"ave-verum-piano.json",
+		"part":"SATB0"
+	},
+
+
+	{
+		"title":"Bohemian Rhapsody SOPRAN",
+		"dataURL":"bohemian-rhapsody-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Bohemian Rhapsody ALT",
+		"dataURL":"bohemian-rhapsody-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Bohemian Rhapsody TENOR",
+		"dataURL":"bohemian-rhapsody-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Bohemian Rhapsody BASS",
+		"dataURL":"bohemian-rhapsody-b.json",
+		"part":"B"
+	},
+
+	
+	{
+		"title":"Bye, Bye Blackbird SOPRAN",
+		"dataURL":"bbbb-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Bye, Bye Blackbird ALT",
+		"dataURL":"bbbb-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Bye, Bye Blackbird TENOR",
+		"dataURL":"bbbb-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Bye, Bye Blackbird BASS",
+		"dataURL":"bbbb-b.json",
+		"part":"B"
+	},
+	{
+		"title":"Bye, Bye Blackbird ENSEMBLE",
+		"dataURL":"bbbb-satb.json",
+		"part":"SATB0"
+	},
+	
+	
+	{
+		"title":"Echo-Kanon SOPRAN",
+		"dataURL":"echo-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Echo-Kanon ALT",
+		"dataURL":"echo-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Echo-Kanon TENOR",
+		"dataURL":"echo-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Echo-Kanon BASS",
+		"dataURL":"echo-b.json",
+		"part":"B"
+	},
+
+
+	{
+		"title":"Free Your Soul SOPRAN 1",
+		"dataURL":"free-your-soul-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Free Your Soul SOPRAN 2",
+		"dataURL":"free-your-soul-s2.json",
+		"part":"S2"
+	},
+
+
+	{
+		"title":"He Is Always Close To You SOPRAN",
+		"dataURL":"he-is-always-cty-s.json",
+		"part":"S"
+	},
+	{
+		"title":"He Is Always Close To You ALT 1",
+		"dataURL":"he-is-always-cty-a1.json",
+		"part":"A1"
+	},
+	{
+		"title":"He Is Always Close To You ALT 2",
+		"dataURL":"he-is-always-cty-a2.json",
+		"part":"A2"
+	},
+	{
+		"title":"He Is Always Close To You TENOR",
+		"dataURL":"he-is-always-cty-t.json",
+		"part":"T"
+	},
+	{
+		"title":"He Is Always Close To You ENSEMBLE",
+		"dataURL":"he-is-always-cty-satb.json",
+		"part":"SATB0"
+	},
+	
+	
+	{
+		"title":"I denna ljuva sommartid SOPRAN",
+		"dataURL":"ljuva-sommartid-s.json",
+		"part":"S"
+	},
+	{
+		"title":"I denna ljuva sommartid ALT",
+		"dataURL":"ljuva-sommartid-a.json",
+		"part":"A"
+	},
+	{
+		"title":"I denna ljuva sommartid TENOR",
+		"dataURL":"ljuva-sommartid-t.json",
+		"part":"T"
+	},
+	{
+		"title":"I denna ljuva sommartid BASS",
+		"dataURL":"ljuva-sommartid-b.json",
+		"part":"B"
+	},
+
+
+	{
+		"title":"In The Mood SOPRAN INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-s.json",
+		"part":"S"
+	},
+	{
+		"title":"In The Mood ALT 1 INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-a1.json",
+		"part":"A1"
+	},
+	{
+		"title":"In The Mood ALT 2 INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-a2.json",
+		"part":"A2"
+	},
+	{
+		"title":"In The Mood TENOR INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-t.json",
+		"part":"T"
+	},
+	{
+		"title":"In The Mood BASS INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-b.json",
+		"part":"B"
+	},
+	{
+		"title":"In The Mood ENSEMBLE INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-satb.json",
+		"part":"SATB0"
+	},
+	
+	
+	{
+		"title":"An Irish Blessing SOPRAN 1+2",
+		"dataURL":"irish-blessing-s.json",
+		"part":"S"
+	},
+	{
+		"title":"An Irish Blessing ALT",
+		"dataURL":"irish-blessing-a.json",
+		"part":"A"
+	},
+	{
+		"title":"An Irish Blessing TENOR",
+		"dataURL":"irish-blessing-t.json",
+		"part":"T"
+	},
+	{
+		"title":"An Irish Blessing BASS",
+		"dataURL":"irish-blessing-b.json",
+		"part":"B"
+	},
+
+
+	{
+		"title":"Royals SOPRAN",
+		"dataURL":"royals-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Royals ALT",
+		"dataURL":"royals-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Royals TENOR + BASS",
+		"dataURL":"royals-tb.json",
+		"part":"T+B"
+	},
+
+
+	{
+		"title":"Shenandoah SOPRAN 1+2",
+		"dataURL":"shenandoah-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Shenandoah ALT 1+2",
+		"dataURL":"shenandoah-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Shenandoah TENOR 1",
+		"dataURL":"shenandoah-t1.json",
+		"part":"T1"
+	},
+	{
+		"title":"Shenandoah TENOR 2",
+		"dataURL":"shenandoah-t2.json",
+		"part":"T2"
+	},
+	{
+		"title":"Shenandoah BASS 1",
+		"dataURL":"shenandoah-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"Shenandoah BASS 2",
+		"dataURL":"shenandoah-b2.json",
+		"part":"B2"
+	},
+
+	
+	{
+		"title":"That Lonesome Road ENSEMBLE",
+		"dataURL":"lonesome-road-satb.json",
+		"comment": "see: https://www.youtube.com/watch?v=7N75BDfm1Ls",
+		"part":"SATB0"
+	},
+	{
+		"title":"That Lonesome Road SOPRAN",
+		"dataURL":"lonesome-road-s.json",
+		"part":"S"
+	},
+	{
+		"title":"That Lonesome Road ALT 1",
+		"dataURL":"lonesome-road-a1.json",
+		"part":"A1"
+	},
+	{
+		"title":"That Lonesome Road ALT 2",
+		"dataURL":"lonesome-road-a2.json",
+		"part":"A2"
+	},
+	{
+		"title":"That Lonesome Road TENOR",
+		"dataURL":"lonesome-road-t.json",
+		"part":"T"
+	},
+	{
+		"title":"That Lonesome Road INSTRUMENTAL BASS 1",
+		"dataURL":"lonesome-road-b1-piano.json",
+		"part":"B1"
+	},
+	{
+		"title":"That Lonesome Road BASS 1",
+		"dataURL":"lonesome-road-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"That Lonesome Road INSTRUMENTAL BASS 2",
+		"dataURL":"lonesome-road-b2-piano.json",
+		"part":"B2"
+	},
+	{
+		"title":"That Lonesome Road BASS 2",
+		"dataURL":"lonesome-road-b2.json",
+		"part":"B2"
+	},
+
+
+	{
+		"title":"Waldesnacht SOPRAN",
+		"dataURL":"waldesnacht-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Waldesnacht ALT",
+		"dataURL":"waldesnacht-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Waldesnacht TENOR",
+		"dataURL":"waldesnacht-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Waldesnacht BASS",
+		"dataURL":"waldesnacht-b.json",
+		"part":"B"
+	},
+	{
+		"title":"Waldesnacht (Schluss) BASS 1",
+		"dataURL":"waldesnacht-schluss-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"Waldesnacht SATB (LIVE)",
+		"dataURL":"waldesnacht-satb-live.json",
+		"part":"SATB0"
+	},
+	
+	
+	{
+		"title":"Will you come and follow me SOPRAN",
+		"dataURL":"come-and-follow-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Will you come and follow me ALT",
+		"dataURL":"come-and-follow-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Will you come and follow me TENOR",
+		"dataURL":"come-and-follow-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Will you come and follow me BASS",
+		"dataURL":"come-and-follow-b.json",
+		"part":"B"
+	},
+
+
+	
+	{
+		"title":"God Rest You Merry, Gentlemen SOPRAN",
+		"category":"xmas",
+		"dataURL":"god-rest-you-s.json",
+		"part":"S"
+	},
+	{
+		"title":"God Rest You Merry, Gentlemen ALT",
+		"category":"xmas",
+		"dataURL":"god-rest-you-a.json",
+		"part":"A"
+	},
+	{
+		"title":"God Rest You Merry, Gentlemen TENOR",
+		"category":"xmas",
+		"dataURL":"god-rest-you-t.json",
+		"part":"T"
+	},
+	{
+		"title":"God Rest You Merry, Gentlemen BASS",
+		"category":"xmas",
+		"dataURL":"god-rest-you-b.json",
+		"part":"B"
+	},
+	{
+		"title":"God Rest You Merry, Gentlemen ENSEMBLE",
+		"category":"xmas",
+		"dataURL":"god-rest-you-satb.json",
+		"part":"SATB0"
+	},
+	{
+		"title":"O, du fröhliche SOPRAN 1",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"O, du fröhliche SOPRAN 2",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"O, du fröhliche ALT",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-a.json",
+		"part":"A"
+	},
+	{
+		"title":"O, du fröhliche TENOR",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-t.json",
+		"part":"T"
+	},
+	{
+		"title":"O, du fröhliche BASS",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-b.json",
+		"part":"B"
+	},
+	{
+		"title":"Silent Night LIVE 2012",
+		"category":"xmas",
+		"dataURL":"silent-night-2012.json",
+		"part":"SATB0"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL SATB",
+		"category":"xmas",
+		"dataURL":"silent-night-satb-flute.json",
+		"part":"SATB0"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL SOPRAN 2",
+		"category":"xmas",
+		"dataURL":"silent-night-s2-flute.json",
+		"part":"S2"
+	}
+]
+}

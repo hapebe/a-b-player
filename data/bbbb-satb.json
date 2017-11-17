@@ -1,0 +1,22 @@
+{
+	"title": "Bye, Bye Blackbird ENSEMBLE",
+	"url": "audio/Bye, Bye Blackbird-SATB.mp3",
+	"presets": [
+		{"t0":3,"t1":20,"desc":"1. Strophe, Zeile 1"}, 
+		{"t0":18,"t1":33,"desc":"1. Strophe, Zeile 2"}, 
+		{"t0":32,"t1":46,"desc":"1. Bridge (Frauen)"}, 
+		{"t0":45,"t1":59,"desc":"1. Strophe Schlussphrase"},
+		{"t0":61,"t1":76,"desc":"2. Strophe, Zeile 1"},
+		{"t0":75,"t1":90,"desc":"2. Strophe, Zeile 2"}, 
+		{"t0":88,"t1":103,"desc":"2. Bridge (Männer)"}, 
+		{"t0":102,"t1":112,"desc":"2. Strophe Schlussphrase"}, 
+		{"t0":107,"t1":133,"desc":"Refrain/Schluss"}
+	],
+	"trackset": [
+		{"S":"bbbb-s"},
+		{"A":"bbbb-a"},
+		{"T":"bbbb-t"},
+		{"B":"bbbb-b"},
+		{"SATB":"bbbb-satb"}
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"title": "An Irish Blessing TENOR",
+	"key": "Bb major",
+	"tempo": "(1/4 = ca. 62)",
+	"url": "audio/An-Irish-Blessing-T.mp3",
+	"presets": [
+		{"t0":3,"t1":22,"desc":"1. Strophe A","measure":1},
+		{"t0":16,"t1":38,"desc":"1. Strophe B","measure":5},
+		{"t0":31,"t1":77,"desc":"1. Refrain","measure":9},
+		{"t0":77,"t1":150,"desc":"2. Strophe (komplett)","measure":1}
+	],
+	"trackset": [
+		{"S":"irish-blessing-s"},
+		{"A":"irish-blessing-a"},
+		{"T":"irish-blessing-t"},
+		{"B":"irish-blessing-b"}
+	]
+}

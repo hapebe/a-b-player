@@ -1,0 +1,24 @@
+{
+	"title": "Royals SOPRAN",
+	"url": "audio/Royals-Sopran.mp3",
+	"presets": [
+		{"t0":9,"t1":32,"desc":"Verse 1.1: And I'm not proud...","measure":4},
+		{"t0":27,"t1":46,"desc":"Verse 1.2a: ... gold teeth, Grey Goose, ...","measure":9},
+		{"t0":45,"t1":57,"desc":"Verse 1.2b: ... Crystal, Maybachs, ...","measure":13},
+		{"t0":58,"t1":73,"desc":"Chorus 1a","measure":17},
+		{"t0":72,"t1":92,"desc":"Chorus 1b","measure":21},
+		{"t0":93,"t1":123,"desc":"Verse 2.1: My friends and I...","measure":27},
+		{"t0":121,"t1":137,"desc":"Verse 2.2a: ... gold teeth, Grey Goose, ...","measure":35},
+		{"t0":135,"t1":148,"desc":"Verse 2.2b: ... Crystal, Maybachs, ...","measure":39},
+		{"t0":149,"t1":164,"desc":"Chorus 2a","measure":43},
+		{"t0":161,"t1":179,"desc":"Chorus 2b","measure":47},
+		{"t0":177,"t1":208,"desc":"Bridge","measure":51},
+		{"t0":205,"t1":224,"desc":"Chorus 3a","measure":59},
+		{"t0":219,"t1":234,"desc":"Chorus 3b","measure":63}
+	],
+	"trackset": [
+		{"S":"royals-s"},
+		{"A":"royals-a"},
+		{"T+B":"royals-tb"}
+	]
+}

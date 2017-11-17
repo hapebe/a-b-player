@@ -1,0 +1,5 @@
+# exclude the audio tracks themselves:
+audio/*.mp3
+
+# exclude Windows thumbnail files:
+**/Thumbs.db

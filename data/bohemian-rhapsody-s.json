@@ -1,0 +1,29 @@
+{
+	"title": "Bohemian Rhapsody SOPRAN",
+	"key": "Bb major",
+	"tempo": "With conviction (1/4 = 76)",
+	"url": "audio/Bohemian-S.mp3",
+	"presets": [
+		{"t0":3,"t1":59,"desc":"A [komplett]","measure":1},
+		{"t0":3,"t1":22,"desc":"A1 (Is this the real life...)","measure":1},
+		{"t0":18,"t1":47,"desc":"A2 (Open your eyes...)","measure":6},
+		{"t0":42,"t1":59,"desc":"A3 (Anyway the wind blows...)","measure":13},
+		{"t0":58,"t1":113,"desc":"B [1. Strophe]","measure":18},
+		{"t0":114,"t1":165,"desc":"B [2. Strophe]","measure":18},
+		{"t0":169,"t1":241,"desc":"C (Scaramouche) [komplett]","measure":34},
+		{"t0":169,"t1":193,"desc":"C1 (I see a little silhouetto...)","measure":34},
+		{"t0":189,"t1":204,"desc":"C2 (He's just a poor boy...)","measure":47},
+		{"t0":202,"t1":222,"desc":"C3 (Easy come, easy go...)","measure":54},
+		{"t0":215,"t1":227,"desc":"C4 (Oh, oh, oh - no, no, no...)","measure":64},
+		{"t0":226,"t1":241,"desc":"C5 (Oh mama mia, let me go...)","measure":67},
+		{"t0":245,"t1":282,"desc":"E (So you think you can...)","measure":79},
+		{"t0":284,"t1":298,"desc":"F (oo yeah...)","measure":95},
+		{"t0":301,"t1":333,"desc":"G (Nothing really matters...)","measure":100}
+	],
+	"trackset": [
+		{"S":"bohemian-rhapsody-s"},
+		{"A":"bohemian-rhapsody-a"},
+		{"T":"bohemian-rhapsody-t"},
+		{"B":"bohemian-rhapsody-b"}
+	]
+}

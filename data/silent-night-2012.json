@@ -1,0 +1,18 @@
+{
+	"title": "Silent Night LIVE 2012",
+	"key": "Bb major",
+	"url": "audio/Silent Night 2012.mp3",
+	"presets": [
+		{"t0":0,"t1":60,"desc":"1. Strophe"}, 
+		{"t0":61,"t1":118,"desc":"2. Strophe"}, 
+		{"t0":119,"t1":180,"desc":"3. Strophe"}, 
+		{"t0":61,"t1":82,"desc":"Strophe, Teil I","measure":1}, 
+		{"t0":82,"t1":99,"desc":"Strophe, Teil II","measure":5}, 
+		{"t0":99,"t1":118,"desc":"Strophe, Teil III","measure":9}
+	],
+	"trackset": [
+		{"S2":"silent-night-s2-flute"},
+		{"SATB (instr)":"silent-night-satb-flute"},
+		{"SATB (live)":"silent-night-2012"}
+	]
+}
