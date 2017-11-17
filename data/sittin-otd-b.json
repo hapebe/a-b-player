@@ -1,0 +1,23 @@
+{
+	"title": "Sittin' On The Dock Of The Bay BASS",
+	"key": "G major",
+	"tempo": "Straight Soul (1/4 = 106)",
+	"url": "audio/Sittin-B.mp3",
+	"presets": [
+		{"t0":0,"t1":32,"desc":"A+B (Intro+Verse I)","measure":1},
+		{"t0":26,"t1":50,"desc":"C (Chorus I)","measure":11},
+		{"t0":43,"t1":67,"desc":"D (Verse II)","measure":19},
+		{"t0":62,"t1":85,"desc":"E (Chorus II)","measure":27},
+		{"t0":78,"t1":102,"desc":"F (Bridge)","measure":35},
+		{"t0":98,"t1":119,"desc":"G (Verse III)","measure":43},
+		{"t0":114,"t1":138,"desc":"E' (Chorus II)","measure":27},
+		{"t0":135,"t1":189,"desc":"H+I (Coda+VAMP)","measure":51}
+	],
+	"trackset": [
+		{"S1":"sittin-otd-s1"},
+		{"S2":"sittin-otd-s2"},
+		{"A":"sittin-otd-a"},
+		{"T":"sittin-otd-t"},
+		{"B":"sittin-otd-b"}
+	]
+}
