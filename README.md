@@ -16,6 +16,8 @@ TODOs:
 * add current time indicator
 * add volume adjustment slider
 * add graphic representation of loop(s) - wavesurfer.js region plugin...
+* make the track list full width on XL screens, and allow 3 (or 4?) columns for the overview
+* if the number of tracks is >50 / > 100 (?), prefix the list of tracks for each initial letter with this letter.
 
 
 References / Acknowledgements:
