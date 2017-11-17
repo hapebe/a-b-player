@@ -23,7 +23,7 @@
 	border-color:#bbb;
 	/* color:#620319; */
 }
-#trackSelection1 button:first-child, #trackSelection2 button:first-child  { margin-top:5px; }
+#trackSelection1 button:first-child, #trackSelection2 button:first-child , #trackSelection3 button:first-child , #trackSelection4 button:first-child  { margin-top:5px; }
 
 /* player view: */
 #audioPlayer { width:100%; }
@@ -34,6 +34,7 @@
 	line-height:25px; cursor: pointer;
 } */
 #repeatControl.enabled button:hover { background:#339ad6; color:white; }
+#playTimeDisplay { font-size:180%; }
 
 /* #favorlist_ul { border:1px solid #f0f0f0; padding:5px 5px; min-height:50px;} */
 #favorlist_ul li { /* list-style-type:none; */ cursor: pointer;}

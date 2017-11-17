@@ -40,7 +40,7 @@
 	
 </head>
 <body> 
-	<div class="container">
+	<div class="container-fluid">
 	
 		<!-- track selection list -->
 		<div id="panelTrackSelection">
@@ -78,15 +78,17 @@
 			<div class="col-xs-12">
 				<h4>Wähle einen Track...</h4>
 			</div>
-			<div class="col-xs-12 col-md-6" id="trackSelection1">
+			<div class="col-xs-12 col-md-6 col-lg-3" id="trackSelection1">
 				(Bitte warten, Tracks werden geladen...)
 				<!-- <button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/bbbb-s.json')">Bye, Bye Blackbird SOPRAN</button>
 				<button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/bbbb-a.json')">Bye, Bye Blackbird ALT</button> -->
 			</div>
-			<div class="col-xs-12 col-md-6" id="trackSelection2">
-				<!-- <button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/royals-s.json')">Royals SOPRAN</button>
-				<button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/royals-tb.json')">Royals TENOR &amp; BASS</button> -->
-			</div>
+			<div class="col-xs-12 col-md-6 col-lg-3" id="trackSelection2"></div>
+			<div class="col-md-12 visible-md-block"><hr /></div>
+			<div class="col-xs-12 col-md-6 col-lg-3" id="trackSelection3"></div>
+			<div class="col-xs-12 col-md-6 col-lg-3" id="trackSelection4"></div>
+			
+			<div class="col-xs-12">&nbsp;</div>
 		</div><!-- /#panelTrackSelection -->
 
 
@@ -116,6 +118,10 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div id="repeatControl" class="disabled">
+							<!-- position indicator line -->
+							<div class="row" style="text-align: center">
+								<span id="playTimeDisplay">0:00</span>
+							</div>		
 							<!-- play/pause button line -->
 							<div class="row" style="text-align: center">
 								<button class="btn btn-primary" id="btnPlayPause"><i class="glyphicon glyphicon-play"></i> Play</button>

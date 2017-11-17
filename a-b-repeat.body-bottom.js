@@ -50,6 +50,7 @@ filterPartEnsemble: true, // track selection view: include ensemble tracks?
 
 // detail view / player:
 canPlay: false, // is set by event from player, after audio file has been loaded
+playTime: 0, // currently displayed play time (position in seconds)
 aTime: -1, bTime: -1,
 currentPresetDesc: '', // loop name of currently active "favorite" / "preset" (loop)
 presetList: [],
@@ -396,16 +397,23 @@ registerCanPlay: function() {
 	document.abplayer.repeatAB(); // try to autoplay (implicitly calls play at pos t=0 if no aTime is set)
 },
 registerProgress: function() {
+	// update current play time display:
+	var currentTime = document.abplayer.getCurrentTime();
+	if (Math.floor(currentTime) != document.abplayer.playTime) {
+		document.abplayer.playTime = Math.floor(currentTime);
+		$('#playTimeDisplay').html(document.abplayer.formatTime(document.abplayer.playTime));
+	}
+	
 	if (document.abplayer.printEvents) {
 		var now = (new Date()).getTime()/1000 | 0;
 		if (now >= document.abplayer.registerProgressTimestamp + 5) {
-			console.log('progress: ' + document.abplayer.getCurrentTime());
+			console.log('progress: ' + currentTime);
 			document.abplayer.registerProgressTimestamp = now;
 		}
 	}
 	
 	if (document.abplayer.presetsFollower) { // enable a plug-in-like / optional behaviour:
-		document.abplayer.presetsFollower.updateForTime(document.abplayer.getCurrentTime());
+		document.abplayer.presetsFollower.updateForTime(currentTime);
 	}
 
 	document.abplayer.checkRepeat();
@@ -587,15 +595,42 @@ document.abplayer.trackselection = {
 			}
 		); // console.log(matches);
 		
-		var targets = ['trackSelection1', 'trackSelection2']; // left an right columns
-		var html = [];
-		for (var i=0; i<targets.length; i++) { html[i] = ''; }
+		var targets = ['trackSelection1', 'trackSelection2', 'trackSelection3', 'trackSelection4'];
+		var html = []; for (var i=0; i<targets.length; i++) { html[i] = ''; }
+		
+		// distribute the tracks to the columns:
+		var targetCounts = []; for (var i=0; i<targets.length; i++) { targetCounts[i] = Math.floor(matches.length / targets.length); }
+		var cursor = 0;
+		while (arraySum(targetCounts) < matches.length) {
+			targetCounts[cursor] ++;
+			cursor = (cursor + 1) % targets.length;
+		} console.log(targetCounts);
+		// the first two columns must have an equal number of entries, otherwise the 2-column layout for MD screens breaks ugly:
+		if (targets.length >= 4) {
+			if (targetCounts[0] > targetCounts[1]) {
+				if (targetCounts[2] > targetCounts[3]) {
+					targetCounts[1] ++;
+					targetCounts[2] --;
+				} else {
+					targetCounts[1] ++;
+					targetCounts[3] --;
+				}
+			}
+		} console.log(targetCounts);
+		
+		
+		cursor = 0;
+		var targetCount = 0;
 		for (var i=0; i<matches.length; i++) {
-			var stringIdx = Math.floor(i * 2 / matches.length);
+			targetCount ++;
+			if (targetCount > targetCounts[cursor]) {
+				cursor += 1;
+				targetCount = 1;
+			} 
+			
 			var o = matches[i];
-			var additionalClasses = '';
-			if (o.category) additionalClasses += 'btn-'+o.category+' ';
-			html[stringIdx] += 
+			var additionalClasses = (o.category)?('btn-'+o.category+' '):('');
+			html[cursor] += 
 				'<button type="button" class="btn btn-default ' + additionalClasses + 'btn-block" onclick="document.abplayer.ui.clickOpenMeta(\''
 				+ 'data/' + o.dataURL 
 				+ '\')">'
@@ -659,4 +694,13 @@ function handleDragOver(evt) {
 	evt.preventDefault();
 	evt.dataTransfer.dropEffect = 'copy'; // Explicitly show this is a copy.
 	$("body").addClass("dragover");
+}
+
+
+function arraySum(a) {
+	var sum = 0;
+	for (var i=0; i<a.length; i++) {
+		sum += a[i];
+	}
+	return sum;
 }
