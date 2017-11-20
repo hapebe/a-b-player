@@ -21,7 +21,10 @@ $(function(){
 	$('#btnPreB').click(function() { document.abplayer.setAB('B', -1, 0) } );
 	$('#btnNextB').click(function() { document.abplayer.setAB('B', 1, 0) } );
 	$('#btnClearAB').click(document.abplayer.clearAB);
-	$('#btnAddPreset').click(document.abplayer.addFavor);
+	$('#btnAddPreset').click(document.abplayer.addPreset);
+	$('#btnResetPresets').click(document.abplayer.ui.clickResetPresets);
+	$('#btnClearPresets').click(document.abplayer.ui.clickClearPresets);
+
 	
 	document.abplayer.init();
 	
@@ -87,6 +90,10 @@ init: function() {
 	ab.wavesurfer.on('play', document.abplayer.registerPlaying);
 	ab.wavesurfer.on('pause', document.abplayer.registerPause);
 	ab.wavesurfer.on('finish', document.abplayer.registerEnded);
+	// extensions for region support:
+	ab.wavesurfer.on('region-in', function(region) {document.abplayer.registerRegionEvent('in', region)});
+	ab.wavesurfer.on('region-out', function(region) {document.abplayer.registerRegionEvent('out', region)});
+	
 	
 	ab.trackselection.loadTracksData('./data/tracks.json');
 
@@ -118,9 +125,9 @@ openMeta: function(url) {
 		_paq.push(['trackEvent', 'Top', 'openTrack', o.fileInfo.title]);
 
 		o.fileInfo = data;
-		o.presetList = o.fileInfo.presets;
 		
-		o.renderFavorList();
+		o.resetPresets(); // includes rendering
+		
 		o.renderRelatedTrackList();
 		$("#filename").html(o.fileInfo.title);
 		
@@ -136,7 +143,7 @@ openMeta: function(url) {
 				function (index, value) {
 					for (var prop in value) { // console.log(prop + ": " + value[prop]);
 						if (prop=='desc' && value[prop]==o.currentPresetDesc) { // console.log("Found at [" + index + "]");
-							o.playFavor(index);
+							o.playPreset(index);
 						}
 					}
 				}
@@ -172,8 +179,7 @@ stop: function() {
 },
 
 disableControls: function() {
-	document.abplayer.presetList = [];
-	document.abplayer.renderFavorList();
+	document.abplayer.clearPresets(); // includes rendering
 	
 	$('#repeatControl *').attr("disabled", true);
 	$('#repeatControl').removeClass('enabled');
@@ -283,20 +289,29 @@ repeatAB: function() {
 },
 
 
-addFavor: function() {
+clearPresets: function () {
+	console.log('clear presets');
+	document.abplayer.presetList = [];
+	document.abplayer.renderPresetList();
+},
+resetPresets: function() {
+	console.log('reset presets');
+	document.abplayer.presetList = document.abplayer.fileInfo.presets;
+	document.abplayer.renderPresetList();
+},
+addPreset: function() {
 	if (document.abplayer.bTime < 1) {return;}
 	
 	var p = {t0:document.abplayer.aTime, t1:document.abplayer.bTime, desc:"custom"};
 	document.abplayer.presetList.push(p);
-	document.abplayer.renderFavorList();
+	document.abplayer.renderPresetList();
 },
-playFavor: function(i) {
+playPreset: function(i) {
 	var o = document.abplayer;
-
 	var p = o.presetList[i];
 	
 	// title line of dropdown list
-	$('#btnPresetsLabel').html(p.desc); 
+	$('#btnPresetsLabel').html(p.desc);
 	
 	// full list - mark the current entry as active, all others as not:
 	$('#presetListLarge a').removeClass('active');
@@ -318,16 +333,26 @@ playFavor: function(i) {
 	// re-enable tracking, but allow for some processing time:
 	setTimeout(function(){ document.abplayer.register = true; }, 1000);
 },
+findPresetByTimes: function(t0, t1) {
+	var list = document.abplayer.presetList;
+	for (var i=0; i<list.length; i++) {
+		var p = list[i];
+		if ((p.t0 == t0) && (p.t1 == t1)) {
+			return p;
+		}
+	}
+	return false; // not found...
+},
 
 // rendering section:
-renderFavorList: function() {
+renderPresetList: function() {
 	var o = document.abplayer;
 	// dropdown list:
 	var lines = [];
 	for (var i = 0; i < o.presetList.length; i++) {
 		var p = o.presetList[i];
 		lines.push(
-			"<li onclick='document.abplayer.playFavor(" + i + ")'>" 
+			"<li onclick='document.abplayer.playPreset(" + i + ")'>" 
 			+ o.formatTime(p.t0) + " - " 
 			+ o.formatTime(p.t1) + ": " 
 			+ p.desc + "</li>");
@@ -339,7 +364,7 @@ renderFavorList: function() {
 	for (var i = 0; i < o.presetList.length; i++) {
 		var p = o.presetList[i];
 		lines.push(
-			'<a href="#" onclick="document.abplayer.playFavor(' + i +')" class="list-group-item" id="largePresets' + i + '">'
+			'<a href="#" onclick="document.abplayer.playPreset(' + i +')" class="list-group-item" id="largePresets' + i + '">'
 			+ p.desc + '<span class="badge">'
 			+ (p.measure ? 'T. '+p.measure+', ' : '')
 			+ o.formatTime(p.t0) + ' - ' + o.formatTime(p.t1)
@@ -347,7 +372,31 @@ renderFavorList: function() {
 		);
 	}
 	$("#presetListLarge").html(lines.join(""));
-},
+	
+	// don't update wavesurfer, if it is not ready yet:
+	if (!o.canPlay) return;
+	
+	// update wavesurfer (graphical) sections:
+	o.wavesurfer.clearRegions();
+	$.each(
+		o.presetList,
+		function(index, preset) {
+			var c = o.ui.regionColors.DEFAULT;
+			if (o.ui.regionColors[preset.type]) {
+				c = o.ui.regionColors[preset.type];
+			}
+			o.wavesurfer.addRegion({
+				id: preset.desc,
+				start: preset.t0,
+				end: preset.t1,
+				loop: false,
+				drag: false, // TODO: default would be true, but needs to be handled...
+				resize: false, // TODO: dito
+				color: 'rgba('+c.r+','+c.g+','+c.b+','+c.alpha+')'
+			});
+		}
+	);
+}, // end renderPresetList()
 renderRelatedTrackList: function() {
 	// TODO: handle if no related tracks are present (hide the whole list / menu!)
 	if (document.abplayer.fileInfo.trackset && document.abplayer.fileInfo.trackset.length > 0) {
@@ -394,28 +443,11 @@ registerCanPlay: function() {
 	
 	if (o.printEvents) console.log('canPlay');
 	
-	// update wavesurfer (graphical) sections:
-	o.wavesurfer.clearRegions();
-	$.each(
-		o.presetList,
-		function(index, preset) {
-			var c = o.ui.regionColors.DEFAULT;
-			if (o.ui.regionColors[preset.type]) {
-				c = o.ui.regionColors[preset.type];
-			}
-			o.wavesurfer.addRegion({
-				id: preset.desc,
-				start: preset.t0,
-				end: preset.t1,
-				loop: false,
-				drag: false, // TODO: default would be true, but needs to be handled...
-				resize: false, // TODO: dito
-				color: 'rgba('+c.r+','+c.g+','+c.b+','+c.alpha+')'
-			});
-		}
-	);
-	
 	o.canPlay = true;
+
+	// render favor list & wavesurfer regions!
+	o.renderPresetList();
+
 	$("#busyIndicator").hide();
 	
 	o.enableControls();
@@ -461,6 +493,19 @@ registerPause: function() {
 	}
 	$('#btnPlayPause').html('<i class="glyphicon glyphicon-play"></i> Play</button>');
 },
+// wavesurfer region events:
+registerRegionEvent: function(eventType, region) {
+	if (eventType == 'in') {
+		console.log('region-in: ' + region.id);
+		var c = document.abplayer.ui.regionColorActive(region.color);
+		region.update({color: 'rgba('+c.r+','+c.g+','+c.b+','+c.alpha+')'});
+	}
+	if (eventType == 'out') {
+		console.log('region-out: ' + region.id);
+		var c = region.color;
+		region.update({color: 'rgba('+c.r+','+c.g+','+c.b+','+0.2+')'});  // TODO: find the original color param instead...
+	}
+},
 // end events section
 
 
@@ -479,6 +524,15 @@ document.abplayer.ui = {
 		verse: {r: 255, g: 241, b: 125, alpha: 0.2},
 		chorus: {r: 255, g: 125, b: 125, alpha: 0.2},
 		bridge: {r: 162, g: 255, b: 162, alpha: 0.2}
+	},
+	regionColorActive: function(color) {
+		// return a more opaque version of this color object:
+		return {
+			r: color.r,
+			g: color.g,
+			b: color.b,
+			alpha: color.alpha + 0.2
+		};
 	},
 	clickOpenMeta: function(url) {
 		// TODO: loading... message, show player only on success.
@@ -528,6 +582,12 @@ document.abplayer.ui = {
 			// play:
 			document.abplayer.play();
 		}
+	},
+	clickResetPresets: function() {
+		document.abplayer.resetPresets();
+	},
+	clickClearPresets: function() {
+		document.abplayer.clearPresets();
 	}
 };
 
