@@ -1,0 +1,19 @@
+{
+	"title": "Down In The River To Pray SOPRAN 1",
+	"key": "F major",
+	"tempo": "Freely with Reverence",
+	"url": "audio/Down-In-The-River-S1.mp3",
+	"presets": [
+		{"t0":16,"t1":40,"desc":"Chorus I","measure":149},
+		{"t0":33,"t1":58,"desc":"Verse II","measure":157},
+		{"t0":53,"t1":78,"desc":"Chorus II","measure":166},
+		{"t0":70,"t1":96,"desc":"Verse III","measure":174},
+		{"t0":91,"t1":129,"desc":"Chorus III + Coda","measure":183}
+	],
+	"trackset": [
+		{"S1":"down-in-s1"},
+		{"S2":"down-in-s2"},
+		{"A":"down-in-a"},
+		{"T":"down-in-t"}
+	]
+}

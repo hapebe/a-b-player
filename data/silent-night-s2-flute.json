@@ -9,7 +9,11 @@
 		{"t0":0,"t1":47,"desc":"ganze Strophe"}
 	],
 	"trackset": [
+		{"S1":"silent-night-s1-flute"},
 		{"S2":"silent-night-s2-flute"},
+		{"A":"silent-night-a-flute"},
+		{"T":"silent-night-t-flute"},
+		{"B":"silent-night-b-flute"},
 		{"SATB (instr)":"silent-night-satb-flute"},
 		{"SATB (live)":"silent-night-2012"}
 	]

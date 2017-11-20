@@ -1,6 +1,28 @@
 {
 "tracks":[
 	{
+		"title":"An Irish Blessing SOPRAN 1+2",
+		"dataURL":"irish-blessing-s.json",
+		"part":"S"
+	},
+	{
+		"title":"An Irish Blessing ALT",
+		"dataURL":"irish-blessing-a.json",
+		"part":"A"
+	},
+	{
+		"title":"An Irish Blessing TENOR",
+		"dataURL":"irish-blessing-t.json",
+		"part":"T"
+	},
+	{
+		"title":"An Irish Blessing BASS",
+		"dataURL":"irish-blessing-b.json",
+		"part":"B"
+	},
+
+
+	{
 		"title":"Ave Verum Corpus SOPRAN",
 		"dataURL":"ave-verum-s.json",
 		"part":"S"
@@ -76,6 +98,28 @@
 	},
 	
 	
+	{
+		"title":"Down In The River To Pray SOPRAN 1",
+		"dataURL":"down-in-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Down In The River To Pray SOPRAN 2",
+		"dataURL":"down-in-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"Down In The River To Pray ALT",
+		"dataURL":"down-in-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Down In The River To Pray TENOR",
+		"dataURL":"down-in-t.json",
+		"part":"T"
+	},
+
+
 	{
 		"title":"Echo-Kanon SOPRAN",
 		"dataURL":"echo-s.json",
@@ -198,27 +242,27 @@
 	
 	
 	{
-		"title":"An Irish Blessing SOPRAN 1+2",
-		"dataURL":"irish-blessing-s.json",
+		"title":"Kum Ba Yah SOPRAN",
+		"dataURL":"kumbayah-s.json",
 		"part":"S"
 	},
 	{
-		"title":"An Irish Blessing ALT",
-		"dataURL":"irish-blessing-a.json",
+		"title":"Kum Ba Yah ALT",
+		"dataURL":"kumbayah-a.json",
 		"part":"A"
 	},
 	{
-		"title":"An Irish Blessing TENOR",
-		"dataURL":"irish-blessing-t.json",
+		"title":"Kum Ba Yah TENOR",
+		"dataURL":"kumbayah-t.json",
 		"part":"T"
 	},
 	{
-		"title":"An Irish Blessing BASS",
-		"dataURL":"irish-blessing-b.json",
+		"title":"Kum Ba Yah BASS",
+		"dataURL":"kumbayah-b.json",
 		"part":"B"
 	},
-
-
+	
+	
 	{
 		"title":"Royals SOPRAN",
 		"dataURL":"royals-s.json",
@@ -264,6 +308,55 @@
 	{
 		"title":"Shenandoah BASS 2",
 		"dataURL":"shenandoah-b2.json",
+		"part":"B2"
+	},
+
+	
+	{
+		"title":"Sittin' On The Dock Of The Bay SOPRAN 1",
+		"dataURL":"sittin-otd-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Sittin' On The Dock Of The Bay SOPRAN 2",
+		"dataURL":"sittin-otd-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"Sittin' On The Dock Of The Bay ALT",
+		"dataURL":"sittin-otd-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Sittin' On The Dock Of The Bay TENOR",
+		"dataURL":"sittin-otd-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Sittin' On The Dock Of The Bay BASS",
+		"dataURL":"sittin-otd-b.json",
+		"part":"B"
+	},
+
+
+	{
+		"title":"Spanische Nächte INSTRUMENTAL TENOR 1",
+		"dataURL":"spanische-t1.json",
+		"part":"T1"
+	},
+	{
+		"title":"Spanische Nächte TENOR 2",
+		"dataURL":"spanische-t2.json",
+		"part":"T2"
+	},
+	{
+		"title":"Spanische Nächte BASS 1",
+		"dataURL":"spanische-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"Spanische Nächte BASS 2",
+		"dataURL":"spanische-b2.json",
 		"part":"B2"
 	},
 
@@ -347,6 +440,28 @@
 		"part":"SATB0"
 	},
 	
+	
+	{
+		"title":"We Pray SOPRAN",
+		"dataURL":"we-pray-s.json",
+		"part":"S"
+	},
+	{
+		"title":"We Pray ALT",
+		"dataURL":"we-pray-a.json",
+		"part":"A"
+	},
+	{
+		"title":"We Pray TENOR",
+		"dataURL":"we-pray-t.json",
+		"part":"T"
+	},
+	{
+		"title":"We Pray BASS",
+		"dataURL":"we-pray-b.json",
+		"part":"B"
+	},
+
 	
 	{
 		"title":"Will you come and follow me SOPRAN",
@@ -444,10 +559,35 @@
 		"part":"SATB0"
 	},
 	{
+		"title":"Silent Night INSTRUMENTAL SOPRAN 1",
+		"category":"xmas",
+		"dataURL":"silent-night-s1-flute.json",
+		"part":"S1"
+	},
+	{
 		"title":"Silent Night INSTRUMENTAL SOPRAN 2",
 		"category":"xmas",
 		"dataURL":"silent-night-s2-flute.json",
 		"part":"S2"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL ALT",
+		"category":"xmas",
+		"dataURL":"silent-night-a-flute.json",
+		"part":"A"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL TENOR",
+		"category":"xmas",
+		"dataURL":"silent-night-t-flute.json",
+		"part":"T"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL BASS",
+		"category":"xmas",
+		"dataURL":"silent-night-b-flute.json",
+		"part":"B"
 	}
+	
 ]
 }

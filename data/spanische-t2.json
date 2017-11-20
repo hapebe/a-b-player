@@ -1,0 +1,19 @@
+{
+	"title": "Spanische Nächte TENOR 2",
+	"key": "F major",
+	"tempo": "Im Tango-Tempo",
+	"url": "audio/Spanische-T2.mp3",
+	"presets": [
+		{"t0":2,"t1":19,"desc":"Intro","measure":1},
+		{"t0":15,"t1":52,"desc":"Refrain","measure":9},
+		{"t0":47,"t1":81,"desc":"Strophe","measure":25},
+		{"t0":78,"t1":113,"desc":"Refrain'","measure":9},
+		{"t0":109,"t1":130,"desc":"Coda","measure":42}
+	],
+	"trackset": [
+		{"T1":"spanische-t1"},
+		{"T2":"spanische-t2"},
+		{"B1":"spanische-b1"},
+		{"B2":"spanische-b2"}
+	]
+}

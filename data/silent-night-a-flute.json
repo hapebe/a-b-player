@@ -1,7 +1,7 @@
 {
-	"title": "Silent Night INSTRUMENTAL SATB",
+	"title": "Silent Night INSTRUMENTAL ALT",
 	"key": "Bb major",
-	"url": "audio/Silent Night (Johansen)-SATB-synth-flute.mp3",
+	"url": "audio/Silent Night (Johansen)-A-synth-flute.mp3",
 	"presets": [
 		{"t0":0,"t1":15,"desc":"Strophe, Teil I","measure":1}, 
 		{"t0":15,"t1":30,"desc":"Strophe, Teil II","measure":5}, 

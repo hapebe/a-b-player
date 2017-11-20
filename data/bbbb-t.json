@@ -2,15 +2,15 @@
 	"title": "Bye, Bye Blackbird TENOR",
 	"url": "audio/Bye, Bye Blackbird-Tenor.mp3",
 	"presets": [
-		{"t0":4,"t1":20,"desc":"1. Strophe, Zeile 1"}, 
-		{"t0":19,"t1":34,"desc":"1. Strophe, Zeile 2"}, 
-		{"t0":32,"t1":46,"desc":"1. Bridge (Piano)"}, 
-		{"t0":46,"t1":59,"desc":"1.Strophe Schlussphrase"},
-		{"t0":63,"t1":78,"desc":"2. Strophe, Zeile 1"},
-		{"t0":76,"t1":91,"desc":"2. Strophe, Zeile 2"}, 
-		{"t0":89,"t1":105,"desc":"2. Bridge (Vokal)"}, 
-		{"t0":103,"t1":115,"desc":"2.Strophe Schlussphrase"}, 
-		{"t0":109,"t1":135,"desc":"Refrain/Schluss"}
+		{"t0":4,"t1":20,"desc":"1. Strophe, Zeile 1","type":"verse"}, 
+		{"t0":19,"t1":34,"desc":"1. Strophe, Zeile 2","type":"verse"}, 
+		{"t0":32,"t1":46,"desc":"1. Bridge (Piano)","type":"bridge"},
+		{"t0":46,"t1":59,"desc":"1.Strophe Schlussphrase","type":"chorus"},
+		{"t0":63,"t1":78,"desc":"2. Strophe, Zeile 1","type":"verse"},
+		{"t0":76,"t1":91,"desc":"2. Strophe, Zeile 2","type":"verse"}, 
+		{"t0":89,"t1":105,"desc":"2. Bridge (Vokal)","type":"bridge"}, 
+		{"t0":103,"t1":115,"desc":"2.Strophe Schlussphrase","type":"chorus"}, 
+		{"t0":109,"t1":135,"desc":"Refrain/Schluss","type":"chorus"}
 	],
 	"trackset": [
 		{"S":"bbbb-s"},

@@ -1,0 +1,19 @@
+{
+	"title": "Spanische Nächte BASS 1",
+	"key": "F major",
+	"tempo": "Im Tango-Tempo",
+	"url": "audio/Spanische-B1.mp3",
+	"presets": [
+		{"t0":2,"t1":20,"desc":"Intro","measure":1},
+		{"t0":17,"t1":52,"desc":"Refrain","measure":9},
+		{"t0":48,"t1":84,"desc":"Strophe","measure":25},
+		{"t0":78,"t1":117,"desc":"Refrain'","measure":9},
+		{"t0":110,"t1":134,"desc":"Coda","measure":42}
+	],
+	"trackset": [
+		{"T1":"spanische-t1"},
+		{"T2":"spanische-t2"},
+		{"B1":"spanische-b1"},
+		{"B2":"spanische-b2"}
+	]
+}
