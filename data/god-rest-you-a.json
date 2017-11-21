@@ -2,10 +2,12 @@
 	"title": "God Rest You Merry, Gentlemen ALT",
 	"url": "audio/God Rest You Merry, Gentlemen-Alt.mp3",
 	"presets": [
-		{"t0":2,"t1":24,"desc":"Strophe (Klavier)"}, 
+		{"t0":0,"t1":25,"desc":"Strophe (Klavier)"}, 
 		{"t0":21,"t1":37,"desc":"Refrain (Klavier)"}, 
-		{"t0":37,"t1":59,"desc":"Strophe"}, 
-		{"t0":57,"t1":72,"desc":"Refrain"}
+		{"t0":37,"t1":60,"desc":"Strophe"}, 
+		{"t0":57,"t1":72,"desc":"Refrain"},
+		{"t0":73,"t1":96,"desc":"Strophe, take II"}, 
+		{"t0":94,"t1":109,"desc":"Refrain, take II"}
 	],
 	"trackset": [
 		{"S":"god-rest-you-s"},

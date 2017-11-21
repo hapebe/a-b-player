@@ -1,0 +1,21 @@
+{
+	"title": "Silent Night ALT",
+	"key": "Bb major",
+	"url": "audio/Silent Night (Johansen)-A.mp3",
+	"presets": [
+		{"t0":0,"t1":23,"desc":"Strophe, Teil I","measure":1}, 
+		{"t0":23,"t1":41,"desc":"Strophe, Teil II","measure":5}, 
+		{"t0":36,"t1":59,"desc":"Strophe, Teil III","measure":9},
+		{"t0":3,"t1":59,"desc":"ganze Strophe"}
+	],
+	"trackset": [
+		{"S1":"silent-night-s1"},
+		{"S2":"silent-night-s2"},
+		{"A":"silent-night-a"},
+		{"T":"silent-night-t"},
+		{"B1":"silent-night-b1"},
+		{"B2":"silent-night-b2"},
+		{"SATB (instr)":"silent-night-satb-flute"},
+		{"SATB (live)":"silent-night-2012"}
+	]
+}

@@ -90,9 +90,13 @@ init: function() {
 	ab.wavesurfer.on('play', document.abplayer.registerPlaying);
 	ab.wavesurfer.on('pause', document.abplayer.registerPause);
 	ab.wavesurfer.on('finish', document.abplayer.registerEnded);
+	ab.wavesurfer.on('seek', function(fraction) {document.abplayer.registerSeek(fraction);});
 	// extensions for region support:
 	ab.wavesurfer.on('region-in', function(region) {document.abplayer.registerRegionEvent('in', region)});
 	ab.wavesurfer.on('region-out', function(region) {document.abplayer.registerRegionEvent('out', region)});
+	
+	// handle space key for play/pause - make sure that wavesurfer is initialized before:
+	$('body').keydown(function(event) {document.abplayer.ui.pressKey(event)});
 	
 	
 	ab.trackselection.loadTracksData('./data/tracks.json');
@@ -456,7 +460,7 @@ registerCanPlay: function() {
 registerProgress: function() {
 	// update current play time display:
 	var currentTime = document.abplayer.getCurrentTime();
-	if (Math.floor(currentTime) != document.abplayer.playTime) {
+	if (Math.floor(currentTime) != document.abplayer.playTime) { // respect > 100 ms difference
 		document.abplayer.playTime = Math.floor(currentTime);
 		$('#playTimeDisplay').html(document.abplayer.formatTime(document.abplayer.playTime));
 	}
@@ -474,6 +478,10 @@ registerProgress: function() {
 	}
 
 	document.abplayer.checkRepeat();
+},
+registerSeek: function(fraction) {
+	var t1 = document.abplayer.wavesurfer.getDuration();
+	document.abplayer.registerProgress(); // mainly in order to update the current time display
 },
 registerEnded: function() {
 	if (document.abplayer.printEvents) console.log('ended');
@@ -512,7 +520,8 @@ registerRegionEvent: function(eventType, region) {
 formatTime: function (secondsIn) {
 	var min = Math.floor(secondsIn / 60);
 	var sec = secondsIn % 60;
-	return min + ':' + (sec<10?'0':'') + sec;
+	// var msec = sec - Math.floor(sec); msec = Math.floor(msec * 10);
+	return min + ':' + (sec<10?'0':'') + sec; // + '.' + msec;
 },
 
 }; // end definition of document.abplayer
@@ -581,6 +590,14 @@ document.abplayer.ui = {
 		} else {
 			// play:
 			document.abplayer.play();
+		}
+	},
+	pressKey: function(event) {
+		if (event.which == 32) {
+			if (document.abplayer.canPlay) {
+				event.preventDefault();
+				document.abplayer.ui.clickPlayPause();
+			}
 		}
 	},
 	clickResetPresets: function() {
