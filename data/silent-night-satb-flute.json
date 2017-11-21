@@ -9,12 +9,18 @@
 		{"t0":0,"t1":47,"desc":"ganze Strophe"}
 	],
 	"trackset": [
-		{"S1":"silent-night-s1-flute"},
-		{"S2":"silent-night-s2-flute"},
-		{"A":"silent-night-a-flute"},
-		{"T":"silent-night-t-flute"},
-		{"B":"silent-night-b-flute"},
-		{"SATB (instr)":"silent-night-satb-flute"},
+		{"S1i":"silent-night-s1-flute"},
+		{"S2i":"silent-night-s2-flute"},
+		{"Ai":"silent-night-a-flute"},
+		{"Ti":"silent-night-t-flute"},
+		{"Bi":"silent-night-b-flute"},
+		{"S1":"silent-night-s1"},
+		{"S2":"silent-night-s2"},
+		{"A":"silent-night-a"},
+		{"T":"silent-night-t"},
+		{"B1":"silent-night-b1"},
+		{"B2":"silent-night-b2"},
+		{"SATBi":"silent-night-satb-flute"},
 		{"SATB (live)":"silent-night-2012"}
 	]
 }

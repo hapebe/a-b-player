@@ -546,12 +546,50 @@
 		"dataURL":"o-du-froehliche-b.json",
 		"part":"B"
 	},
+
 	{
 		"title":"Silent Night LIVE 2012",
 		"category":"xmas",
 		"dataURL":"silent-night-2012.json",
 		"part":"SATB0"
 	},
+	{
+		"title":"Silent Night SOPRAN 1",
+		"category":"xmas",
+		"dataURL":"silent-night-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Silent Night SOPRAN 2",
+		"category":"xmas",
+		"dataURL":"silent-night-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"Silent Night ALT",
+		"category":"xmas",
+		"dataURL":"silent-night-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Silent Night TENOR",
+		"category":"xmas",
+		"dataURL":"silent-night-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Silent Night BASS 1",
+		"category":"xmas",
+		"dataURL":"silent-night-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"Silent Night BASS 2",
+		"category":"xmas",
+		"dataURL":"silent-night-b2.json",
+		"part":"B2"
+	},
+
 	{
 		"title":"Silent Night INSTRUMENTAL SATB",
 		"category":"xmas",
