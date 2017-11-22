@@ -1,7 +1,8 @@
+// do this event when complete loading fails...
+$('#panelPlayer').hide();
+$("#busyIndicator").hide();
+
 $(function(){
-	$('#panelPlayer').hide();
-	$("#busyIndicator").hide();
-	
 	// route track selection filter clicks:
 	$('#filterPartEnsemble').change(function() { 
 		var flag = $(this).is(':checked');
@@ -25,9 +26,22 @@ $(function(){
 	$('#btnResetPresets').click(document.abplayer.ui.clickResetPresets);
 	$('#btnClearPresets').click(document.abplayer.ui.clickClearPresets);
 
-	
 	document.abplayer.init();
 	
+	// set up volume slider:
+	$('#sliderVolume').slider({
+		// orientation: 'horizontal', // "vertical",
+		value: Math.floor(document.abplayer.volume * 100 + 0.5),
+		min: 0,
+		max: 100,
+		range: 'min',
+		animate: true,
+		step: 1,
+		slide: function(e, ui) {
+			document.abplayer.setVolume(ui.value / 100);
+		}
+	});
+
 	// setTimeout(function(){ document.abplayer.openWebFile('audio/Bye, Bye Blackbird-Sopran.mp3'); }, 2000);
 	// setTimeout(function(){ document.abplayer.openMeta("data/royals-s.json"); }, 500);	
 	
@@ -55,6 +69,7 @@ filterPartEnsemble: true, // track selection view: include ensemble tracks?
 canPlay: false, // is set by event from player, after audio file has been loaded
 playTime: 0, // currently displayed play time (position in seconds)
 aTime: -1, bTime: -1,
+muted: false, volume: 0.75, // audio output controls
 currentPresetDesc: '', // loop name of currently active "favorite" / "preset" (loop)
 presetList: [], // preset loops, loaded from single track data (or managed manually)
 fileInfo: {
@@ -180,6 +195,10 @@ pause: function() {
 },
 stop: function() {
 	document.abplayer.wavesurfer.stop();
+},
+setVolume: function(vol) {
+	document.abplayer.volume = vol;
+	if (document.abplayer.canPlay) document.abplayer.wavesurfer.setVolume(document.abplayer.volume);
 },
 
 disableControls: function() {
@@ -455,6 +474,7 @@ registerCanPlay: function() {
 	$("#busyIndicator").hide();
 	
 	o.enableControls();
+	o.wavesurfer.setVolume(o.volume);
 	o.repeatAB(); // try to autoplay (implicitly calls play at pos t=0 if no aTime is set)
 },
 registerProgress: function() {
