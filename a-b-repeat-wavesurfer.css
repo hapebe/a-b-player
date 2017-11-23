@@ -29,13 +29,30 @@
 #audioPlayer { width:100%; }
 #wavesurferTarget { margin-bottom:5px; }
 #files {visibility: hidden; position: absolute;}
-/* #repeatControl button {
-	width: 66px; padding:0 6px;
-	border:1px solid #b6d9ed; background:#fff;
-	line-height:25px; cursor: pointer;
-} */
-#repeatControl.enabled button:hover { background:#339ad6; color:white; }
 #playTimeDisplay { font-size:180%; }
+#repeatControl.enabled button:hover { background:#339ad6; color:white; }
+#repeatControl .row { display:table; width:100%; text-align:center; margin-left:0px; margin-right:0px; }
+#repeatControl .row div.cell { display:table-cell; vertical-align: middle; float:none; }
+#volumeBar {
+	padding-left: 4px;
+	padding-right: 12px;
+}
+#volumeBar::before { 
+	content: "\e036";  /* volume-off */
+	position: absolute;	width:0px; height:0px; overflow: visible;
+	top: 30%; left: -8px;
+	display: inline-block;
+	font-size:20px;
+	font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: 400; line-height: 1;
+}
+#volumeBar::after { 
+	content: "\e038";  /* volume-up */
+	position: absolute;	width:0px; height:0px; overflow: visible;
+	top: 30%; right: 16px;
+	display: inline-block;
+	font-size:20px;
+	font-family: 'Glyphicons Halflings'; font-style: normal; font-weight: 400; line-height: 1;
+}
 
 /* #favorlist_ul { border:1px solid #f0f0f0; padding:5px 5px; min-height:50px;} */
 #favorlist_ul li { /* list-style-type:none; */ cursor: pointer;}
@@ -45,12 +62,6 @@
 #tips li { font-size:0.8em;}
 #tips li a {color:#888; text-decoration:none;} 
 */
-
-/* presets which are not active, but would match the current playback position: */
-.currentPresetMatch:not(.active) {
-	background-color: #b2dbff;
-}
-
 
 /* *************** */
 /* Busy Indicator: */

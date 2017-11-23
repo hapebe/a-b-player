@@ -5,10 +5,10 @@
 	"dimensions": "19 Takte (Strophe: 4A,4A,4B; Refrain: 4+3), 4 Strophen",
 	"url": "audio/God Rest You Merry, Gentlemen-SATB.mp3",
 	"presets": [
-		{"t0":0,"t1":26,"desc":"Strophe (Klavier)"}, 
-		{"t0":24,"t1":39,"desc":"Refrain (Klavier)"}, 
-		{"t0":38,"t1":61,"desc":"Strophe"}, 
-		{"t0":58,"t1":76,"desc":"Refrain"}
+		{"t0":0,"t1":26,"desc":"Strophe (Klavier)","type":"verse"}, 
+		{"t0":24,"t1":39,"desc":"Refrain (Klavier)","type":"chorus"}, 
+		{"t0":38,"t1":61,"desc":"Strophe","type":"verse"}, 
+		{"t0":58,"t1":76,"desc":"Refrain","type":"chorus"}
 	],
 	"trackset": [
 		{"S":"god-rest-you-s"},

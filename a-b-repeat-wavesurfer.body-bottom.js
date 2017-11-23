@@ -1,7 +1,8 @@
+// do this event when complete loading fails...
+$('#panelPlayer').hide();
+$("#busyIndicator").hide();
+
 $(function(){
-	$('#panelPlayer').hide();
-	$("#busyIndicator").hide();
-	
 	// route track selection filter clicks:
 	$('#filterPartEnsemble').change(function() { 
 		var flag = $(this).is(':checked');
@@ -21,10 +22,26 @@ $(function(){
 	$('#btnPreB').click(function() { document.abplayer.setAB('B', -1, 0) } );
 	$('#btnNextB').click(function() { document.abplayer.setAB('B', 1, 0) } );
 	$('#btnClearAB').click(document.abplayer.clearAB);
-	$('#btnAddPreset').click(document.abplayer.addFavor);
-	
+	$('#btnAddPreset').click(document.abplayer.addPreset);
+	$('#btnResetPresets').click(document.abplayer.ui.clickResetPresets);
+	$('#btnClearPresets').click(document.abplayer.ui.clickClearPresets);
+
 	document.abplayer.init();
 	
+	// set up volume slider:
+	$('#sliderVolume').slider({
+		// orientation: 'horizontal', // "vertical",
+		value: Math.floor(document.abplayer.volume * 100 + 0.5),
+		min: 0,
+		max: 100,
+		range: 'min',
+		animate: true,
+		step: 1,
+		slide: function(e, ui) {
+			document.abplayer.setVolume(ui.value / 100);
+		}
+	});
+
 	// setTimeout(function(){ document.abplayer.openWebFile('audio/Bye, Bye Blackbird-Sopran.mp3'); }, 2000);
 	// setTimeout(function(){ document.abplayer.openMeta("data/royals-s.json"); }, 500);	
 	
@@ -52,7 +69,9 @@ filterPartEnsemble: true, // track selection view: include ensemble tracks?
 canPlay: false, // is set by event from player, after audio file has been loaded
 playTime: 0, // currently displayed play time (position in seconds)
 aTime: -1, bTime: -1,
-currentPresetDesc: '', // loop name of currently active "favorite" / "preset" (loop)
+muted: false, volume: 0.75, // audio output controls
+currentPresetDesc: undefined, // loop name of currently active "favorite" / "preset" (loop)
+previousPresetDesc: undefined, // last actively selected preset, if any (regardless of automated clearing etc.)
 presetList: [], // preset loops, loaded from single track data (or managed manually)
 fileInfo: {
 	'title': 'Drag &amp; drop files or click &quot;Open file...&quot;',
@@ -87,6 +106,14 @@ init: function() {
 	ab.wavesurfer.on('play', document.abplayer.registerPlaying);
 	ab.wavesurfer.on('pause', document.abplayer.registerPause);
 	ab.wavesurfer.on('finish', document.abplayer.registerEnded);
+	ab.wavesurfer.on('seek', function(fraction) {document.abplayer.registerSeek(fraction);});
+	// extensions for region support:
+	// ab.wavesurfer.on('region-in', function(region) {document.abplayer.registerRegionEvent('in', region)});
+	// ab.wavesurfer.on('region-out', function(region) {document.abplayer.registerRegionEvent('out', region)});
+	
+	// handle space key for play/pause - make sure that wavesurfer is initialized before:
+	$('body').keydown(function(event) {document.abplayer.ui.registerKeyPress(event)});
+	
 	
 	ab.trackselection.loadTracksData('./data/tracks.json');
 
@@ -104,7 +131,10 @@ openMeta: function(url) {
 	var o = document.abplayer;
 
 	o.register=false;
+	o.setActivePreset(undefined);
+	if (o.presetsFollower) o.presetsFollower.currentMatches = [];
 	o.disableControls();
+	o.clearAB();
 	o.register=true;
 
 	$("#busyIndicator").show();
@@ -117,10 +147,15 @@ openMeta: function(url) {
 		// track successful opening:
 		_paq.push(['trackEvent', 'Top', 'openTrack', o.fileInfo.title]);
 
-		o.fileInfo = data;
-		o.presetList = o.fileInfo.presets;
+		// add DOM ID to presets data:
+		for (var i=0; i<data.presets.length; i++) {
+			data.presets[i].domID = o.getPresetDomID(data.presets[i]);
+		}
 		
-		o.renderFavorList();
+		o.fileInfo = data;
+		
+		o.resetPresets(); // includes rendering
+		
 		o.renderRelatedTrackList();
 		$("#filename").html(o.fileInfo.title);
 		
@@ -130,14 +165,13 @@ openMeta: function(url) {
 		o.wavesurfer.load(o.fileInfo.url);
 		
 		// try to restore the latest active preset:
-		if (o.currentPresetDesc.length > 0) { // console.log("Trying to restore currentPresetDesc: " + o.currentPresetDesc);
+		if (o.previousPresetDesc) {
+			console.log('previousPresetDesc: ', o.previousPresetDesc);
 			$.each(
 				o.presetList,
-				function (index, value) {
-					for (var prop in value) { // console.log(prop + ": " + value[prop]);
-						if (prop=='desc' && value[prop]==o.currentPresetDesc) { // console.log("Found at [" + index + "]");
-							o.playFavor(index);
-						}
+				function (index, p) {
+					if (p.desc == o.previousPresetDesc) { // console.log("Found at [" + index + "]");
+						o.playPreset(p.t0, p.t1);
 					}
 				}
 			);
@@ -170,15 +204,17 @@ pause: function() {
 stop: function() {
 	document.abplayer.wavesurfer.stop();
 },
+setVolume: function(vol) {
+	document.abplayer.volume = vol;
+	if (document.abplayer.canPlay) document.abplayer.wavesurfer.setVolume(document.abplayer.volume);
+},
 
 disableControls: function() {
-	document.abplayer.presetList = [];
-	document.abplayer.renderFavorList();
+	document.abplayer.clearPresets(); // includes rendering
 	
 	$('#repeatControl *').attr("disabled", true);
 	$('#repeatControl').removeClass('enabled');
 	$('#repeatControl').addClass('disabled');
-	document.abplayer.clearAB();
 },
 
 enableControls: function() {
@@ -189,18 +225,15 @@ enableControls: function() {
 },
 
 clearAB: function() {
-	document.abplayer.aTime = -1;
-	document.abplayer.bTime = -1;
-	document.abplayer.updateABButtons();
+	var o = document.abplayer;
+	
+	o.aTime = -1; o.bTime = -1; o.updateABButtons();
+	o.setActivePreset(undefined); // clear preset
+	// o.previousPresetDesc = undefined; // also, forget it (in case we load a different track)
 
-	if (document.abplayer.register) {
-		_paq.push(['trackEvent', 'Track', 'clearAB', document.abplayer.fileInfo.title]);
+	if (o.register) {
+		_paq.push(['trackEvent', 'Track', 'clearAB', o.fileInfo.title]);
 	}
-
-	// clear latest active loop setting:
-	// document.abplayer.currentPresetDesc	= '';
-	$('#presetListLarge a').removeClass('active');
-	$('#btnPresetsLabel').html('Fertige Loops: ...');
 },
 setA: function() { 
 	document.abplayer.setAB('A', parseInt(document.abplayer.getCurrentTime()), 1); 
@@ -252,13 +285,13 @@ checkRepeat: function() {
 	var t = document.abplayer.getCurrentTime();
 	
 	if (a >= 0) { // is aTime in effect?
-		if (t < a) { 
+		if (t < a - 0.001) { 
 			// this can happen when loading a new track with an existing pre-set loop:
 			document.abplayer.setCurrentTime(a); 
 		}
 	}
 	if (b >= 0) { // is bTime in effect?
-		if (t > b) { 
+		if (t > b + 0.001) { 
 			document.abplayer.repeatAB(); 
 		}
 	}
@@ -283,28 +316,43 @@ repeatAB: function() {
 },
 
 
-addFavor: function() {
-	if (document.abplayer.bTime < 1) {return;}
+clearPresets: function () {
+	console.log('clear presets');
+	document.abplayer.setActivePreset(undefined);
+	// document.abplayer.previousPresetDesc = undefined;
 	
-	var p = {t0:document.abplayer.aTime, t1:document.abplayer.bTime, desc:"custom"};
-	document.abplayer.presetList.push(p);
-	document.abplayer.renderFavorList();
+	document.abplayer.presetList = [];
+	document.abplayer.renderPresetList();
 },
-playFavor: function(i) {
+resetPresets: function() {
+	console.log('reset presets');
+	document.abplayer.presetList = document.abplayer.fileInfo.presets;
+	document.abplayer.renderPresetList();
+},
+addPreset: function() {
 	var o = document.abplayer;
 
-	var p = o.presetList[i];
+	if ((o.aTime < 1) || (o.bTime < 1)) {return;} // only if there is a current loop...
 	
-	// title line of dropdown list
-	$('#btnPresetsLabel').html(p.desc); 
+	// only if it does not exist yet:
+	var target = o.findPresetByTimes(o.aTime, o.bTime);
+	if (target.preset) return; // TODO: error message
 	
-	// full list - mark the current entry as active, all others as not:
-	$('#presetListLarge a').removeClass('active');
-	$('#largePresets' + i).addClass('active');
-	
-	// remember this setting - if another track is selected next; we will try to activate a loop with the same description: 
-	o.currentPresetDesc	= p.desc; // console.log("Trying to set currentPresetDesc: " + o.currentPresetDesc);
+	var p = {t0:o.aTime, t1:o.bTime, desc:"custom"};
+	p.domID = o.getPresetDomID(data.presets[i]);
 
+	document.abplayer.presetList.push(p);
+	document.abplayer.renderPresetList();
+},
+playPreset: function(t0, t1) {
+	var o = document.abplayer;
+	
+	var target = o.findPresetByTimes(t0, t1);
+	var p = target.preset;
+	if (!p) return; // TODO: error message
+	
+	o.setActivePreset(p);
+	
 	_paq.push(['trackEvent', 'Track', 'selectLoop', o.currentPresetDesc]);
 	
 	o.register = false;
@@ -318,16 +366,60 @@ playFavor: function(i) {
 	// re-enable tracking, but allow for some processing time:
 	setTimeout(function(){ document.abplayer.register = true; }, 1000);
 },
+findPresetByDesc: function(desc) { // returns both a preset and a region, if found!
+	var retval = {preset: false, region: false};
+	
+	var list = document.abplayer.presetList;
+	for (var i=0; i<list.length; i++) {
+		if (list[i].desc == desc) { retval.preset = list[i]; break; }
+	}
+	
+	list = document.abplayer.wavesurfer.regions.list;
+	Object.keys(list).forEach(function (key) {
+		var r = list[key];
+		if (r.id == desc) { retval.region = r; }
+	});
+	
+	return retval;
+},
+findPresetByTimes: function(t0, t1) { // returns both a preset and a region, if found!
+	var retval = {preset: false, region: false};
+	
+	var list = document.abplayer.presetList;
+	for (var i=0; i<list.length; i++) {
+		var p = list[i];
+		if ((p.t0 == t0) && (p.t1 == t1)) {
+			retval.preset = p;
+			break;
+		}
+	}
+	
+	list = document.abplayer.wavesurfer.regions.list;
+	for (var i=0; i<list.length; i++) {
+		var r = list[i];
+		if ((r.start == t0) && (r.end == t1)) {
+			retval.regions = r;
+			break;
+		}
+	}
+	
+	return retval;
+},
+
+
 
 // rendering section:
-renderFavorList: function() {
+
+renderPresetList: function() {
 	var o = document.abplayer;
+	var colorTool = o.ui.colorTool;
+
 	// dropdown list:
 	var lines = [];
 	for (var i = 0; i < o.presetList.length; i++) {
 		var p = o.presetList[i];
 		lines.push(
-			"<li onclick='document.abplayer.playFavor(" + i + ")'>" 
+			'<li onclick="document.abplayer.playPreset(' + p.t0 +', ' + p.t1 + ')" id="smallPresets' + p.domID + '">"'
 			+ o.formatTime(p.t0) + " - " 
 			+ o.formatTime(p.t1) + ": " 
 			+ p.desc + "</li>");
@@ -339,14 +431,52 @@ renderFavorList: function() {
 	for (var i = 0; i < o.presetList.length; i++) {
 		var p = o.presetList[i];
 		lines.push(
-			'<a href="#" onclick="document.abplayer.playFavor(' + i +')" class="list-group-item" id="largePresets' + i + '">'
-			+ p.desc + '<span class="badge">'
-			+ (p.measure ? 'T. '+p.measure+', ' : '')
-			+ o.formatTime(p.t0) + ' - ' + o.formatTime(p.t1)
-			+ '</span></a>'
+			'<a href="#" onclick="document.abplayer.playPreset('  + p.t0 +', ' + p.t1 + ')" class="list-group-item" id="largePresets' + p.domID + '">'
+			+ ((p.desc == o.currentPresetDesc)?'<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> ':'')
+			+ o.getLargePresetLabel(p) + '</a>'
 		);
 	}
 	$("#presetListLarge").html(lines.join(""));
+	
+	// add colors for the presets:
+	for (var i = 0; i < o.presetList.length; i++) {
+		var p = o.presetList[i];
+		var bg = colorTool.getColorForType(p.type);
+		
+		$('#smallPresets' + p.domID).css('background-color', colorTool.getCSS(bg));
+		$('#largePresets' + p.domID).css('background-color', colorTool.getCSS(bg));
+	}
+	
+	// don't update wavesurfer, if it is not ready yet:
+	if (!o.canPlay) return;
+	
+	// update wavesurfer (graphical) sections:
+	o.wavesurfer.clearRegions();
+	$.each(
+		o.presetList,
+		function(index, preset) {
+			var c = colorTool.getColorForType(preset.type);
+			o.wavesurfer.addRegion({
+				id: preset.desc,
+				start: preset.t0,
+				end: preset.t1,
+				loop: false,
+				drag: false, // TODO: default would be true, but needs to be handled...
+				resize: false, // TODO: dito
+				color: colorTool.getCSS(c)
+			});
+		}
+	);
+}, // end renderPresetList()
+getPresetDomID: function(p) {
+	return '_' + p.t0 + '_' + p.t1;	
+},
+getLargePresetLabel: function(p) {
+	var o = document.abplayer;
+	return p.desc + '<span class="badge">'
+			+ (p.measure ? 'T. '+p.measure+', ' : '')
+			+ o.formatTime(p.t0) + ' - ' + o.formatTime(p.t1)	
+			+ '</span>';
 },
 renderRelatedTrackList: function() {
 	// TODO: handle if no related tracks are present (hide the whole list / menu!)
@@ -372,18 +502,59 @@ renderRelatedTrackList: function() {
 		$('#relatedTrackContainer').hide();
 	}
 },
+setActivePreset: function(preset) {
+	var o = document.abplayer;
+	var colorTool = o.ui.colorTool;
+
+	if (preset) {
+		// ignore if the current preset was selected again:
+		if (preset.desc == o.currentPresetDesc) return;
+	}
+
+	// reset the label of the old current preset:
+	if (o.currentPresetDesc) {
+		var target = o.findPresetByDesc(o.currentPresetDesc);
+		if (target.preset) {
+			var old = target.preset;
+			$('#largePresets' + old.domID).html(o.getLargePresetLabel(old));
+		}
+	}
+	
+	if (!preset) {
+		// reset - no active preset:
+		o.currentPresetDesc	= undefined;
+		
+		$('#btnPresetsLabel').html('Fertige Loops...');
+		return;
+	}
+	
+	// we have a new active preset:
+
+	// remember this setting - if another track is selected next; we will try to activate a loop with the same description: 
+	o.currentPresetDesc	= preset.desc;
+	o.previousPresetDesc = preset.desc;
+	
+	// title line of dropdown list
+	$('#btnPresetsLabel').html(preset.desc);
+	
+	// full list - mark the current entry as active:
+	$('#largePresets' + preset.domID).html(
+		'<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span> '
+		+ o.getLargePresetLabel(preset)
+	);
+},
 updateABButtons: function() {
-	var aTime = document.abplayer.aTime;
-	if ( aTime < 0) {
+	var o = document.abplayer;
+	
+	if ( o.aTime < 0) {
 		$("#btnAtime").html("A");
 	} else {
-		$("#btnAtime").html("A[" + document.abplayer.formatTime(aTime) + "]");
+		$("#btnAtime").html("A[" + o.formatTime(o.aTime) + "]");
 	}
-	var bTime = document.abplayer.bTime;
-	if ( bTime < 0) {
+	if ( o.bTime < 0) {
 		$("#btnBtime").html("B");
 	} else {
-		$("#btnBtime").html("B[" + document.abplayer.formatTime(bTime) + "]");
+		$("#btnBtime").html("B[" + o.formatTime(o.bTime) + "]");
 	}
 },
 
@@ -394,54 +565,68 @@ registerCanPlay: function() {
 	
 	if (o.printEvents) console.log('canPlay');
 	
-	// update wavesurfer (graphical) sections:
-	o.wavesurfer.clearRegions();
-	$.each(
-		o.presetList,
-		function(index, preset) {
-			var c = o.ui.regionColors.DEFAULT;
-			if (o.ui.regionColors[preset.type]) {
-				c = o.ui.regionColors[preset.type];
-			}
-			o.wavesurfer.addRegion({
-				id: preset.desc,
-				start: preset.t0,
-				end: preset.t1,
-				loop: false,
-				drag: false, // TODO: default would be true, but needs to be handled...
-				resize: false, // TODO: dito
-				color: 'rgba('+c.r+','+c.g+','+c.b+','+c.alpha+')'
-			});
-		}
-	);
-	
 	o.canPlay = true;
+
+	// render favor list & wavesurfer regions!
+	o.renderPresetList();
+
 	$("#busyIndicator").hide();
 	
 	o.enableControls();
+	o.wavesurfer.setVolume(o.volume);
 	o.repeatAB(); // try to autoplay (implicitly calls play at pos t=0 if no aTime is set)
 },
 registerProgress: function() {
-	// update current play time display:
-	var currentTime = document.abplayer.getCurrentTime();
-	if (Math.floor(currentTime) != document.abplayer.playTime) {
-		document.abplayer.playTime = Math.floor(currentTime);
-		$('#playTimeDisplay').html(document.abplayer.formatTime(document.abplayer.playTime));
-	}
-	
-	if (document.abplayer.printEvents) {
+	var o = document.abplayer;
+	var currentTime = o.getCurrentTime();
+
+	if (o.printEvents) {
 		var now = (new Date()).getTime()/1000 | 0;
-		if (now >= document.abplayer.registerProgressTimestamp + 5) {
+		if (now >= o.registerProgressTimestamp + 5) {
 			console.log('progress: ' + currentTime);
-			document.abplayer.registerProgressTimestamp = now;
+			o.registerProgressTimestamp = now;
 		}
 	}
 	
-	if (document.abplayer.presetsFollower) { // enable a plug-in-like / optional behaviour:
-		document.abplayer.presetsFollower.updateForTime(currentTime);
+	// update current play time display:
+	if (Math.floor(currentTime) != o.playTime) {
+		o.playTime = Math.floor(currentTime);
+		$('#playTimeDisplay').html(o.formatTime(o.playTime));
+	}
+	
+	if (o.presetsFollower) { // enable a plug-in-like / optional behaviour:
+		o.presetsFollower.update();
 	}
 
-	document.abplayer.checkRepeat();
+	o.checkRepeat();
+},
+registerSeek: function(fraction) {
+	var o = document.abplayer;
+	
+	var t1 = o.wavesurfer.getDuration();
+	var t = fraction * t1;
+	
+	var msg = o.formatTime(t) + 'min';
+	
+	// is it outside the current preset?
+	if (o.currentPresetDesc) {
+		var target = o.findPresetByDesc(o.currentPresetDesc);
+		if (target.preset) {
+			if ((t < target.preset.t0 - 0.001) || (t > target.preset.t1 + 0.001)) {
+				o.setActivePreset(undefined);
+				msg += ', outside of current preset.';
+			}
+		}
+	}
+	
+	if (document.abplayer.printEvents) {
+		console.log('seek to ' + msg );
+	}
+	if (document.abplayer.register) {
+		_paq.push(['trackEvent', 'Track', 'seek to', msg]);
+	}
+	
+	document.abplayer.registerProgress(); // mainly in order to update the current time display
 },
 registerEnded: function() {
 	if (document.abplayer.printEvents) console.log('ended');
@@ -463,11 +648,11 @@ registerPause: function() {
 },
 // end events section
 
-
 formatTime: function (secondsIn) {
 	var min = Math.floor(secondsIn / 60);
 	var sec = secondsIn % 60;
-	return min + ':' + (sec<10?'0':'') + sec;
+	// var msec = sec - Math.floor(sec); msec = Math.floor(msec * 10);
+	return min + ':' + (sec<10?'0':'') + sec; // + '.' + msec;
 },
 
 }; // end definition of document.abplayer
@@ -476,9 +661,11 @@ formatTime: function (secondsIn) {
 document.abplayer.ui = {
 	regionColors: {
 		DEFAULT: {r: 125, g: 194, b: 255, alpha: 0.2},
+		alternative: {r: 162, g: 111, b: 255, alpha: 0.2},
 		verse: {r: 255, g: 241, b: 125, alpha: 0.2},
 		chorus: {r: 255, g: 125, b: 125, alpha: 0.2},
-		bridge: {r: 162, g: 255, b: 162, alpha: 0.2}
+		bridge: {r: 162, g: 255, b: 162, alpha: 0.2},
+		invisible: {r: 255, g: 255, b: 255, alpha: 0.0}
 	},
 	clickOpenMeta: function(url) {
 		// TODO: loading... message, show player only on success.
@@ -499,14 +686,20 @@ document.abplayer.ui = {
 		$('#panelTrackSelection').hide();
 	},
 	closePlayer: function() {
-		_paq.push(['trackEvent', 'Track', 'closeTrack', document.abplayer.fileInfo.title]);
+		var o = document.abplayer;
 		
-		document.abplayer.register = false;
+		_paq.push(['trackEvent', 'Track', 'closeTrack', o.fileInfo.title]);
 		
-		// document.abplayer.audio.pause(); // audio element
-		document.abplayer.stop();
+		o.register = false;
 		
-		document.abplayer.wavesurfer.clearRegions();
+		o.setActivePreset(undefined);
+		o.previousPresetDesc = undefined;
+		if (o.presetsFollower) o.presetsFollower.currentMatches = [];
+
+		// o.audio.pause(); // audio element
+		o.stop();
+		
+		o.wavesurfer.clearRegions();
 		
 		setTimeout(function(){ document.abplayer.register = true; }, 500);
 		
@@ -528,20 +721,70 @@ document.abplayer.ui = {
 			// play:
 			document.abplayer.play();
 		}
+	},
+	registerKeyPress: function(event) {
+		if (event.which == 32) { // space bar
+			if (document.abplayer.canPlay) {
+				event.preventDefault();
+				document.abplayer.ui.clickPlayPause();
+			}
+		}
+	},
+	clickResetPresets: function() {
+		document.abplayer.resetPresets();
+	},
+	clickClearPresets: function() {
+		document.abplayer.clearPresets();
+	},
+	
+	// colorTool helper class:
+	colorTool: {
+		getColorForType: function(type) {
+			var ui = document.abplayer.ui;
+			var c = ui.regionColors.DEFAULT;
+			if (ui.regionColors[type]) {
+				c = ui.regionColors[type];
+			}			
+			return c;
+		},
+		getCurrentColor: function(color) { // return a more opaque version of this color object:
+			return {
+				r: color.r,
+				g: color.g,
+				b: color.b,
+				alpha: color.alpha * 2
+			};
+		},
+		getActiveColor: function(color) { // return a *very* opaque version of this color object:
+			// (used for preset list, to mark the currently selected loop)
+			return {
+				r: color.r,
+				g: color.g,
+				b: color.b,
+				alpha: 0.7
+			};
+		},
+		getCSS: function(c) {
+			return 'rgba('+c.r+','+c.g+','+c.b+','+c.alpha+')'			
+		}
 	}
 };
 
 // document.abplayer.presetsFollower (added 2017-10-03)
 document.abplayer.presetsFollower = {
-	currentMatches: [],
-	updateForTime: function(t) {
+	currentMatches: [], // contains IDs (preset.desc, region.id)
+	update: function() {
 		var o = document.abplayer;
-		// if (o.printEvents) console.log('presetsFollower.updateForTime(' + t + ')');
+		var colorTool = o.ui.colorTool;
+		var t = document.abplayer.getCurrentTime();
+		// if (o.printEvents) console.log('presetsFollower.update(); t=' + t);
 		
-		// calculate matching presets:
+		// find matching presets:
 		var tMatches = [];
 		$.each(o.presetList, function(i, preset) {
-			if ((t >= preset.t0) && (t <= preset.t1)) tMatches.push(i);
+			if ((t >= preset.t0 - 0.001) && (t <= preset.t1 + 0.001)) {
+				tMatches.push(preset.desc);
+			}
 		});
 		
 		// collect presets that should lose their highlight:
@@ -570,17 +813,37 @@ document.abplayer.presetsFollower = {
 		if (removeHighlight.length > 0 || addHighlight.length > 0) {
 			if (o.printEvents) console.log('Updating preset highlighting: remove ' + JSON.stringify(removeHighlight) + ', add ' + JSON.stringify(addHighlight));
 			
-			$.each(addHighlight, function(i, presetIdx) {
-				$('#largePresets' + presetIdx).addClass('currentPresetMatch');
+			$.each(addHighlight, function(i, id) {
+				var target = o.findPresetByDesc(id);
+				var preset = target.preset;	// TODO: if (!preset) ...
+				var region = target.region;
+
+				// background color: more opaque version of the base color:
+				var base = colorTool.getColorForType(preset.type);
+				var bg = colorTool.getCurrentColor(base);
+				var bg2 = colorTool.getActiveColor(base); // even darker version...
+				
+				$('#smallPresets' + preset.domID).css('background-color', colorTool.getCSS(bg2));
+				$('#largePresets' + preset.domID).css('background-color', colorTool.getCSS(bg2));
+				if (region) region.update({color: colorTool.getCSS(bg)});
 			});
-			$.each(removeHighlight, function(i, presetIdx) {
-				$('#largePresets' + presetIdx).removeClass('currentPresetMatch');
+			$.each(removeHighlight, function(i, id) {
+				var target = o.findPresetByDesc(id);
+				var preset = target.preset;	// TODO: if (!preset) ...
+				var region = target.region;
+
+				// background color: base color:
+				var bg = colorTool.getColorForType(preset.type);
+				
+				$('#smallPresets' + preset.domID).css('background-color', colorTool.getCSS(bg));
+				$('#largePresets' + preset.domID).css('background-color', colorTool.getCSS(bg));
+				if (region)	region.update({color: colorTool.getCSS(bg)});
 			});
 			
 			// memorize the new status:
 			o.presetsFollower.currentMatches = tMatches;
 		};
-	},
+	}, // end update()
 };
 
 // document.abplayer.trackselection
