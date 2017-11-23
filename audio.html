@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>A-B-Repeat Audio Player</title>
+	
+	<!-- Bootstrap: Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	
+	<link href="img/app-icons/apple-touch-icon.png" rel="apple-touch-icon" />
+	<link href="img/app-icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+	<link href="img/app-icons/icon-hires.png" type="image/png" rel="icon" sizes="192x192" />
+	<link href="img/app-icons/icon-normal.png" type="image/png" rel="icon" sizes="128x128" />
+	
+	<!-- link rel="stylesheet" type="text/css" href="./js/jquery.fancybox-1.3.4.css" media="screen" / -->
+	<link rel="stylesheet" type="text/css" href="./a-b-repeat-audio.css" media="screen" />
+	
+	<!-- Piwik -->
+	<script type="text/javascript">
+		var domain = 'hapebe.local'; var piwikUrl = '//piwik.local/'; var siteId = '1';
+		if ((window.location.hostname == 'www.hapebe.de') || (window.location.hostname == 'hapebe.de')) {
+			var domain = 'hapebe.de'; var piwikUrl = '//log.erp-berlin.com/'; var siteId = '5';
+		}
+	
+	  var _paq = _paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  _paq.push(["setDomains", ["*." + domain]]);
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+		var u= piwikUrl;
+		_paq.push(['setTrackerUrl', u+'piwik.php']);
+		_paq.push(['setSiteId', siteId]);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Piwik Code -->	
+	
+</head>
+<body> 
+	<div class="container">
+	
+		<!-- track selection list -->
+		<div id="panelTrackSelection">
+		
+			<nav class="navbar navbar-default">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<span id="filterPartLabel">(alle Stimmgruppen)</span> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#" onclick="document.abplayer.ui.clickFilterPart('', '(alle Stimmgruppen)')">(alle Stimmgruppen)</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#" onclick="document.abplayer.ui.clickFilterPart('S1', 'Sopran 1')">Sopran 1</a></li>
+							<li><a href="#" onclick="document.abplayer.ui.clickFilterPart('S2', 'Sopran 2')">Sopran 2</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#" onclick="document.abplayer.ui.clickFilterPart('A1', 'Alt 1')">Alt 1</a></li>
+							<li><a href="#" onclick="document.abplayer.ui.clickFilterPart('A2', 'Alt 2')">Alt 2</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#" onclick="document.abplayer.ui.clickFilterPart('T1', 'Tenor 1')">Tenor 1</a></li>
+							<li><a href="#" onclick="document.abplayer.ui.clickFilterPart('T2', 'Tenor 2')">Tenor 2</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#" onclick="document.abplayer.ui.clickFilterPart('B1', 'Bass 1')">Bass 1</a></li>
+							<li><a href="#" onclick="document.abplayer.ui.clickFilterPart('B2', 'Bass 2')">Bass 2</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">
+							<label style="font-weight:400;"><input name="filterPartEnsemble" id="filterPartEnsemble" type="checkbox" checked="checked"> mit Ensemble-Versionen</label>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		
+			<div class="col-xs-12">
+				<h4>Wähle einen Track...</h4>
+			</div>
+			<div class="col-xs-12 col-md-6" id="trackSelection1">
+				(Bitte warten, Tracks werden geladen...)
+				<!-- <button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/bbbb-s.json')">Bye, Bye Blackbird SOPRAN</button>
+				<button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/bbbb-a.json')">Bye, Bye Blackbird ALT</button> -->
+			</div>
+			<div class="col-xs-12 col-md-6" id="trackSelection2">
+				<!-- <button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/royals-s.json')">Royals SOPRAN</button>
+				<button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/royals-tb.json')">Royals TENOR &amp; BASS</button> -->
+			</div>
+		</div><!-- /#panelTrackSelection -->
+		
+		
+		<!-- single track player interface -->
+		<div id="panelPlayer">
+		
+		<!-- title and player line -->
+		<div class="row">
+			<div class="col-xs-10 col-md-11">
+				<button type="button" class="btn btn-danger" onclick="document.abplayer.ui.closePlayer();" style="margin: 6px 6px 6px 0;">
+					<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					<span class="sr-only">Player schließen</span>
+				</button>
+				<h4 id="filename" style="display:inline;">Audio-Player mit besonderem Schwerpunkt auf A-B-Loops</h4>
+			</div>
+			<div class="col-xs-2 col-md-1 text-right">
+				<!-- <a href="img/how.png" role="button" class="btn btn-link how">How to use?</a> -->
+			</div>
+			
+			<div class="col-xs-12">
+				<audio id="audioPlayer" controls="controls">Leider unterstützt Ihr Browser nicht das HTML5 Audio-Element.</audio>
+			</div>
+		</div>
+	
+		<!-- 1 or 2 column design based on display width -->
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div id="repeatControl" class="disabled">
+							<div class="row">
+								<!-- A/B line -->
+								<div class="col-xs-1 no-side-padding text-right">
+									<a role="button" type="btn btn-link" id="btnPreA" style="display:inline-block; margin-top:6px;">
+										<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+									</a>
+								</div>
+								<div class="col-xs-4 no-side-padding"><button id="btnAtime" type="button" class="btn btn-primary btn-block">A</button></div>
+								<div class="col-xs-1 no-side-padding text-left">
+									<a role="button" type="btn btn-link" id="btnNextA" style="display:inline-block; margin-top:6px;">
+										<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+									</a>
+								</div>
+								
+								<div class="col-xs-1 no-side-padding text-right">
+									<a role="button" type="btn btn-link" id="btnPreB" style="display:inline-block; margin-top:6px;">
+										<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+									</a>
+								</div>
+								<div class="col-xs-4 no-side-padding"><button id="btnBtime" type="button" class="btn btn-primary btn-block">B</button></div>
+								<div class="col-xs-1 no-side-padding text-left">
+									<a role="button" type="btn btn-link" id="btnNextB" style="display:inline-block; margin-top:6px;">
+										<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+									</a>
+								</div>
+							</div>
+						
+							<div class="row row-vspace">
+								<!-- A/B tools line -->
+								<div class="col-xs-12 text-center">
+									<button id="btnClearAB" type="button" class="btn btn-default"><span class="glyphicon glyphicon-erase" aria-hidden="true"></span> Clear</button>
+									<button id="btnAddPreset" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> Add</button>
+								</div>
+							</div>
+							
+							<!-- presetList: dropdown list (small screen layout) -->
+							<div class="row row-vspace">
+								<div class="col-xs-10 col-xs-offset-1 no-side-padding">
+									<div class="btn-group btn-block hidden-md hidden-lg">
+									  <button type="button" class="btn btn-primary btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<span id="btnPresetsLabel">Preset Loops: ...</span>
+										<span class="caret"></span>
+										<span class="sr-only">Toggle Dropdown</span>
+									  </button>
+									  <ul class="dropdown-menu" id="favorlist_ul">
+										<li>(none)</li>
+										<!-- <li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#">Separated link</a></li> -->
+									  </ul>
+									</div>
+								</div>
+							</div>
+							
+						</div><!-- #repeatControl -->
+					</div><!-- .panel-body -->
+					<div class="panel-footer"><small>A / B loop marks</small></div>
+				</div><!-- .panel -->
+				
+				<div class="row row-vspace">
+					<!-- related tracks button -->
+					<div class="col-xs-12 text-right" id="relatedTrackContainer">
+						Related tracks:
+						<div class="btn-group" role="group" aria-label="related tracks" id="relatedTrackDiv">
+							(none)
+							<!--
+							<a type="button" class="btn btn-default" onclick="document.abplayer.ui.clickOpenMeta('data/royals-s.json')">S</a>
+							<a type="button" class="btn btn-default" onclick="document.abplayer.ui.clickOpenMeta('data/royals-a.json')">A</a>
+							<a type="button" class="btn btn-default" onclick="document.abplayer.ui.clickOpenMeta('data/royals-tb.json')">T+B</a>
+							-->
+						</div>
+					</div>
+				</div><!-- .row -->
+				
+				<!-- additional tools line -->
+				<!-- 
+				(2015-11-21 temporarily hidden!)
+				<div class="col-xs-12 col-md-4" id="tips">
+					<img width="29px" height="32px" style="cursor:pointer" onclick="$('#files').click()" src="img/add.png" alt="Open file..." title="Open file..." />
+				</div>
+				 -->
+				
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="row">
+					<!-- preset list -->
+					<div class="col-xs-12">
+						<!-- alternative (large screen layout) -->
+						<div class="list-group visible-md-block visible-lg-block" id="presetListLarge">
+							<span class="list-group-item" id="btnLargePresetsLabel">Preset Loops: ...</span>
+							<!-- <a href="#" class="list-group-item" id="largetPresets0">Cras justo odio<span class="badge">0:06 - 1:42</span></a>
+							<a href="#" class="list-group-item" id="largetPresets1">Dapibus ac facilisis in<span class="badge">0:06 - 1:42</span></a>-->
+						</div>
+					</div>
+				</div><!-- .row -->
+			
+			</div>
+		</div><!-- .row -->
+
+		</div><!-- #panelPlayer -->
+		
+		<input type="file" id="files" name="files[]" /> 
+		
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- script type="text/javascript" src="./js/jquery.fancybox-1.3.4.pack.js"></script -->
+	
+	<!-- Bootstrap: Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	
+	<script type="text/javascript" src="./a-b-repeat-audio.body-bottom.js">
+	</script>
+	
+	<!-- Piwik noscript tracking: -->
+	<noscript><p><img src="//piwik.local/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
+
+</body>
+</html>

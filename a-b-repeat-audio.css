@@ -1,0 +1,45 @@
+.row-vspace { margin-top:1.0em; }
+.no-side-padding { padding-left:0; padding-right:0; }
+.dragover {background:#94c3e4;}
+
+/* track selection view: */
+.btn-default.btn-xmas {
+	background-color:#fad4de;
+	border-color:#c95f78;
+	color:#620319;
+}
+.btn-default.btn-xmas:hover {
+	background-color:#f2a0b4;
+	border-color:#c95f78;
+	color:#620319;
+}
+.btn-default.btn-kammerchor {
+	background-color:#cccccc;
+	border-color:#777;
+	/* color:#620319; */
+}
+.btn-default.btn-kammerchor:hover {
+	background-color:#d7d7d7;
+	border-color:#bbb;
+	/* color:#620319; */
+}
+#trackSelection1 button:first-child, #trackSelection2 button:first-child  { margin-top:5px; }
+
+/* player view: */
+#audioPlayer { width:100%; }
+#files {visibility: hidden; position: absolute;}
+/* #repeatControl button {
+	width: 66px; padding:0 6px;
+	border:1px solid #b6d9ed; background:#fff;
+	line-height:25px; cursor: pointer;
+} */
+#repeatControl.enabled button:hover { background:#339ad6; color:white; }
+
+/* #favorlist_ul { border:1px solid #f0f0f0; padding:5px 5px; min-height:50px;} */
+#favorlist_ul li { /* list-style-type:none; */ cursor: pointer;}
+#presetListLarge .list-group-item { padding: 5px 15px; }
+/*
+#tips { float: right; }
+#tips li { font-size:0.8em;}
+#tips li a {color:#888; text-decoration:none;} 
+*/
