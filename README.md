@@ -26,6 +26,7 @@ TODOs:
 * fix issue: play/pause button does not look right after looping at the track end
 * if the number of tracks is >50 / > 100 (?), prefix the list of tracks for each initial letter with this letter.
 * regions: allow creation of presets by dragging (selecting / marking) the waveform view
+* display sheetMusicURL property of track data, if set
 
 
 References / Acknowledgements:

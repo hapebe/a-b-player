@@ -73,6 +73,7 @@ muted: false, volume: 0.75, // audio output controls
 currentPresetDesc: undefined, // loop name of currently active "favorite" / "preset" (loop)
 previousPresetDesc: undefined, // last actively selected preset, if any (regardless of automated clearing etc.)
 presetList: [], // preset loops, loaded from single track data (or managed manually)
+trackCode: undefined, // can hold the 'code' of the currently loaded track, i.e. the name of the JSON file without extension.
 fileInfo: {
 	'title': 'Drag &amp; drop files or click &quot;Open file...&quot;',
 	'url': false,
@@ -135,17 +136,19 @@ openMeta: function(url) {
 	if (o.presetsFollower) o.presetsFollower.currentMatches = [];
 	o.disableControls();
 	o.clearAB();
+	o.canPlay = false;
 	o.register=true;
 
 	$("#busyIndicator").show();
 	
+	o.trackCode = url.substring(url.lastIndexOf('/')+1, url.length-5); // console.log(o.trackCode);
 	$.getJSON(url)
 	.done(function(data) { 
 		var o = document.abplayer;
 	
 		if (o.printEvents) console.log('meta data received: ', data);
 		// track successful opening:
-		_paq.push(['trackEvent', 'Top', 'openTrack', o.fileInfo.title]);
+		_paq.push(['trackEvent', 'Top', 'openTrack', data.title]);
 
 		// add DOM ID to presets data:
 		for (var i=0; i<data.presets.length; i++) {
@@ -181,7 +184,7 @@ openMeta: function(url) {
 	.fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
 		console.log( "Request Failed: " + err );
-		_paq.push(['trackEvent', 'Top', 'ERROR openTrack', err]);
+		_paq.push(['trackEvent', 'Top', 'ERROR openTrack', document.abplayer.trackCode + ': ' + err]);
 		$("#busyIndicator").hide();
 	});
 }, // end function openMeta()
@@ -296,12 +299,15 @@ checkRepeat: function() {
 		}
 	}
 },
-repeatAB: function() {
+repeatAB: function(modeParam) {
+	var mode = 'repeat'; if (modeParam) mode = modeParam; // this can be 'autoplay'
 	var jumpTo = Math.max(0, document.abplayer.aTime);
 
+	if (document.abplayer.printEvents) console.log(mode);
+	
 	var globalRegister = document.abplayer.register;
 	if (globalRegister) {
-		_paq.push(['trackEvent', 'Track', 'repeat', document.abplayer.fileInfo.title]);
+		_paq.push(['trackEvent', 'Track', mode, document.abplayer.fileInfo.title]);
 	}
 	// even if globalRegister is active, we don't want to see our own sub-routine re-start:
 	document.abplayer.register = false;
@@ -309,6 +315,9 @@ repeatAB: function() {
 	document.abplayer.pause();
 	document.abplayer.setCurrentTime(jumpTo);
 	document.abplayer.play();
+
+	// update play button (bug fix: looks wrong when looping at audio end - we've turned register off here...)
+	$('#btnPlayPause').html('<i class="glyphicon glyphicon-pause"></i> Pause</button>');
 	
 	if (globalRegister) {
 		setTimeout(function(){ document.abplayer.register = true; }, 500);
@@ -361,7 +370,7 @@ playPreset: function(t0, t1) {
 	o.setAB('A', p.t0 * 1, 1);
 	o.setAB('B', p.t1 * 1, 1);
 	
-	if (document.abplayer.canPlay) o.repeatAB();
+	if (document.abplayer.canPlay) o.repeatAB('autoplay');
 	
 	// re-enable tracking, but allow for some processing time:
 	setTimeout(function(){ document.abplayer.register = true; }, 1000);
@@ -574,7 +583,7 @@ registerCanPlay: function() {
 	
 	o.enableControls();
 	o.wavesurfer.setVolume(o.volume);
-	o.repeatAB(); // try to autoplay (implicitly calls play at pos t=0 if no aTime is set)
+	o.repeatAB('autoplay'); // try to autoplay (implicitly calls play at pos t=0 if no aTime is set)
 },
 registerProgress: function() {
 	var o = document.abplayer;
@@ -633,18 +642,16 @@ registerEnded: function() {
 	document.abplayer.repeatAB();
 },
 registerPlaying: function() {
-	if (document.abplayer.printEvents) console.log('playing');
 	if (document.abplayer.register) {
-		_paq.push(['trackEvent', 'Track', 'playing', document.abplayer.fileInfo.title]);
+		if (document.abplayer.printEvents) console.log('playing');
+		$('#btnPlayPause').html('<i class="glyphicon glyphicon-pause"></i> Pause</button>');
 	}
-	$('#btnPlayPause').html('<i class="glyphicon glyphicon-pause"></i> Pause</button>');
 },
 registerPause: function() {
-	if (document.abplayer.printEvents) console.log('pause');
 	if (document.abplayer.register) {
-		_paq.push(['trackEvent', 'Track', 'pause', document.abplayer.fileInfo.title]);
+		if (document.abplayer.printEvents) console.log('pause');
+		$('#btnPlayPause').html('<i class="glyphicon glyphicon-play"></i> Play</button>');
 	}
-	$('#btnPlayPause').html('<i class="glyphicon glyphicon-play"></i> Play</button>');
 },
 // end events section
 
@@ -675,15 +682,19 @@ document.abplayer.ui = {
 		$('#panelTrackSelection').hide();
 	},
 	clickRelated: function(url, code) {
+		var o = document.abplayer;
+		
 		// ... a track has been requested via the related tracks widget - 
-		_paq.push(['trackEvent', 'Track', 'selectTrackRelated', document.abplayer.fileInfo.title + ' to ' + code]);
+		_paq.push(['trackEvent', 'Track', 'relatedTrackFromTo', o.trackCode + ' to ' + code]);
+		_paq.push(['trackEvent', 'Track', 'relatedTrackFrom', o.trackCode]);
+		_paq.push(['trackEvent', 'Track', 'relatedTrackTo', code]);
 		
-		document.abplayer.stop();
+		o.stop();
 		
-		document.abplayer.openMeta(url);
+		o.openMeta(url);
 
-		$('#panelPlayer').show();
-		$('#panelTrackSelection').hide();
+		// $('#panelPlayer').show();
+		// $('#panelTrackSelection').hide();
 	},
 	closePlayer: function() {
 		var o = document.abplayer;
@@ -716,9 +727,11 @@ document.abplayer.ui = {
 	clickPlayPause: function() {
 		if (document.abplayer.wavesurfer.isPlaying()) {
 			// pause:
+			_paq.push(['trackEvent', 'Track', 'pause', document.abplayer.fileInfo.title]);
 			document.abplayer.pause();
 		} else {
 			// play:
+			_paq.push(['trackEvent', 'Track', 'playing', document.abplayer.fileInfo.title]);
 			document.abplayer.play();
 		}
 	},
