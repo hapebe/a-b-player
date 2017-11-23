@@ -3,10 +3,10 @@
 	"key": "Bb major",
 	"url": "audio/Silent Night (Johansen)-S1.mp3",
 	"presets": [
+		{"t0":3,"t1":60,"desc":"ganze Strophe","type":"invisible"},
 		{"t0":0,"t1":25,"desc":"Strophe, Teil I","measure":1}, 
 		{"t0":19,"t1":42,"desc":"Strophe, Teil II","measure":5}, 
-		{"t0":38,"t1":60,"desc":"Strophe, Teil III","measure":9},
-		{"t0":3,"t1":60,"desc":"ganze Strophe"}
+		{"t0":38,"t1":60,"desc":"Strophe, Teil III","measure":9}
 	],
 	"trackset": [
 		{"S1":"silent-night-s1"},

@@ -5,10 +5,10 @@
 	"url": "audio/I-denna-ljuva-sommartid-A.mp3",
 	"sheetMusicURL": "http://www.choralmidisdigest.com/midis/popular%20europea/anonimo-i%20denna%20ljuva%20sommartid.pdf",
 	"presets": [
+		{"t0":0,"t1":50,"desc":"1. Strophe komplett","measure":1,"type":"invisible"},
 		{"t0":0,"t1":27,"desc":"Zeile 1 - I denna ljuva...","measure":1},
 		{"t0":23,"t1":43,"desc":"Zeile 3 - Se, hur i prydning...","measure":7},
-		{"t0":38,"t1":50,"desc":"Schlusszeile - så underbara håvor","measure":12},
-		{"t0":0,"t1":50,"desc":"1. Strophe komplett","measure":1}
+		{"t0":38,"t1":50,"desc":"Schlusszeile - så underbara håvor","measure":12}
 	],
 	"trackset": [
 		{"S":"ljuva-sommartid-s"},
