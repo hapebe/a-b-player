@@ -11,6 +11,36 @@ $(function(){
 		
 		_paq.push(['trackEvent', 'Top', 'clickFilterPartEnsemble', (flag?'withEnsemble':'withoutEnsemble')]);
 	});
+	// route track selection filter text:
+	$('#filterText').bind('input', function() { 
+		var txt = $(this).val();
+		
+		if (txt.length > 0) {
+			document.abplayer.filterText = txt;
+			$('#btnResetFilterText').html('<i class="glyphicon glyphicon-remove"></i>');
+			
+			_paq.push(['trackEvent', 'Top', 'filterText', txt]);
+		} else {
+			document.abplayer.filterText = undefined; 
+			$('#btnResetFilterText').html('<i class="glyphicon glyphicon-filter"></i>');
+			
+			_paq.push(['trackEvent', 'Top', 'filterText', '(EMPTY)']);
+		}
+		
+		document.abplayer.trackselection.renderMenu();
+	});
+	// route track selection text filter reset button:
+	$('#btnResetFilterText').click(function() {
+		document.abplayer.filterText = undefined
+		$('#filterText').val(''); // this does not trigger an "input" event...
+		$('#btnResetFilterText').html('<i class="glyphicon glyphicon-filter"></i>');
+		document.abplayer.trackselection.renderMenu();
+		
+		_paq.push(['trackEvent', 'Top', 'filterText', '(CLEARED)']);
+	});
+	// no form submission:
+	$('#filterTextForm').submit(function(e) {e.preventDefault();});
+	
 	
 	// route player button clicks:
 	$('#btnClosePlayer').click(document.abplayer.ui.closePlayer);
@@ -28,6 +58,16 @@ $(function(){
 
 	document.abplayer.init();
 	
+	// do we have an inherited filterText value?
+	var filterText = $('#filterText').val();
+	if (filterText.length > 0) {
+		document.abplayer.filterText = filterText;
+		$('#btnResetFilterText').html('<i class="glyphicon glyphicon-remove"></i>');
+		document.abplayer.trackselection.renderMenu();
+		
+		_paq.push(['trackEvent', 'Top', 'filterText', txt]);
+	}
+	
 	// set up volume slider:
 	$('#sliderVolume').slider({
 		// orientation: 'horizontal', // "vertical",
@@ -41,7 +81,7 @@ $(function(){
 			document.abplayer.setVolume(ui.value / 100);
 		}
 	});
-
+	
 	// setTimeout(function(){ document.abplayer.openWebFile('audio/Bye, Bye Blackbird-Sopran.mp3'); }, 2000);
 	// setTimeout(function(){ document.abplayer.openMeta("data/royals-s.json"); }, 500);	
 	
@@ -64,6 +104,7 @@ registerProgressTimestamp: -1,
 tracksData: [], // all available tracks (meta data file index)
 filterPart: '', // voice group selection in track selection view
 filterPartEnsemble: true, // track selection view: include ensemble tracks?
+fiterText: undefined, // text input filter for tracks
 
 // detail view / player:
 canPlay: false, // is set by event from player, after audio file has been loaded
@@ -875,36 +916,56 @@ document.abplayer.trackselection = {
 	},
 	renderMenu: function() {
 		var matches = [];
-		var filterPart = document.abplayer.filterPart; // strict filter (including sub-voice-group, e.g. Sopran 2)
-		var wideFilterPart = filterPart.replace(/[0-9]/,""); // loose filter (i.e. treats Sopran 2 as Sopran)
-			// console.log(filterPart + "/" + wideFilterPart);
-		var acceptEnsembleVersions = document.abplayer.filterPartEnsemble;
+		
+		var filterSubGroup = document.abplayer.filterPart; // strict filter (including sub-voice-group, e.g. Sopran 2)
+		var filterGroup = filterSubGroup.replace(/[0-9]/,""); // loose filter (i.e. treats Sopran 2 as Sopran)
+			// console.log(filterSubGroup + "/" + filterGroup);
+		var acceptEnsembleVersions = document.abplayer.filterSubGroupEnsemble;
+		
+		var filterText = document.abplayer.filterText;
 		
 		$.each(
 			document.abplayer.tracksData, 
 			function(index, value) { // console.log(value.title + "; " + value.part);
+				// a tracks has to match all (active) filters...
 				if ((!acceptEnsembleVersions) && (value.part.match(/[0]/g) != null)) {
 					// it is an ensemble version, skip:
 					return;
 				}
-				if (filterPart.length == 0) { // accept all:
-					matches.push(value);
-					return;
-				}
-				if (value.part.indexOf(filterPart) != -1) { // strict match:
-					matches.push(value);
-					return;
-				}
-				if (value.part.match(/[1-9]/g) == null) { // the tracks itself is not for a sub-voice group!
-					if (value.part.indexOf(wideFilterPart) != -1) { // loose match:
-						matches.push(value);
-						return;
+				
+				// filterSubGroup:
+				if (filterSubGroup.length > 0) {
+					if (value.part.indexOf(filterGroup) == -1) return; // not even group match...
+					if (value.part.match(/[1-9]/g) != null) { // the tracks itself IS for a sub-voice group!
+						if (value.part.indexOf(filterSubGroup) != -1) { // not a sub-group match:
+							return;
+						}
 					}
 				}
+				
+				// filterText:
+				if (filterText && (filterText.length > 0)) {
+					var regex = new RegExp(filterText, 'ig')
+					if (value.title.match(regex) == null) return;
+				}
+				
+				matches.push(value);
 			}
 		); // console.log(matches);
 		
+
 		var targets = ['trackSelection1', 'trackSelection2', 'trackSelection3', 'trackSelection4'];
+		if (matches.length == 0) {
+			// oh no, no matches!
+			$('#trackSelectionMessage').html('<div class="alert alert-danger" role="alert"><strong>Oh nein, es gibt keine Treffer!</strong> Bitte andere Filter-Kriterien versuchen!</div>');
+			
+			for (var i=0; i<targets.length; i++) { 
+				$('#'+targets[i]).html('');
+			}
+			return;
+		}
+		$('#trackSelectionMessage').html(''); // if we have matches, clear empty message...
+		
 		var html = []; for (var i=0; i<targets.length; i++) { html[i] = ''; }
 		
 		// distribute the tracks to the columns:

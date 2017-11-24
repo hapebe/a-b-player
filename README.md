@@ -19,14 +19,15 @@ trying to switch to WaveSurfer.js (https://wavesurfer-js.org/) as the actual pla
 * add graphic representation of loop(s) - wavesurfer.js region plugin...
 	* regions: synchronize / sanitize highlighting (bg color) of loops and preset list entries
 * add volume adjustment slider
+* fix issue: play/pause button does not look right after looping at the track end
 
 
 TODOs:
 * add error message (pop-up? dialog?) if loading of track fails (e.g. when audio file is missing)
-* fix issue: play/pause button does not look right after looping at the track end
 * if the number of tracks is >50 / > 100 (?), prefix the list of tracks for each initial letter with this letter.
 * regions: allow creation of presets by dragging (selecting / marking) the waveform view
 * display sheetMusicURL property of track data, if set
+* allow filtering the tracks in overview by typing (search field)
 
 
 References / Acknowledgements:

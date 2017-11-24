@@ -76,11 +76,23 @@
 						</a>
 					</li>
 				</ul>
+				
+				<div class="col-xs-12 col-sm-6 col-md-3 pull-right">
+					<form id="filterTextForm" class="navbar-form" role="search" style="border-color:transparent;">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Suchbegriff zum Filtern..." name="filterText" id="filterText">
+						<div class="input-group-btn">
+							<button id="btnResetFilterText" class="btn btn-default" type="button"><i class="glyphicon glyphicon-filter"></i></button>
+						</div>
+					</div>
+					</form>				
+				</div>
 			</nav>
 		
 			<div class="col-xs-12">
 				<h4>Wähle einen Track...</h4>
 			</div>
+			<div class="col-xs-12" id="trackSelectionMessage"></div>
 			<div class="col-xs-12 col-md-6 col-lg-3" id="trackSelection1">
 				(Bitte warten, Tracks werden geladen...)
 				<!-- <button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/bbbb-s.json')">Bye, Bye Blackbird SOPRAN</button>

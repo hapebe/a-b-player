@@ -627,5 +627,151 @@
 		"part":"B"
 	}
 	
-]
+],
+"tracksets": {
+	"irish-blessing": [
+		{"S":"irish-blessing-s"},
+		{"A":"irish-blessing-a"},
+		{"T":"irish-blessing-t"},
+		{"B":"irish-blessing-b"}
+	],
+	"ave-verum": [
+		{"S":"ave-verum-s"},
+		{"A":"ave-verum-a"},
+		{"T":"ave-verum-t"},
+		{"B":"ave-verum-b"},
+		{"SATB":"ave-verum-piano"}
+	],
+	"bohemian-rhapsody": [
+		{"S":"bohemian-rhapsody-s"},
+		{"A":"bohemian-rhapsody-a"},
+		{"T":"bohemian-rhapsody-t"},
+		{"B":"bohemian-rhapsody-b"}
+	],
+	"bbbb": [
+		{"S":"bbbb-s"},
+		{"A":"bbbb-a"},
+		{"T":"bbbb-t"},
+		{"B":"bbbb-b"},
+		{"SATB":"bbbb-satb"}
+	],
+	"down-in-the-river": [
+		{"S1":"down-in-s1"},
+		{"S2":"down-in-s2"},
+		{"A":"down-in-a"},
+		{"T":"down-in-t"}
+	],
+	"echo-kanon": [
+		{"S":"echo-s"},
+		{"A":"echo-a"},
+		{"T":"echo-t"},
+		{"B":"echo-b"}
+	],
+	"free-your-soul": [
+		{"S1":"free-your-soul-s1"},
+		{"S2":"free-your-soul-s2"}
+	],
+	"he-is-always-close": [
+		{"S":"he-is-always-cty-s"},
+		{"A1":"he-is-always-cty-a1"},
+		{"A2":"he-is-always-cty-a2"},
+		{"T":"he-is-always-cty-t"},
+		{"SATB":"he-is-always-cty-satb"}
+	],
+	"in-the-mood": [
+		{"S":"in-the-mood-s"},
+		{"A1":"in-the-mood-a1"},
+		{"A2":"in-the-mood-a2"},
+		{"T":"in-the-mood-t"},
+		{"B":"in-the-mood-b"},
+		{"SATB":"in-the-mood-satb"}
+	],
+	"kumbayah": [
+		{"S":"kumbayah-s"},
+		{"A":"kumbayah-a"},
+		{"T":"kumbayah-t"},
+		{"B":"kumbayah-b"}
+	],
+	"ljuva-sommartid": [
+		{"S":"ljuva-sommartid-s"},
+		{"A":"ljuva-sommartid-a"},
+		{"T":"ljuva-sommartid-t"},
+		{"B":"ljuva-sommartid-b"}
+	],
+	"royals": [
+		{"S":"royals-s"},
+		{"A":"royals-a"},
+		{"T+B":"royals-tb"}
+	],
+	"shenandoah": [
+		{"S":"shenandoah-s"},
+		{"A":"shenandoah-a"},
+		{"T1":"shenandoah-t1"},
+		{"T2":"shenandoah-t2"},
+		{"B1":"shenandoah-b1"},
+		{"B2":"shenandoah-b2"}
+	],
+	"sittin-on-the-dock": [
+		{"S1":"sittin-otd-s1"},
+		{"S2":"sittin-otd-s2"},
+		{"A":"sittin-otd-a"},
+		{"T":"sittin-otd-t"},
+		{"B":"sittin-otd-b"}
+	],
+	"spanische-naechte": [
+		{"T1":"spanische-t1"},
+		{"T2":"spanische-t2"},
+		{"B1":"spanische-b1"},
+		{"B2":"spanische-b2"}
+	],
+	"that-lonesome-road": [
+		{"S":"lonesome-road-s"},
+		{"A1":"lonesome-road-a1"},
+		{"A2":"lonesome-road-a2"},
+		{"T":"lonesome-road-t"},
+		{"B1":"lonesome-road-b1"},
+		{"B1i":"lonesome-road-b1-piano"},
+		{"B2":"lonesome-road-b2"},
+		{"B2i":"lonesome-road-b2-piano"},
+		{"SATB":"lonesome-road-satb"}
+	],
+	"waldesnacht": [
+		{"S":"waldesnacht-s"},
+		{"A":"waldesnacht-a"},
+		{"T":"waldesnacht-t"},
+		{"B":"waldesnacht-b"},
+		{"SATB (live)":"waldesnacht-satb-live"}
+	],
+	"we-pray": [
+		{"S":"we-pray-s"},
+		{"A":"we-pray-a"},
+		{"T":"we-pray-t"},
+		{"B":"we-pray-b"}
+	],
+	
+	"god-rest-you-merry": [
+		{"S":"god-rest-you-s"},
+		{"A":"god-rest-you-a"},
+		{"T":"god-rest-you-t"},
+		{"B":"god-rest-you-b"},
+		{"SATB":"god-rest-you-satb"}
+	],
+	"o-du-froehliche": [
+		{"S1":"o-du-froehliche-s1"},
+		{"S2":"o-du-froehliche-s2"},
+		{"A":"o-du-froehliche-a"},
+		{"T":"o-du-froehliche-t"},
+		{"B":"o-du-froehliche-b"}
+	],
+	"silent-night": [
+		{"S1":"silent-night-s1"},
+		{"S2":"silent-night-s2"},
+		{"A":"silent-night-a"},
+		{"T":"silent-night-t"},
+		{"B1":"silent-night-b1"},
+		{"B2":"silent-night-b2"},
+		{"SATB (instr)":"silent-night-satb-flute"},
+		{"SATB (live)":"silent-night-2012"}
+	]
+}
 }
