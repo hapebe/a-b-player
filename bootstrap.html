@@ -74,11 +74,24 @@
 						</a>
 					</li>
 				</ul>
+				
+				<div class="col-xs-12 col-sm-6 col-md-3 pull-right">
+					<form id="filterTextForm" class="navbar-form" role="search" style="border-color:transparent;">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Suchbegriff zum Filtern..." name="filterText" id="filterText">
+						<div class="input-group-btn">
+							<button id="btnResetFilterText" class="btn btn-default" type="button"><i class="glyphicon glyphicon-filter"></i></button>
+						</div>
+					</div>
+					</form>				
+				</div>
+				
 			</nav>
 		
 			<div class="col-xs-12">
 				<h4>Wähle einen Track...</h4>
 			</div>
+			<div class="col-xs-12" id="trackSelectionMessage"></div>
 			<div class="col-xs-12 col-md-6" id="trackSelection1">
 				(Bitte warten, Tracks werden geladen...)
 				<!-- <button type="button" class="btn btn-default btn-block" onclick="document.abplayer.ui.clickOpenMeta('data/bbbb-s.json')">Bye, Bye Blackbird SOPRAN</button>
@@ -219,6 +232,16 @@
 			</div>
 		</div><!-- .row -->
 
+		<div class="row row-vspace" style="margin-top:2.5em;">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<p style="margin:0;"><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i> <strong>Neugierig auf eine Weiterentwicklung?</strong> Wechsle hier zum <a id="linkWavesurfer" href="#">Player mit grafischer Anzeige des Tracks</a> selbst...</p>
+					</div><!-- .panel-body -->
+				</div><!-- .panel -->
+			</div><!-- .col -->
+		</div><!-- .row -->
+		
 		</div><!-- #panelPlayer -->
 		
 		<input type="file" id="files" name="files[]" /> 

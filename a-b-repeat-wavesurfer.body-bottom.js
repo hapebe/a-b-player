@@ -203,6 +203,8 @@ openMeta: function(url) {
 		o.renderRelatedTrackList();
 		$("#filename").html(o.fileInfo.title);
 		
+		$('#linkAudio').attr('href', 'bootstrap.html#' + o.trackCode);
+		
 		// wavesurfer: init
 		o.canPlay = false;
 		o.wavesurfer.clearRegions();

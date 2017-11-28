@@ -20,6 +20,9 @@ trying to switch to WaveSurfer.js (https://wavesurfer-js.org/) as the actual pla
 	* regions: synchronize / sanitize highlighting (bg color) of loops and preset list entries
 * add volume adjustment slider
 * fix issue: play/pause button does not look right after looping at the track end
+* allow filtering the tracks in overview by typing (search field)
+	* backport the feature for the <audio> element-based version
+* added links to switch between the classic <audio> player and the wavesurfer version
 
 
 TODOs:
@@ -27,7 +30,6 @@ TODOs:
 * if the number of tracks is >50 / > 100 (?), prefix the list of tracks for each initial letter with this letter.
 * regions: allow creation of presets by dragging (selecting / marking) the waveform view
 * display sheetMusicURL property of track data, if set
-* allow filtering the tracks in overview by typing (search field)
 
 
 References / Acknowledgements:
