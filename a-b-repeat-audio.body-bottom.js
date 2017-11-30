@@ -60,7 +60,7 @@ $(function(){
 		$('#btnResetFilterText').html('<i class="glyphicon glyphicon-remove"></i>');
 		document.abplayer.trackselection.renderMenu();
 		
-		_paq.push(['trackEvent', 'Top', 'filterText', txt]);
+		_paq.push(['trackEvent', 'Top', 'filterText', filterText]);
 	}
 	
 	// setTimeout(function(){ document.abplayer.openWebFile('audio/Bye, Bye Blackbird-Sopran.mp3'); }, 2000);

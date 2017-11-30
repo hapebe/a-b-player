@@ -1,0 +1,24 @@
+{
+	"title": "Come In And Stay A While BASS",
+	"key": "C major",
+	"tempo": "Slow Rubato",
+	"url": "audio/Come-In-And-Stay-A-While-B.mp3",
+	"presets": [
+		{"t0":7,"t1":40,"desc":"Part A+B","measure":1,"type":"invisible"},
+		{"t0":36,"t1":65,"desc":"Part C+D","measure":1,"type":"invisible"},
+		{"t0":60,"t1":95,"desc":"Part E+F","measure":1,"type":"invisible"},
+		{"t0":7,"t1":26,"desc":"Part A (Come in...)","measure":1},
+		{"t0":21,"t1":40,"desc":"Part B (Give yourself a chance...)","measure":1},
+		{"t0":36,"t1":53,"desc":"Part C (Sometimes it's hard to...)","measure":1},
+		{"t0":47,"t1":65,"desc":"Part D (Pleasantries can be...)","measure":1},
+		{"t0":60,"t1":80,"desc":"Part E (The one who...)","measure":1},
+		{"t0":75,"t1":95,"desc":"Part F (So let this place...)","measure":1}
+	],
+	"trackset": [
+		{"S1":"ciasaw-s1"},
+		{"S2":"ciasaw-s2"},
+		{"A":"ciasaw-a"},
+		{"T":"ciasaw-t"},
+		{"B":"ciasaw-b"}
+	]
+}

@@ -1,6 +1,28 @@
 {
 "tracks":[
 	{
+		"title":"Abschied vom Walde SOPRAN",
+		"dataURL":"abschied-walde-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Abschied vom Walde ALT",
+		"dataURL":"abschied-walde-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Abschied vom Walde TENOR",
+		"dataURL":"abschied-walde-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Abschied vom Walde BASS",
+		"dataURL":"abschied-walde-b.json",
+		"part":"B"
+	},
+
+	
+	{
 		"title":"An Irish Blessing SOPRAN 1+2",
 		"dataURL":"irish-blessing-s.json",
 		"part":"S"
@@ -98,6 +120,33 @@
 	},
 	
 	
+	{
+		"title":"Come In And Stay A While SOPRAN 1",
+		"dataURL":"ciasaw-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Come In And Stay A While SOPRAN 2",
+		"dataURL":"ciasaw-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"Come In And Stay A While ALT",
+		"dataURL":"ciasaw-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Come In And Stay A While TENOR",
+		"dataURL":"ciasaw-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Come In And Stay A While BASS",
+		"dataURL":"ciasaw-b.json",
+		"part":"B"
+	},
+
+
 	{
 		"title":"Down In The River To Pray SOPRAN 1",
 		"dataURL":"down-in-s1.json",
@@ -628,150 +677,342 @@
 	}
 	
 ],
-"tracksets": {
-	"irish-blessing": [
-		{"S":"irish-blessing-s"},
-		{"A":"irish-blessing-a"},
-		{"T":"irish-blessing-t"},
-		{"B":"irish-blessing-b"}
-	],
-	"ave-verum": [
-		{"S":"ave-verum-s"},
-		{"A":"ave-verum-a"},
-		{"T":"ave-verum-t"},
-		{"B":"ave-verum-b"},
-		{"SATB":"ave-verum-piano"}
-	],
-	"bohemian-rhapsody": [
-		{"S":"bohemian-rhapsody-s"},
-		{"A":"bohemian-rhapsody-a"},
-		{"T":"bohemian-rhapsody-t"},
-		{"B":"bohemian-rhapsody-b"}
-	],
-	"bbbb": [
-		{"S":"bbbb-s"},
-		{"A":"bbbb-a"},
-		{"T":"bbbb-t"},
-		{"B":"bbbb-b"},
-		{"SATB":"bbbb-satb"}
-	],
-	"down-in-the-river": [
-		{"S1":"down-in-s1"},
-		{"S2":"down-in-s2"},
-		{"A":"down-in-a"},
-		{"T":"down-in-t"}
-	],
-	"echo-kanon": [
-		{"S":"echo-s"},
-		{"A":"echo-a"},
-		{"T":"echo-t"},
-		{"B":"echo-b"}
-	],
-	"free-your-soul": [
-		{"S1":"free-your-soul-s1"},
-		{"S2":"free-your-soul-s2"}
-	],
-	"he-is-always-close": [
-		{"S":"he-is-always-cty-s"},
-		{"A1":"he-is-always-cty-a1"},
-		{"A2":"he-is-always-cty-a2"},
-		{"T":"he-is-always-cty-t"},
-		{"SATB":"he-is-always-cty-satb"}
-	],
-	"in-the-mood": [
-		{"S":"in-the-mood-s"},
-		{"A1":"in-the-mood-a1"},
-		{"A2":"in-the-mood-a2"},
-		{"T":"in-the-mood-t"},
-		{"B":"in-the-mood-b"},
-		{"SATB":"in-the-mood-satb"}
-	],
-	"kumbayah": [
-		{"S":"kumbayah-s"},
-		{"A":"kumbayah-a"},
-		{"T":"kumbayah-t"},
-		{"B":"kumbayah-b"}
-	],
-	"ljuva-sommartid": [
-		{"S":"ljuva-sommartid-s"},
-		{"A":"ljuva-sommartid-a"},
-		{"T":"ljuva-sommartid-t"},
-		{"B":"ljuva-sommartid-b"}
-	],
-	"royals": [
-		{"S":"royals-s"},
-		{"A":"royals-a"},
-		{"T+B":"royals-tb"}
-	],
-	"shenandoah": [
-		{"S":"shenandoah-s"},
-		{"A":"shenandoah-a"},
-		{"T1":"shenandoah-t1"},
-		{"T2":"shenandoah-t2"},
-		{"B1":"shenandoah-b1"},
-		{"B2":"shenandoah-b2"}
-	],
-	"sittin-on-the-dock": [
-		{"S1":"sittin-otd-s1"},
-		{"S2":"sittin-otd-s2"},
-		{"A":"sittin-otd-a"},
-		{"T":"sittin-otd-t"},
-		{"B":"sittin-otd-b"}
-	],
-	"spanische-naechte": [
-		{"T1":"spanische-t1"},
-		{"T2":"spanische-t2"},
-		{"B1":"spanische-b1"},
-		{"B2":"spanische-b2"}
-	],
-	"that-lonesome-road": [
-		{"S":"lonesome-road-s"},
-		{"A1":"lonesome-road-a1"},
-		{"A2":"lonesome-road-a2"},
-		{"T":"lonesome-road-t"},
-		{"B1":"lonesome-road-b1"},
-		{"B1i":"lonesome-road-b1-piano"},
-		{"B2":"lonesome-road-b2"},
-		{"B2i":"lonesome-road-b2-piano"},
-		{"SATB":"lonesome-road-satb"}
-	],
-	"waldesnacht": [
-		{"S":"waldesnacht-s"},
-		{"A":"waldesnacht-a"},
-		{"T":"waldesnacht-t"},
-		{"B":"waldesnacht-b"},
-		{"SATB (live)":"waldesnacht-satb-live"}
-	],
-	"we-pray": [
-		{"S":"we-pray-s"},
-		{"A":"we-pray-a"},
-		{"T":"we-pray-t"},
-		{"B":"we-pray-b"}
-	],
+
+
+
+
+
+
+
+
+"pieces": {
+	"abschied-vom-walde": {
+		"title": "Abschied vom Walde",
+		"info": "Op. 59 No. 3; aus: Sechs Lieder für SATB im Freien zu singen - Frau Henriette Benecke gewidmet - Drittes Heft; Edition Peters 8165 - Breitkopf & Härtel  Serie 16 No. 127 M.B.127",
+		"authorMusic": "Felix Mendelssohn-Bartholdy (1809-1847), 1843",
+		"authorText": "Josef von Eichendorff (1788-1857), 1810",
+		"sheetMusicURL": "https://imslp.nl/imglnks/usimg/3/35/IMSLP378937-PMLP29292-mendelssohnAbschiedOp59nr3.pdf",
+		"trackset": [
+			{"S":"abschied-walde-s"},
+			{"A":"abschied-walde-a"},
+			{"T":"abschied-walde-t"},
+			{"B":"abschied-walde-b"}
+		],
+		"renditions": [
+			{"desc": "YouTube: Rundfunk-Jugendchor Wernigerode", "url": "https://www.youtube.com/watch?v=tiB3uUlTCeQ"}
+		]
+	},
+	"irish-blessing": {
+		"title": "An Irish Blessing",
+		"info": "",
+		"authorMusic": "Trad. aus Irland, Arr. James E. Moore",
+		"authorText": "Trad.",
+		"sheetMusicURL": "http://www.askoe-bfi.at/sektionen/chor/Singalong/An%20Irish%20Blessing%20(SATB).pdf",
+		"trackset": [
+			{"S":"irish-blessing-s"},
+			{"A":"irish-blessing-a"},
+			{"T":"irish-blessing-t"},
+			{"B":"irish-blessing-b"}
+		]
+	},
+	"ave-verum": {
+		"title": "Ave Verum Corpus",
+		"info": "KV 618",
+		"authorMusic": "Wolfgang Amadeus Mozart (1756-1791), 1791",
+		"authorText": "(Eucharistische Hymne, 14. Jh.)",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"ave-verum-s"},
+			{"A":"ave-verum-a"},
+			{"T":"ave-verum-t"},
+			{"B":"ave-verum-b"},
+			{"SATB":"ave-verum-piano"}
+		]
+	},
+	"bohemian-rhapsody": {
+		"title": "Bohemian Rhapsody",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"bohemian-rhapsody-s"},
+			{"A":"bohemian-rhapsody-a"},
+			{"T":"bohemian-rhapsody-t"},
+			{"B":"bohemian-rhapsody-b"}
+		]
+	},
+	"bbbb": {
+		"title": "Bye Bye, Blackbird",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"bbbb-s"},
+			{"A":"bbbb-a"},
+			{"T":"bbbb-t"},
+			{"B":"bbbb-b"},
+			{"SATB":"bbbb-satb"}
+		]
+	},
+	"ciasaw": {
+		"title": "Come In And Stay A While",
+		"info": "",
+		"authorMusic": "Rhonda Polay",
+		"authorText": "Rhonda Polay",
+		"sheetMusicURL": "http://oisteinr.com/Files/Kammerkoret/Noter/Come%20in%20and%20stay.pdf",
+		"trackset": [
+			{"S1":"ciasaw-s1"},
+			{"S2":"ciasaw-s2"},
+			{"A":"ciasaw-a"},
+			{"T":"ciasaw-t"},
+			{"B":"ciasaw-b"}
+		],
+		"renditions": [
+			{"desc": "YouTube: VOICES - Landesjugendchor Vorarlberg (2015)", "url": "https://www.youtube.com/watch?v=_nf02ZAFZ6Y"},
+			{"desc": "YouTube: Coro de Câmara do Orfeão de Leiria", "url": "https://www.youtube.com/watch?v=lkJyI10ivds"},
+			{"desc": "YouTube: Art'n'Voices (Poland)", "url": "https://www.youtube.com/watch?v=Q6TVgOqxS3Q"}
+		]
+	},
+	"down-in-the-river": {
+		"title": "Down In The River To Pray",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S1":"down-in-s1"},
+			{"S2":"down-in-s2"},
+			{"A":"down-in-a"},
+			{"T":"down-in-t"}
+		]
+	},
+	"echo-kanon": {
+		"title": "Echo Kanon",
+		"info": "",
+		"authorMusic": "Orlando di Lasso (1532-1594), 1581",
+		"authorText": "Orlando di Lasso (1532-1594), 1581",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"echo-s"},
+			{"A":"echo-a"},
+			{"T":"echo-t"},
+			{"B":"echo-b"}
+		]
+	},
+	"free-your-soul": {
+		"title": "Free Your Soul",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S1":"free-your-soul-s1"},
+			{"S2":"free-your-soul-s2"}
+		]
+	},
+	"he-is-always-close": {
+		"title": "He Is Always Close To You",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"he-is-always-cty-s"},
+			{"A1":"he-is-always-cty-a1"},
+			{"A2":"he-is-always-cty-a2"},
+			{"T":"he-is-always-cty-t"},
+			{"SATB":"he-is-always-cty-satb"}
+		]
+	},
+	"in-the-mood": {
+		"title": "In The Mood",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"in-the-mood-s"},
+			{"A1":"in-the-mood-a1"},
+			{"A2":"in-the-mood-a2"},
+			{"T":"in-the-mood-t"},
+			{"B":"in-the-mood-b"},
+			{"SATB":"in-the-mood-satb"}
+		]
+	},
+	"kumbayah": {
+		"title": "Kumbayah",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"kumbayah-s"},
+			{"A":"kumbayah-a"},
+			{"T":"kumbayah-t"},
+			{"B":"kumbayah-b"}
+		]
+	},
+	"ljuva-sommartid": {
+		"title": "I denna ljuva sommartid",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"ljuva-sommartid-s"},
+			{"A":"ljuva-sommartid-a"},
+			{"T":"ljuva-sommartid-t"},
+			{"B":"ljuva-sommartid-b"}
+		]
+	},
+	"royals": {
+		"title": "Royals",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"royals-s"},
+			{"A":"royals-a"},
+			{"T+B":"royals-tb"}
+		]
+	},
+	"shenandoah": {
+		"title": "Shenandoah",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"shenandoah-s"},
+			{"A":"shenandoah-a"},
+			{"T1":"shenandoah-t1"},
+			{"T2":"shenandoah-t2"},
+			{"B1":"shenandoah-b1"},
+			{"B2":"shenandoah-b2"}
+		]
+	},
+	"sittin-on-the-dock": {
+		"title": "Down In The River To Pray",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S1":"sittin-otd-s1"},
+			{"S2":"sittin-otd-s2"},
+			{"A":"sittin-otd-a"},
+			{"T":"sittin-otd-t"},
+			{"B":"sittin-otd-b"}
+		]
+	},
+	"spanische-naechte": {
+		"title": "Spanische Nächte",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"T1":"spanische-t1"},
+			{"T2":"spanische-t2"},
+			{"B1":"spanische-b1"},
+			{"B2":"spanische-b2"}
+		]
+	},
+	"that-lonesome-road": {
+		"title": "That Lonesome Road",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"lonesome-road-s"},
+			{"A1":"lonesome-road-a1"},
+			{"A2":"lonesome-road-a2"},
+			{"T":"lonesome-road-t"},
+			{"B1":"lonesome-road-b1"},
+			{"B1i":"lonesome-road-b1-piano"},
+			{"B2":"lonesome-road-b2"},
+			{"B2i":"lonesome-road-b2-piano"},
+			{"SATB":"lonesome-road-satb"}
+		]
+	},
+	"waldesnacht": {
+		"title": "Waldesnacht",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"waldesnacht-s"},
+			{"A":"waldesnacht-a"},
+			{"T":"waldesnacht-t"},
+			{"B":"waldesnacht-b"},
+			{"SATB (live)":"waldesnacht-satb-live"}
+		]
+	},
+	"we-pray": {
+		"title": "We Pray",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"we-pray-s"},
+			{"A":"we-pray-a"},
+			{"T":"we-pray-t"},
+			{"B":"we-pray-b"}
+		]
+	},
 	
-	"god-rest-you-merry": [
-		{"S":"god-rest-you-s"},
-		{"A":"god-rest-you-a"},
-		{"T":"god-rest-you-t"},
-		{"B":"god-rest-you-b"},
-		{"SATB":"god-rest-you-satb"}
-	],
-	"o-du-froehliche": [
-		{"S1":"o-du-froehliche-s1"},
-		{"S2":"o-du-froehliche-s2"},
-		{"A":"o-du-froehliche-a"},
-		{"T":"o-du-froehliche-t"},
-		{"B":"o-du-froehliche-b"}
-	],
-	"silent-night": [
-		{"S1":"silent-night-s1"},
-		{"S2":"silent-night-s2"},
-		{"A":"silent-night-a"},
-		{"T":"silent-night-t"},
-		{"B1":"silent-night-b1"},
-		{"B2":"silent-night-b2"},
-		{"SATB (instr)":"silent-night-satb-flute"},
-		{"SATB (live)":"silent-night-2012"}
-	]
+	"god-rest-you-merry": {
+		"title": "God Rest You Merry, Gentlemen",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"god-rest-you-s"},
+			{"A":"god-rest-you-a"},
+			{"T":"god-rest-you-t"},
+			{"B":"god-rest-you-b"},
+			{"SATB":"god-rest-you-satb"}
+		]
+	},
+	"o-du-froehliche": {
+		"title": "O du Fröhliche",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S1":"o-du-froehliche-s1"},
+			{"S2":"o-du-froehliche-s2"},
+			{"A":"o-du-froehliche-a"},
+			{"T":"o-du-froehliche-t"},
+			{"B":"o-du-froehliche-b"}
+		]
+	},
+	"silent-night": {
+		"title": "Silent Night",
+		"info": "",
+		"authorMusic": "Arr. Jens Johansen",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S1":"silent-night-s1"},
+			{"S2":"silent-night-s2"},
+			{"A":"silent-night-a"},
+			{"T":"silent-night-t"},
+			{"B1":"silent-night-b1"},
+			{"B2":"silent-night-b2"},
+			{"SATB (instr)":"silent-night-satb-flute"},
+			{"SATB (live)":"silent-night-2012"}
+		]
+	}
 }
+
+
 }

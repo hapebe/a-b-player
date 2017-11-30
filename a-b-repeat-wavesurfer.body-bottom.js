@@ -65,7 +65,7 @@ $(function(){
 		$('#btnResetFilterText').html('<i class="glyphicon glyphicon-remove"></i>');
 		document.abplayer.trackselection.renderMenu();
 		
-		_paq.push(['trackEvent', 'Top', 'filterText', txt]);
+		_paq.push(['trackEvent', 'Top', 'filterText', filterText]);
 	}
 	
 	// set up volume slider:
