@@ -1,0 +1,10 @@
+{
+	"title": "Ich sag ade TENOR",
+	"pieceID": "ich-sag-ade",
+	"url": "audio/Ich-sag-ade-Tenor.mp3",
+	"presets": [
+		{"t0":4,"t1":28,"desc":"Teil A","measure":1},
+		{"t0":29,"t1":54,"desc":"Teil A'","measure":1},
+		{"t0":56,"t1":94,"desc":"Teil B (Ich laß bei dir...)","measure":10}
+	]
+}

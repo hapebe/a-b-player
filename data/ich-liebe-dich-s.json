@@ -1,0 +1,10 @@
+{
+	"title": "Ich Liebe Dich SOPRAN",
+	"pieceID": "ich-liebe-dich",
+	"url": "audio/Ich-liebe-dich-Sopran.mp3",
+	"presets": [
+		{"t0":4,"t1":52,"desc":"Teil A","measure":1,"type":"chorus"},
+		{"t0":45,"t1":82,"desc":"Teil B (In steter Treu...)","measure":13,"type":"verse"},
+		{"t0":77,"t1":124,"desc":"Teil C","measure":23,"type":"chorus"}
+	]
+}

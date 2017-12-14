@@ -30,6 +30,9 @@ TODOs:
 * if the number of tracks is >50 / > 100 (?), prefix the list of tracks for each initial letter with this letter.
 * regions: allow creation of presets by dragging (selecting / marking) the waveform view
 * display sheetMusicURL property of track data, if set
+* create an overview table of the tracks from tracks.json, pieces data field
+* replace the "trackset" data field in single track's JSON with a reference to the related pieces entry in tracks.json ("pieceID" - as to not duplicate the trackset for each single track any more)
+
 
 
 References / Acknowledgements:

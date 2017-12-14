@@ -1,17 +1,10 @@
 {
 	"title": "We Pray TENOR",
-	"key": "G major",
-	"tempo": "(1/4 = ca. 114)",
+	"pieceID": "we-pray",
 	"url": "audio/We-Pray-T.mp3",
 	"presets": [
 		{"t0":0,"t1":21,"desc":"Refrain (mit Einzählen)","measure":1},
 		{"t0":18,"t1":37,"desc":"Refrain","measure":1},
 		{"t0":34,"t1":54,"desc":"Solo-Strophe","measure":11}
-	],
-	"trackset": [
-		{"S":"we-pray-s"},
-		{"A":"we-pray-a"},
-		{"T":"we-pray-t"},
-		{"B":"we-pray-b"}
 	]
 }

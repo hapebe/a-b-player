@@ -1,0 +1,10 @@
+{
+	"title": "Ich sag ade SOPRAN",
+	"pieceID": "ich-sag-ade",
+	"url": "audio/Ich-sag-ade-Sopran.mp3",
+	"presets": [
+		{"t0":3,"t1":26,"desc":"Teil A","measure":1},
+		{"t0":26,"t1":50,"desc":"Teil A'","measure":1},
+		{"t0":44,"t1":90,"desc":"Teil B (Ich laß bei dir...)","measure":10}
+	]
+}

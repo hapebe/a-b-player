@@ -1,19 +1,11 @@
 {
 	"title": "Echo-Kanon SOPRAN",
-	"key": "D major",
-	"tempo": "Lebhaft. (1/4 = ca. 94)",
+	"pieceID": "echo-kanon",
 	"url": "audio/Echo-Kanon-S.mp3",
-	"sheetMusicURL": "http://www2.cpdl.org/wiki/index.php/O_la,_o_che_bon_eccho!_(The_Echo_Song)_(Orlando_di_Lasso)",
 	"presets": [
 		{"t0":2,"t1":25,"desc":"Teil 1 - Holla","measure":1},
 		{"t0":21,"t1":57,"desc":"Teil 2 - Hörst du, Geselle","measure":9},
 		{"t0":52,"t1":83,"desc":"Teil 3 - Schweig doch stille","measure":22},
 		{"t0":78,"t1":97,"desc":"Teil 4 - Basta, basta","measure":32}
-	],
-	"trackset": [
-		{"S":"echo-s"},
-		{"A":"echo-a"},
-		{"T":"echo-t"},
-		{"B":"echo-b"}
 	]
 }

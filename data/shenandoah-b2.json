@@ -1,20 +1,10 @@
 {
 	"title": "Shenandoah BASS 2",
-	"key": "E major",
-	"tempo": "Smoothly, tenderly (1/4 = 58-60)",
+	"pieceID": "shenandoah",
 	"url": "audio/Shenandoah-B2.mp3",
-	"sheetMusicURL": "http://frankbond.com/choirmusic/Shenandoah.pdf",
 	"presets": [
 		{"t0":2,"t1":44,"desc":"3. Strophe ('Tis seven long years...)","measure":21},
 		{"t0":38,"t1":81,"desc":"4. Strophe (O Shenando', I long to see you...)","measure":32},
 		{"t0":77,"t1":97,"desc":"Coda (O Shen-n-n-ando...)","measure":42}
-	],
-	"trackset": [
-		{"S":"shenandoah-s"},
-		{"A":"shenandoah-a"},
-		{"T1":"shenandoah-t1"},
-		{"T2":"shenandoah-t2"},
-		{"B1":"shenandoah-b1"},
-		{"B2":"shenandoah-b2"}
 	]
 }

@@ -1,18 +1,11 @@
 {
 	"title": "An Irish Blessing BASS",
-	"key": "Bb major",
-	"tempo": "(1/4 = ca. 62)",
+	"pieceID": "irish-blessing",
 	"url": "audio/An-Irish-Blessing-B.mp3",
 	"presets": [
 		{"t0":3,"t1":21,"desc":"1. Strophe A","measure":1,"type":"verse"},
 		{"t0":15,"t1":37,"desc":"1. Strophe B","measure":5,"type":"verse"},
 		{"t0":30,"t1":74,"desc":"1. Refrain","measure":9,"type":"chorus"},
 		{"t0":74,"t1":141,"desc":"2. Strophe (komplett)","measure":1}
-	],
-	"trackset": [
-		{"S":"irish-blessing-s"},
-		{"A":"irish-blessing-a"},
-		{"T":"irish-blessing-t"},
-		{"B":"irish-blessing-b"}
 	]
 }

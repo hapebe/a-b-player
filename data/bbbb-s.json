@@ -1,5 +1,6 @@
 {
 	"title": "Bye, Bye Blackbird SOPRAN",
+	"pieceID": "bbbb",
 	"url": "audio/Bye, Bye Blackbird-Sopran.mp3",
 	"presets": [
 		{"t0":5,"t1":20,"desc":"1. Strophe, Zeile 1","type":"verse"},
@@ -11,12 +12,5 @@
 		{"t0":93,"t1":108,"desc":"2. Bridge (Piano)","type":"bridge"}, 
 		{"t0":107,"t1":117,"desc":"2.Strophe Schlussphrase","type":"chorus"},
 		{"t0":114,"t1":139,"desc":"Refrain/Schluss","type":"chorus"}
-	],
-	"trackset": [
-		{"S":"bbbb-s"},
-		{"A":"bbbb-a"},
-		{"T":"bbbb-t"},
-		{"B":"bbbb-b"},
-		{"SATB":"bbbb-satb"}
 	]
 }

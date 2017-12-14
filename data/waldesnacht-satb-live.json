@@ -1,7 +1,6 @@
 {
 	"title": "Waldesnacht SATB (LIVE)",
-	"key": "D major",
-	"tempo": "Etwas langsam. (1/4 = ca. 64)",
+	"pieceID": "waldesnacht",
 	"url": "audio/Waldesnacht-LIVE.mp3",
 	"presets": [
 		{"t0":0,"t1":44,"desc":"Teil 1","measure":1},
@@ -9,12 +8,5 @@
 		{"t0":54,"t1":88,"desc":"Teil 2b","measure":17},
 		{"t0":91,"t1":181,"desc":"2. Strophe","measure":1},
 		{"t0":182,"t1":275,"desc":"3. Strophe","measure":1}
-	],
-	"trackset": [
-		{"S":"waldesnacht-s"},
-		{"A":"waldesnacht-a"},
-		{"T":"waldesnacht-t"},
-		{"B":"waldesnacht-b"},
-		{"SATB (live)":"waldesnacht-satb-live"}
 	]
 }

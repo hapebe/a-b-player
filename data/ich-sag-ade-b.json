@@ -1,0 +1,10 @@
+{
+	"title": "Ich sag ade BASS",
+	"pieceID": "ich-sag-ade",
+	"url": "audio/Ich-sag-ade-Bass.mp3",
+	"presets": [
+		{"t0":2,"t1":28,"desc":"Teil A","measure":1},
+		{"t0":28,"t1":54,"desc":"Teil A'","measure":1},
+		{"t0":56,"t1":98,"desc":"Teil B (Ich laß bei dir...)","measure":10}
+	]
+}

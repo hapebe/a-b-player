@@ -1,7 +1,6 @@
 {
 	"title": "In The Mood ALT 1 Instrumental",
-	"key": "G major",
-	"tempo": "(1/4 = ca. 160, Swing feel)",
+	"pieceID": "in-the-mood",
 	"url": "audio/In The Mood-alto1.mp3",
 	"presets": [
 		{"t0":0,"t1":21,"desc":"Intro","measure":1},
@@ -13,13 +12,5 @@
 		{"t0":127,"t1":152,"desc":"Part F","measure":53},
 		{"t0":142,"t1":169,"desc":"Part G","measure":61},
 		{"t0":226,"t1":265,"desc":"Part K (Coda)","measure":69}
-	],
-	"trackset": [
-		{"S":"in-the-mood-s"},
-		{"A1":"in-the-mood-a1"},
-		{"A2":"in-the-mood-a2"},
-		{"T":"in-the-mood-t"},
-		{"B":"in-the-mood-b"},
-		{"SATB":"in-the-mood-satb"}
 	]
 }

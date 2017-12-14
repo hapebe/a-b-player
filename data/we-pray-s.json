@@ -1,17 +1,10 @@
 {
 	"title": "We Pray SOPRAN",
-	"key": "G major",
-	"tempo": "(1/4 = ca. 114)",
+	"pieceID": "we-pray",
 	"url": "audio/We-Pray-S.mp3",
 	"presets": [
 		{"t0":0,"t1":20,"desc":"Refrain (mit Einzählen)","measure":1},
 		{"t0":17,"t1":38,"desc":"Refrain","measure":1},
 		{"t0":34,"t1":52,"desc":"Solo-Strophe","measure":29}
-	],
-	"trackset": [
-		{"S":"we-pray-s"},
-		{"A":"we-pray-a"},
-		{"T":"we-pray-t"},
-		{"B":"we-pray-b"}
 	]
 }

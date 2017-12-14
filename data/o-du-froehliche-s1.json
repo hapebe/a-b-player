@@ -1,15 +1,9 @@
 {
 	"title": "O, du fröhliche SOPRAN 1",
+	"pieceID": "o-du-froehliche",
 	"url": "audio/O-du-F-S1.mp3",
 	"presets": [
 		{"t0":3,"t1":23,"desc":"Refrain","type":"chorus"}, 
 		{"t0":19,"t1":45,"desc":"Strophe(n)","type":"verse"}
-	],
-	"trackset": [
-		{"S1":"o-du-froehliche-s1"},
-		{"S2":"o-du-froehliche-s2"},
-		{"A":"o-du-froehliche-a"},
-		{"T":"o-du-froehliche-t"},
-		{"B":"o-du-froehliche-b"}
 	]
 }

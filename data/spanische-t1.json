@@ -1,7 +1,6 @@
 {
 	"title": "Spanische Nächte INSTRUMENTAL TENOR 1",
-	"key": "F major",
-	"tempo": "Im Tango-Tempo",
+	"pieceID": "spanische-naechte",
 	"url": "audio/Spanische-T1-piano.mp3",
 	"presets": [
 		{"t0":2,"t1":20,"desc":"Intro","measure":1},
@@ -9,11 +8,5 @@
 		{"t0":47,"t1":82,"desc":"Strophe","measure":25},
 		{"t0":78,"t1":115,"desc":"Refrain'","measure":9},
 		{"t0":107,"t1":131,"desc":"Coda","measure":42}
-	],
-	"trackset": [
-		{"T1":"spanische-t1"},
-		{"T2":"spanische-t2"},
-		{"B1":"spanische-b1"},
-		{"B2":"spanische-b2"}
 	]
 }

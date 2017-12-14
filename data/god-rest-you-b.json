@@ -1,5 +1,6 @@
 {
 	"title": "God Rest You Merry, Gentlemen BASS",
+	"pieceID": "god-rest-you-merry",
 	"url": "audio/God Rest You Merry, Gentlemen-Bass.mp3",
 	"presets": [
 		{"t0":0,"t1":26,"desc":"Strophe (Klavier)","type":"verse"}, 
@@ -8,12 +9,5 @@
 		{"t0":58,"t1":76,"desc":"Refrain","type":"chorus"},
 		{"t0":77,"t1":101,"desc":"Strophe, take II","type":"verse"}, 
 		{"t0":98,"t1":114,"desc":"Refrain, take II","type":"chorus"}
-	],
-	"trackset": [
-		{"S":"god-rest-you-s"},
-		{"A":"god-rest-you-a"},
-		{"T":"god-rest-you-t"},
-		{"B":"god-rest-you-b"},
-		{"SATB":"god-rest-you-satb"}
 	]
 }

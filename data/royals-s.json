@@ -1,5 +1,6 @@
 {
 	"title": "Royals SOPRAN",
+	"pieceID": "royals",
 	"url": "audio/Royals-Sopran.mp3",
 	"presets": [
 		{"t0":9,"t1":32,"desc":"Verse 1.1: And I'm not proud...","measure":4},
@@ -15,10 +16,5 @@
 		{"t0":177,"t1":208,"desc":"Bridge","measure":51},
 		{"t0":205,"t1":224,"desc":"Chorus 3a","measure":59},
 		{"t0":219,"t1":234,"desc":"Chorus 3b","measure":63}
-	],
-	"trackset": [
-		{"S":"royals-s"},
-		{"A":"royals-a"},
-		{"T+B":"royals-tb"}
 	]
 }

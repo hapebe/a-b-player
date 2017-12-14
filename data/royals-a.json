@@ -1,7 +1,6 @@
 {
 	"title": "Royals ALT",
-	"key": "D minor",
-	"tempo": "Mysterious, 1/4 = ca. 85",
+	"pieceID": "royals",
 	"url": "audio/Royals-Alt.mp3",
 	"presets": [
 		{"t0":3,"t1":32,"desc":"Verse 1.1: I've never seen a ...","measure":1},
@@ -17,10 +16,5 @@
 		{"t0":174,"t1":204,"desc":"Bridge","measure":51},
 		{"t0":200,"t1":220,"desc":"Chorus 3a","measure":59},
 		{"t0":214,"t1":233,"desc":"Chorus 3b","measure":63}
-	],
-	"trackset": [
-		{"S":"royals-s"},
-		{"A":"royals-a"},
-		{"T+B":"royals-tb"}
 	]
 }

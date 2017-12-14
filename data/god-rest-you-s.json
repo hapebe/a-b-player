@@ -1,5 +1,6 @@
 {
 	"title": "God Rest You Merry, Gentlemen SOPRAN",
+	"pieceID": "god-rest-you-merry",
 	"url": "audio/God Rest You Merry, Gentlemen-Sopran.mp3",
 	"presets": [
 		{"t0":0,"t1":23,"desc":"Strophe (Klavier)","type":"verse"}, 
@@ -8,12 +9,5 @@
 		{"t0":54,"t1":68,"desc":"Refrain","type":"chorus"},
 		{"t0":68,"t1":91,"desc":"Strophe, take II","type":"verse"}, 
 		{"t0":88,"t1":103,"desc":"Refrain, take II","type":"chorus"}
-	],
-	"trackset": [
-		{"S":"god-rest-you-s"},
-		{"A":"god-rest-you-a"},
-		{"T":"god-rest-you-t"},
-		{"B":"god-rest-you-b"},
-		{"SATB":"god-rest-you-satb"}
 	]
 }

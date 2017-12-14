@@ -1,15 +1,9 @@
 {
 	"title": "O, du fröhliche BASS",
+	"pieceID": "o-du-froehliche",
 	"url": "audio/O-du-F-Bass.mp3",
 	"presets": [
 		{"t0":0,"t1":27,"desc":"Refrain","type":"chorus"}, 
 		{"t0":27,"t1":50,"desc":"Strophe(n)","type":"verse"}
-	],
-	"trackset": [
-		{"S1":"o-du-froehliche-s1"},
-		{"S2":"o-du-froehliche-s2"},
-		{"A":"o-du-froehliche-a"},
-		{"T":"o-du-froehliche-t"},
-		{"B":"o-du-froehliche-b"}
 	]
 }

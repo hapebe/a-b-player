@@ -1,7 +1,6 @@
 {
 	"title": "Ave Verum Corpus ALT",
-	"key": "D major",
-	"tempo": "Adagio (1/4 = ca. 64)",
+	"pieceID": "ave-verum",
 	"url": "audio/Ave-Verum-Corpus-A.mp3",
 	"presets": [
 		{"t0":3,"t1":36,"desc":"Teil 1a (Ave, ave...)","measure":3},
@@ -9,12 +8,5 @@
 		{"t0":52,"t1":83,"desc":"Teil 2a (cujus latus...)","measure":22},
 		{"t0":73,"t1":108,"desc":"Teil 2b (esto nobis...)","measure":30},
 		{"t0":96,"t1":122,"desc":"Teil 2c (in mortis...)","measure":37}
-	],
-	"trackset": [
-		{"S":"ave-verum-s"},
-		{"A":"ave-verum-a"},
-		{"T":"ave-verum-t"},
-		{"B":"ave-verum-b"},
-		{"SATB":"ave-verum-piano"}
 	]
 }

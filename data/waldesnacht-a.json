@@ -1,18 +1,10 @@
 {
 	"title": "Waldesnacht ALT",
-	"key": "D major",
-	"tempo": "Etwas langsam. (1/4 = ca. 64)",
+	"pieceID": "waldesnacht",
 	"url": "audio/Waldesnacht-A.mp3",
 	"presets": [
 		{"t0":6,"t1":54,"desc":"Teil 1","measure":1},
 		{"t0":46,"t1":74,"desc":"Teil 2a","measure":13},
 		{"t0":64,"t1":103,"desc":"Teil 2b","measure":17}
-	],
-	"trackset": [
-		{"S":"waldesnacht-s"},
-		{"A":"waldesnacht-a"},
-		{"T":"waldesnacht-t"},
-		{"B":"waldesnacht-b"},
-		{"SATB (live)":"waldesnacht-satb-live"}
 	]
 }

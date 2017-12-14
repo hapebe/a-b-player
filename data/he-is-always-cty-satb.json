@@ -1,5 +1,6 @@
 {
 	"title": "He Is Always Close To You ENSEMBLE",
+	"pieceID": "he-is-always-close",
 	"url": "audio/He Is Always Close To You-SATB.mp3",
 	"presets": [
 		{"t0":0,"t1":36,"desc":"Intro [A]","measure":1},
@@ -9,12 +10,5 @@
 		{"t0":100,"t1":124,"desc":"Bridge [D]","measure":55},
 		{"t0":120,"t1":153,"desc":"Chorus Schleife [E]","measure":62},
 		{"t0":149,"t1":177,"desc":"Coda / Outro Schleife","measure":73}
-	],
-	"trackset": [
-		{"S":"he-is-always-cty-s"},
-		{"A1":"he-is-always-cty-a1"},
-		{"A2":"he-is-always-cty-a2"},
-		{"T":"he-is-always-cty-t"},
-		{"SATB":"he-is-always-cty-satb"}
 	]
 }

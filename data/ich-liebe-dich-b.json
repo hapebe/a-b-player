@@ -1,0 +1,10 @@
+{
+	"title": "Ich Liebe Dich BASS",
+	"pieceID": "ich-liebe-dich",
+	"url": "audio/Ich-liebe-dich-Bass.mp3",
+	"presets": [
+		{"t0":2,"t1":42,"desc":"Teil A","measure":1,"type":"chorus"},
+		{"t0":37,"t1":77,"desc":"Teil B (In steter Treu...)","measure":13,"type":"verse"},
+		{"t0":77,"t1":124,"desc":"Teil C","measure":23,"type":"chorus"}
+	]
+}

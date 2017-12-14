@@ -1,0 +1,10 @@
+{
+	"title": "Ich sag ade ALT",
+	"pieceID": "ich-sag-ade",
+	"url": "audio/Ich-sag-ade-Alt.mp3",
+	"presets": [
+		{"t0":4,"t1":30,"desc":"Teil A","measure":1},
+		{"t0":25,"t1":52,"desc":"Teil A'","measure":1},
+		{"t0":48,"t1":95,"desc":"Teil B (Ich laß bei dir...)","measure":10}
+	]
+}

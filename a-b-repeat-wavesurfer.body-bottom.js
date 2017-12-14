@@ -531,28 +531,48 @@ getLargePresetLabel: function(p) {
 			+ '</span>';
 },
 renderRelatedTrackList: function() {
-	// TODO: handle if no related tracks are present (hide the whole list / menu!)
-	if (document.abplayer.fileInfo.trackset && document.abplayer.fileInfo.trackset.length > 0) {
-		$('#relatedTrackContainer').show();
-		var lines = [];
-		$.each(
-			document.abplayer.fileInfo.trackset, 
-			function (index, value) {
-				for (var prop in value) { // console.log(prop + ": " + value[prop]);
-					lines.push(
-						'<a type="button" class="btn btn-default" onclick="document.abplayer.ui.clickRelated(\''
-						+ 'data/' + value[prop] + '.json\''
-						+ ', '
-						+ '\'' + value[prop] + '\''
-						+ ')">' + prop + '</a>'
-					);
-				}
+	// revised: no longer take the related tracks directly from track data, but instead for tracks(!) data, via pieceID:
+	var o = document.abplayer;
+	
+	var error = false;
+	if (!o.fileInfo.pieceID) {
+		error = true;
+	} else {
+		var piece = o.piecesData[o.fileInfo.pieceID];
+		if (!piece) {
+			error = true;
+		} else {
+			// now, do we have a trackset?
+			if ((!piece.trackset) || (piece.trackset.length == 0)) {
+				error = true;
 			}
-		);
-		$('#relatedTrackDiv').html(lines.join(""));
-	} else { // no related tracks!
-		$('#relatedTrackContainer').hide();
+		}
 	}
+	if (error) {
+		// well, that did not work out:
+		$('#relatedTrackDiv').html('');
+		$('#relatedTrackContainer').hide();
+		return;
+	}
+	
+	// huzzah!
+	var lines = [];
+	$.each(
+		piece.trackset, 
+		function (index, value) {
+			for (var prop in value) { // console.log(prop + ": " + value[prop]);
+				lines.push(
+					'<a type="button" class="btn btn-default" onclick="document.abplayer.ui.clickRelated(\''
+					+ 'data/' + value[prop] + '.json\''
+					+ ', '
+					+ '\'' + value[prop] + '\''
+					+ ')">' + prop + '</a>'
+				);
+			}
+		}
+	);
+	$('#relatedTrackDiv').html(lines.join(""));
+	$('#relatedTrackContainer').show();
 },
 setActivePreset: function(preset) {
 	var o = document.abplayer;
@@ -908,6 +928,9 @@ document.abplayer.trackselection = {
 		$.getJSON(url)
 		.done(function(data) { // console.log(data);
 			document.abplayer.tracksData = data.tracks;
+			if (data.pieces) document.abplayer.piecesData = data.pieces;
+			// plug in: data validation / testing / checking:
+			if (document.abplayer.validator) document.abplayer.validator.validateList();
 			document.abplayer.trackselection.renderMenu();
 		})
 		.fail(function(jqxhr, textStatus, error ) {

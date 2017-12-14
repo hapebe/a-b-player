@@ -1,0 +1,10 @@
+{
+	"title": "Ich Liebe Dich TENOR",
+	"pieceID": "ich-liebe-dich",
+	"url": "audio/Ich-liebe-dich-Tenor.mp3",
+	"presets": [
+		{"t0":1,"t1":39,"desc":"Teil A","measure":1,"type":"chorus"},
+		{"t0":34,"t1":74,"desc":"Teil B (In steter Treu...)","measure":13,"type":"verse"},
+		{"t0":68,"t1":110,"desc":"Teil C","measure":23,"type":"chorus"}
+	]
+}

@@ -1,23 +1,15 @@
 {
 	"title": "Sittin' On The Dock Of The Bay TENOR",
-	"key": "G major",
-	"tempo": "Straight Soul (1/4 = 106)",
+	"pieceID": "sittin-on-the-dock",
 	"url": "audio/Sittin-T.mp3",
 	"presets": [
-		{"t0":0,"t1":32,"desc":"A+B (Intro+Verse I)","measure":1},
-		{"t0":28,"t1":50,"desc":"C (Chorus I)","measure":11},
-		{"t0":45,"t1":66,"desc":"D (Verse II)","measure":19},
-		{"t0":62,"t1":82,"desc":"E (Chorus II)","measure":27},
-		{"t0":79,"t1":99,"desc":"F (Bridge)","measure":35},
-		{"t0":95,"t1":116,"desc":"G (Verse III)","measure":43},
-		{"t0":113,"t1":133,"desc":"E' (Chorus II)","measure":27},
+		{"t0":0,"t1":32,"desc":"A+B (Intro+Verse I)","measure":1,"type":"verse"},
+		{"t0":28,"t1":50,"desc":"C (Chorus I)","measure":11,"type":"chorus"},
+		{"t0":45,"t1":66,"desc":"D (Verse II)","measure":19,"type":"verse"},
+		{"t0":62,"t1":82,"desc":"E (Chorus II)","measure":27,"type":"chorus"},
+		{"t0":79,"t1":99,"desc":"F (Bridge)","measure":35,"type":"bridge"},
+		{"t0":95,"t1":116,"desc":"G (Verse III)","measure":43,"type":"verse"},
+		{"t0":113,"t1":133,"desc":"E' (Chorus II)","measure":27,"type":"chorus"},
 		{"t0":129,"t1":186,"desc":"H+I (Coda+VAMP)","measure":51}
-	],
-	"trackset": [
-		{"S1":"sittin-otd-s1"},
-		{"S2":"sittin-otd-s2"},
-		{"A":"sittin-otd-a"},
-		{"T":"sittin-otd-t"},
-		{"B":"sittin-otd-b"}
 	]
 }

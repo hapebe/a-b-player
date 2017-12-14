@@ -1,7 +1,6 @@
 {
 	"title": "Bohemian Rhapsody TENOR",
-	"key": "Bb major",
-	"tempo": "With conviction (1/4 = 76)",
+	"pieceID": "bohemian-rhapsody",
 	"url": "audio/Bohemian-T.mp3",
 	"presets": [
 		{"t0":3,"t1":51,"desc":"A [komplett]","measure":1},
@@ -19,11 +18,5 @@
 		{"t0":242,"t1":281,"desc":"E (So you think you can...)","measure":79},
 		{"t0":283,"t1":297,"desc":"F (oo yeah...)","measure":95},
 		{"t0":300,"t1":330,"desc":"G (Nothing really matters...)","measure":100}
-	],
-	"trackset": [
-		{"S":"bohemian-rhapsody-s"},
-		{"A":"bohemian-rhapsody-a"},
-		{"T":"bohemian-rhapsody-t"},
-		{"B":"bohemian-rhapsody-b"}
 	]
 }

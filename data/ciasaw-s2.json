@@ -1,7 +1,6 @@
 {
 	"title": "Come In And Stay A While SOPRAN 2",
-	"key": "C major",
-	"tempo": "Slow Rubato",
+	"pieceID": "ciasaw",
 	"url": "audio/Come-In-And-Stay-A-While-S2.mp3",
 	"presets": [
 		{"t0":6,"t1":41,"desc":"Part A+B","measure":1,"type":"invisible"},
@@ -13,12 +12,5 @@
 		{"t0":49,"t1":67,"desc":"Part D (Pleasantries can be...)","measure":14},
 		{"t0":63,"t1":83,"desc":"Part E (The one who...)","measure":18},
 		{"t0":79,"t1":100,"desc":"Part F (So let this place...)","measure":23}
-	],
-	"trackset": [
-		{"S1":"ciasaw-s1"},
-		{"S2":"ciasaw-s2"},
-		{"A":"ciasaw-a"},
-		{"T":"ciasaw-t"},
-		{"B":"ciasaw-b"}
 	]
 }

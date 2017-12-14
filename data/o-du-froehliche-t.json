@@ -1,15 +1,9 @@
 {
 	"title": "O, du fröhliche TENOR",
+	"pieceID": "o-du-froehliche",
 	"url": "audio/O-du-F-Tenor.mp3",
 	"presets": [
 		{"t0":3,"t1":24,"desc":"Refrain","type":"chorus"}, 
 		{"t0":20,"t1":47,"desc":"Strophe(n)","type":"verse"}
-	],
-	"trackset": [
-		{"S1":"o-du-froehliche-s1"},
-		{"S2":"o-du-froehliche-s2"},
-		{"A":"o-du-froehliche-a"},
-		{"T":"o-du-froehliche-t"},
-		{"B":"o-du-froehliche-b"}
 	]
 }

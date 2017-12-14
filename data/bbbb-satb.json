@@ -1,5 +1,6 @@
 {
 	"title": "Bye, Bye Blackbird ENSEMBLE",
+	"pieceID": "bbbb",
 	"url": "audio/Bye, Bye Blackbird-SATB.mp3",
 	"presets": [
 		{"t0":3,"t1":20,"desc":"1. Strophe, Zeile 1","type":"verse"},
@@ -11,12 +12,5 @@
 		{"t0":88,"t1":103,"desc":"2. Bridge (Männer)","type":"bridge"},
 		{"t0":102,"t1":112,"desc":"2. Strophe Schlussphrase","type":"chorus"},
 		{"t0":107,"t1":133,"desc":"Refrain/Schluss","type":"chorus"}
-	],
-	"trackset": [
-		{"S":"bbbb-s"},
-		{"A":"bbbb-a"},
-		{"T":"bbbb-t"},
-		{"B":"bbbb-b"},
-		{"SATB":"bbbb-satb"}
 	]
 }

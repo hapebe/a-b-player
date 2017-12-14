@@ -1,5 +1,6 @@
 {
 	"title": "Bye, Bye Blackbird TENOR",
+	"pieceID": "bbbb",
 	"url": "audio/Bye, Bye Blackbird-Tenor.mp3",
 	"presets": [
 		{"t0":4,"t1":20,"desc":"1. Strophe, Zeile 1","type":"verse"}, 
@@ -11,12 +12,5 @@
 		{"t0":89,"t1":105,"desc":"2. Bridge (Vokal)","type":"bridge"}, 
 		{"t0":103,"t1":115,"desc":"2.Strophe Schlussphrase","type":"chorus"}, 
 		{"t0":109,"t1":135,"desc":"Refrain/Schluss","type":"chorus"}
-	],
-	"trackset": [
-		{"S":"bbbb-s"},
-		{"A":"bbbb-a"},
-		{"T":"bbbb-t"},
-		{"B":"bbbb-b"},
-		{"SATB":"bbbb-satb"}
 	]
 }

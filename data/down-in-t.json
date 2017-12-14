@@ -1,7 +1,6 @@
 {
 	"title": "Down In The River To Pray TENOR",
-	"key": "F major",
-	"tempo": "Freely with Reverence",
+	"pieceID": "down-in-the-river",
 	"url": "audio/Down-In-The-River-T.mp3",
 	"presets": [
 		{"t0":14,"t1":36,"desc":"Chorus I","measure":149},
@@ -9,11 +8,5 @@
 		{"t0":50,"t1":74,"desc":"Chorus II","measure":166},
 		{"t0":68,"t1":91,"desc":"Verse III","measure":174},
 		{"t0":86,"t1":123,"desc":"Chorus III + Coda","measure":183}
-	],
-	"trackset": [
-		{"S1":"down-in-s1"},
-		{"S2":"down-in-s2"},
-		{"A":"down-in-a"},
-		{"T":"down-in-t"}
 	]
 }

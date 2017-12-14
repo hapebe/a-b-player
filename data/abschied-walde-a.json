@@ -1,18 +1,10 @@
 {
 	"title": "Abschied vom Walde ALT",
-	"key": "Eb major",
-	"tempo": "Andante non lento",
+	"pieceID": "abschied-vom-walde",
 	"url": "audio/Abschied-vom-Walde-A.mp3",
 	"presets": [
 		{"t0":5,"t1":73,"desc":"1. Strophe","measure":1,"type":"verse"},
 		{"t0":75,"t1":141,"desc":"2. Strophe","measure":1,"type":"verse"},
 		{"t0":142,"t1":207,"desc":"3. Strophe","measure":1,"type":"verse"}
-	],
-	"tracksetID": "abschied-vom-walde",
-	"trackset": [
-		{"S":"abschied-walde-s"},
-		{"A":"abschied-walde-a"},
-		{"T":"abschied-walde-t"},
-		{"B":"abschied-walde-b"}
 	]
 }

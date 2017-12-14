@@ -1,0 +1,10 @@
+{
+	"title": "Ich Liebe Dich ALT",
+	"pieceID": "ich-liebe-dich",
+	"url": "audio/Ich-liebe-dich-Alt.mp3",
+	"presets": [
+		{"t0":2,"t1":45,"desc":"Teil A","measure":1,"type":"chorus"},
+		{"t0":38,"t1":78,"desc":"Teil B (In steter Treu...)","measure":13,"type":"verse"},
+		{"t0":72,"t1":117,"desc":"Teil C","measure":23,"type":"chorus"}
+	]
+}

@@ -1,16 +1,9 @@
 {
 	"title": "Kum Ba Yah TENOR",
-	"key": "C major",
-	"tempo": "(1/2 = 88)",
+	"pieceID": "kumbayah",
 	"url": "audio/KumBaYah-T.mp3",
 	"presets": [
 		{"t0":4,"t1":17,"desc":"Teil A","measure":1},
 		{"t0":17,"t1":43,"desc":"Teil B (Strophe)","measure":10}
-	],
-	"trackset": [
-		{"S":"kumbayah-s"},
-		{"A":"kumbayah-a"},
-		{"T":"kumbayah-t"},
-		{"B":"kumbayah-b"}
 	]
 }

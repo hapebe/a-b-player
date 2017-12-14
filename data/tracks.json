@@ -253,6 +253,58 @@
 
 
 	{
+		"title":"Ich Liebe Dich SOPRAN",
+		"category":"kammerchor",
+		"dataURL":"ich-liebe-dich-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Ich Liebe Dich ALT",
+		"category":"kammerchor",
+		"dataURL":"ich-liebe-dich-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Ich Liebe Dich TENOR",
+		"category":"kammerchor",
+		"dataURL":"ich-liebe-dich-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Ich Liebe Dich BASS",
+		"category":"kammerchor",
+		"dataURL":"ich-liebe-dich-b.json",
+		"part":"B"
+	},
+	
+	
+	{
+		"title":"Ich sag ade SOPRAN",
+		"category":"kammerchor",
+		"dataURL":"ich-sag-ade-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Ich sag ade ALT",
+		"category":"kammerchor",
+		"dataURL":"ich-sag-ade-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Ich sag ade TENOR",
+		"category":"kammerchor",
+		"dataURL":"ich-sag-ade-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Ich sag ade BASS",
+		"category":"kammerchor",
+		"dataURL":"ich-sag-ade-b.json",
+		"part":"B"
+	},
+	
+	
+	{
 		"title":"In The Mood SOPRAN INSTRUMENTAL",
 		"category":"kammerchor",
 		"dataURL":"in-the-mood-s.json",
@@ -688,6 +740,8 @@
 "pieces": {
 	"abschied-vom-walde": {
 		"title": "Abschied vom Walde",
+		"key": "Eb major",
+		"tempo": "Andante non lento",
 		"info": "Op. 59 No. 3; aus: Sechs Lieder für SATB im Freien zu singen - Frau Henriette Benecke gewidmet - Drittes Heft; Edition Peters 8165 - Breitkopf & Härtel  Serie 16 No. 127 M.B.127",
 		"authorMusic": "Felix Mendelssohn-Bartholdy (1809-1847), 1843",
 		"authorText": "Josef von Eichendorff (1788-1857), 1810",
@@ -704,6 +758,8 @@
 	},
 	"irish-blessing": {
 		"title": "An Irish Blessing",
+		"key": "Bb major",
+		"tempo": "(1/4 = ca. 62)",
 		"info": "",
 		"authorMusic": "Trad. aus Irland, Arr. James E. Moore",
 		"authorText": "Trad.",
@@ -717,6 +773,8 @@
 	},
 	"ave-verum": {
 		"title": "Ave Verum Corpus",
+		"key": "D major",
+		"tempo": "Adagio (1/4 = ca. 64)",
 		"info": "KV 618",
 		"authorMusic": "Wolfgang Amadeus Mozart (1756-1791), 1791",
 		"authorText": "(Eucharistische Hymne, 14. Jh.)",
@@ -731,6 +789,8 @@
 	},
 	"bohemian-rhapsody": {
 		"title": "Bohemian Rhapsody",
+		"key": "Bb major",
+		"tempo": "With conviction (1/4 = 76)",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -758,6 +818,8 @@
 	},
 	"ciasaw": {
 		"title": "Come In And Stay A While",
+		"key": "C major",
+		"tempo": "Slow Rubato",
 		"info": "",
 		"authorMusic": "Rhonda Polay",
 		"authorText": "Rhonda Polay",
@@ -777,6 +839,8 @@
 	},
 	"down-in-the-river": {
 		"title": "Down In The River To Pray",
+		"key": "F major",
+		"tempo": "Freely with Reverence",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -790,10 +854,12 @@
 	},
 	"echo-kanon": {
 		"title": "Echo Kanon",
+		"key": "D major",
+		"tempo": "Lebhaft. (1/4 = ca. 94)",
 		"info": "",
 		"authorMusic": "Orlando di Lasso (1532-1594), 1581",
 		"authorText": "Orlando di Lasso (1532-1594), 1581",
-		"sheetMusicURL": "",
+		"sheetMusicURL": "http://www2.cpdl.org/wiki/index.php/O_la,_o_che_bon_eccho!_(The_Echo_Song)_(Orlando_di_Lasso)",
 		"trackset": [
 			{"S":"echo-s"},
 			{"A":"echo-a"},
@@ -803,6 +869,8 @@
 	},
 	"free-your-soul": {
 		"title": "Free Your Soul",
+		"key": "C major",
+		"tempo": "1/2 = 110",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -826,8 +894,41 @@
 			{"SATB":"he-is-always-cty-satb"}
 		]
 	},
+	"ich-liebe-dich": {
+		"title": "Ich Liebe Dich",
+		"key": "G dorisch",
+		"category":"kammerchor",
+		"info": "",
+		"authorMusic": "Orlando di Lasso (1532-1594)",
+		"authorText": "Orlando di Lasso (1532-1594)",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"ich-liebe-dich-s"},
+			{"A":"ich-liebe-dich-a"},
+			{"T":"ich-liebe-dich-t"},
+			{"B":"ich-liebe-dich-b"}
+		]
+	},
+	"ich-sag-ade": {
+		"title": "Ich sag ade",
+		"key": "Bb major",
+		"category":"kammerchor",
+		"info": "",
+		"authorMusic": "Volksweise, vor 1540 - Tonsetzer unbekannt, 1540",
+		"authorText": "Volksweise, vor 1540",
+		"sheetMusicURL": "",
+		"trackset": [
+			{"S":"ich-sag-ade-s"},
+			{"A":"ich-sag-ade-a"},
+			{"T":"ich-sag-ade-t"},
+			{"B":"ich-sag-ade-b"}
+		]
+	},
 	"in-the-mood": {
 		"title": "In The Mood",
+		"key": "G major",
+		"tempo": "(1/4 = ca. 160, Swing feel)",
+		"category":"kammerchor",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -843,6 +944,8 @@
 	},
 	"kumbayah": {
 		"title": "Kumbayah",
+		"key": "C major",
+		"tempo": "(1/2 = 88)",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -856,10 +959,12 @@
 	},
 	"ljuva-sommartid": {
 		"title": "I denna ljuva sommartid",
+		"key": "F sharp minor",
+		"tempo": "1/4 = 60",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
-		"sheetMusicURL": "",
+		"sheetMusicURL": "http://www.choralmidisdigest.com/midis/popular%20europea/anonimo-i%20denna%20ljuva%20sommartid.pdf",
 		"trackset": [
 			{"S":"ljuva-sommartid-s"},
 			{"A":"ljuva-sommartid-a"},
@@ -869,6 +974,8 @@
 	},
 	"royals": {
 		"title": "Royals",
+		"key": "D minor",
+		"tempo": "Mysterious, 1/4 = ca. 85",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -881,10 +988,12 @@
 	},
 	"shenandoah": {
 		"title": "Shenandoah",
+		"key": "E major",
+		"tempo": "Smoothly, tenderly (1/4 = 58-60)",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
-		"sheetMusicURL": "",
+		"sheetMusicURL": "http://frankbond.com/choirmusic/Shenandoah.pdf",
 		"trackset": [
 			{"S":"shenandoah-s"},
 			{"A":"shenandoah-a"},
@@ -896,6 +1005,8 @@
 	},
 	"sittin-on-the-dock": {
 		"title": "Down In The River To Pray",
+		"key": "G major",
+		"tempo": "Straight Soul (1/4 = 106)",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -910,6 +1021,8 @@
 	},
 	"spanische-naechte": {
 		"title": "Spanische Nächte",
+		"key": "F major",
+		"tempo": "Im Tango-Tempo",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -923,6 +1036,8 @@
 	},
 	"that-lonesome-road": {
 		"title": "That Lonesome Road",
+		"key": "A major",
+		"tempo": "Medium Country feel, 1/4 = ca. 96",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -937,10 +1052,15 @@
 			{"B2":"lonesome-road-b2"},
 			{"B2i":"lonesome-road-b2-piano"},
 			{"SATB":"lonesome-road-satb"}
+		],
+		"renditions": [
+			{"desc": "YouTube: The King's Singers (2012)", "url": "https://www.youtube.com/watch?v=7N75BDfm1Ls"}
 		]
 	},
 	"waldesnacht": {
 		"title": "Waldesnacht",
+		"key": "D major",
+		"tempo": "Etwas langsam. (1/4 = ca. 64)",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -950,11 +1070,14 @@
 			{"A":"waldesnacht-a"},
 			{"T":"waldesnacht-t"},
 			{"B":"waldesnacht-b"},
+			{"B1 (Schluss)":"waldesnacht-schluss-b1"},
 			{"SATB (live)":"waldesnacht-satb-live"}
 		]
 	},
 	"we-pray": {
 		"title": "We Pray",
+		"key": "G major",
+		"tempo": "(1/4 = ca. 114)",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -969,7 +1092,11 @@
 	
 	"god-rest-you-merry": {
 		"title": "God Rest You Merry, Gentlemen",
+		"key": "E minor",
+		"tempo": "lt. Noten: 140; ausgeführt: ca. 128",
+		"category":"xmas",
 		"info": "",
+		"structure": "19 Takte (Strophe: 4A,4A,4B; Refrain: 4+3), 4 Strophen",
 		"authorMusic": "",
 		"authorText": "",
 		"sheetMusicURL": "",
@@ -983,6 +1110,8 @@
 	},
 	"o-du-froehliche": {
 		"title": "O du Fröhliche",
+		"key": "F major",
+		"category":"xmas",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -997,6 +1126,8 @@
 	},
 	"silent-night": {
 		"title": "Silent Night",
+		"key": "Bb major",
+		"category":"xmas",
 		"info": "",
 		"authorMusic": "Arr. Jens Johansen",
 		"authorText": "",
@@ -1013,6 +1144,5 @@
 		]
 	}
 }
-
 
 }

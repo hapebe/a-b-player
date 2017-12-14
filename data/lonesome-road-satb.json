@@ -1,9 +1,7 @@
 {
 	"title": "That Lonesome Road ENSEMBLE",
-	"key": "A major",
-	"tempo": "Medium Country feel, 1/4 = ca. 96",
+	"pieceID": "that-lonesome-road",
 	"url": "audio/That Lonesome Road-SATB.mp3",
-	"comment": "see: https://www.youtube.com/watch?v=7N75BDfm1Ls",
 	"presets": [
 		{"t0":0,"t1":26,"desc":"Chorus part 1","measure":1,"type":"chorus"},
 		{"t0":20,"t1":43,"desc":"Chorus part 2","measure":9,"type":"chorus"},
@@ -12,16 +10,5 @@
 		{"t0":85,"t1":114,"desc":"Verse part 3 (Carry on, ...)","measure":35,"type":"bridge"},
 		{"t0":105,"t1":137,"desc":"Chorus 2, part 1","measure":43,"type":"chorus"},
 		{"t0":131,"t1":157,"desc":"Chorus 2, part 2 (Coda)","measure":9,"type":"chorus"}
-	],
-	"trackset": [
-		{"S":"lonesome-road-s"},
-		{"A1":"lonesome-road-a1"},
-		{"A2":"lonesome-road-a2"},
-		{"T":"lonesome-road-t"},
-		{"B1":"lonesome-road-b1"},
-		{"B1i":"lonesome-road-b1-piano"},
-		{"B2":"lonesome-road-b2"},
-		{"B2i":"lonesome-road-b2-piano"},
-		{"SATB":"lonesome-road-satb"}
 	]
 }

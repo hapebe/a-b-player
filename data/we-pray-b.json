@@ -1,17 +1,10 @@
 {
 	"title": "We Pray BASS",
-	"key": "G major",
-	"tempo": "(1/4 = ca. 114)",
+	"pieceID": "we-pray",
 	"url": "audio/We-Pray-B.mp3",
 	"presets": [
 		{"t0":0,"t1":22,"desc":"Refrain (mit Einzählen)","measure":1},
 		{"t0":19,"t1":40,"desc":"Refrain","measure":1},
 		{"t0":36,"t1":56,"desc":"Solo-Strophe","measure":38}
-	],
-	"trackset": [
-		{"S":"we-pray-s"},
-		{"A":"we-pray-a"},
-		{"T":"we-pray-t"},
-		{"B":"we-pray-b"}
 	]
 }

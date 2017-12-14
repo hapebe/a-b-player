@@ -1,7 +1,6 @@
 {
 	"title": "Free Your Soul SOPRAN 1",
-	"key": "C major",
-	"tempo": "1/2 = 110",
+	"pieceID": "free-your-soul",
 	"url": "audio/Free-Your-Soul-S1.mp3",
 	"presets": [
 		{"t0":3,"t1":15,"desc":"Intro","measure":1},
@@ -16,9 +15,5 @@
 		{"t0":182,"t1":210,"desc":"G, 3. Refrain","measure":98},
 		{"t0":201,"t1":224,"desc":"H, 2. Vamp","measure":112},
 		{"t0":226,"t1":251,"desc":"I, 3. Vamp","measure":120}
-	],
-	"trackset": [
-		{"S1":"free-your-soul-s1"},
-		{"S2":"free-your-soul-s2"}
 	]
 }
