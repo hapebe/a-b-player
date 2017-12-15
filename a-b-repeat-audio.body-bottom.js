@@ -183,7 +183,7 @@ document.abplayer.trackselection.renderMenu = function() {
 	var filterSubGroup = document.abplayer.filterPart; // strict filter (including sub-voice-group, e.g. Sopran 2)
 	var filterGroup = filterSubGroup.replace(/[0-9]/,""); // loose filter (i.e. treats Sopran 2 as Sopran)
 		// console.log(filterSubGroup + "/" + filterGroup);
-	var acceptEnsembleVersions = document.abplayer.filterSubGroupEnsemble;
+	var acceptEnsembleVersions = document.abplayer.filterPartEnsemble;
 	
 	var filterText = document.abplayer.filterText;
 	

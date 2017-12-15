@@ -945,7 +945,7 @@ document.abplayer.trackselection = {
 		var filterSubGroup = document.abplayer.filterPart; // strict filter (including sub-voice-group, e.g. Sopran 2)
 		var filterGroup = filterSubGroup.replace(/[0-9]/,""); // loose filter (i.e. treats Sopran 2 as Sopran)
 			// console.log(filterSubGroup + "/" + filterGroup);
-		var acceptEnsembleVersions = document.abplayer.filterSubGroupEnsemble;
+		var acceptEnsembleVersions = document.abplayer.filterPartEnsemble;
 		
 		var filterText = document.abplayer.filterText;
 		
@@ -954,6 +954,7 @@ document.abplayer.trackselection = {
 			function(index, value) { // console.log(value.title + "; " + value.part);
 				// a tracks has to match all (active) filters...
 				if ((!acceptEnsembleVersions) && (value.part.match(/[0]/g) != null)) {
+					// console.log('skipping an ensemble version: ' + value.title + ', ' + value.part);
 					// it is an ensemble version, skip:
 					return;
 				}
