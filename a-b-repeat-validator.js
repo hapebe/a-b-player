@@ -4,6 +4,9 @@ document.abplayer.validator = {
 	uniqueCategories: {},
 	uniqueComments: {},
 	
+	// dictionary: track code => track title
+	trackTitleDictionary: { _comment:'This is a computer-generated dictionary of the titles of all single tracks IF they are registered in any {trackset} in {pieces}.'},
+	
 	// single track validation: queued, and asynchronous
 	singleTrackQueue: [],
 	singleTrackBusy: false,
@@ -14,6 +17,10 @@ document.abplayer.validator = {
 			// we are finished!
 			clearInterval(this.singleTrackInterval);
 			console.log('finished single track validation.');
+			
+			// display trackTitleDictionary:
+			$('#devOutput').html('<code><pre>"titleDict": ' + JSON.stringify(this.trackTitleDictionary, null, 2) + '</pre></code>');
+			
 			return;
 		}
 		if (!this.singleTrackBusy) {
@@ -50,7 +57,7 @@ document.abplayer.validator = {
 				}
 			}
 		}
-		
+
 		this.printUniqueTrackValues();
 		
 		if (!o.piecesData || o.piecesData.length == 0) {
@@ -80,6 +87,7 @@ document.abplayer.validator = {
 
 		
 		
+		
 		// regarding the individual track data sets / files:
 		// trigger validation of single tracks:
 		this.runValidateSingleTracks();
@@ -93,7 +101,7 @@ document.abplayer.validator = {
 
 		// must have fields:
 		if (!entry.title) { errors.push('no title'); }
-		if (!entry.dataURL) { errors.push('no dataURL'); }
+		if (!entry.trackCode) { errors.push('no trackCode'); }
 		if (!entry.part) {
 			errors.push('no part'); 
 		} else {
@@ -108,9 +116,12 @@ document.abplayer.validator = {
 		for (var key in entry) {
 			if (entry.hasOwnProperty(key)) {
 				if (key == 'title') continue;
-				if (key == 'dataURL') continue;
+				if (key == 'trackCode') continue;
 				if (key == 'part') continue;
 				if (key == 'category') continue;
+				if (key == 'isLive') continue;
+				if (key == 'isEnsemble') continue;
+				if (key == 'isInstrumental') continue;
 				if (key == 'comment') continue;
 				
 				// unknown field!
@@ -201,30 +212,20 @@ document.abplayer.validator = {
 		
 		if (trackset.length == 0) errors.push('no tracks in trackset');
 		
-		for (var i=0; i<trackset.length; i++) {
-			var entry = trackset[i];
+		var cnt = 0;
+		for (var part in trackset) {
+			var trackCode = trackset[part];
 			
-			// each entry should have exactly one mapping part:data-token
-			var cnt = 0;
-			for (var key in entry) {
-				if (entry.hasOwnProperty(key)) {
-					cnt ++;
-					
-					// add this to the global list of trackCodes, IF it is new / unique:
-					var trackCode = entry[key];
-					if (this.singleTrackQueue.indexOf(trackCode) == -1) {
-						this.singleTrackQueue.push(trackCode);	
-					} else {
-						errors.push(trackCode + ' is referenced more than once');
-					}
-					
-					// TODO: register unique part from here (?)
-				}
+			// add this to the global list of trackCodes, IF it is new / unique:
+			if (this.singleTrackQueue.indexOf(trackCode) == -1) {
+				this.singleTrackQueue.push(trackCode);	
+			} else {
+				errors.push(trackCode + ' is referenced more than once');
 			}
 			
-			if (cnt == 0) { errors.push('entry #' + i + ' has no mapping'); }
-			if (cnt > 1) { errors.push('entry #' + i + ' has more than one mapping'); }
+			cnt++;
 		}
+		if (cnt == 0) { errors.push('trackset has no entries!'); }
 		
 		if (errors.length == 0) return true;
 		return errors;
@@ -244,6 +245,8 @@ document.abplayer.validator = {
 			var check = document.abplayer.validator.validateSingleTrack(data);
 			if (check != true) {
 				console.log(trackCode + ': ' + check.join(', '));
+			} else {
+				document.abplayer.validator.trackTitleDictionary[trackCode] = data.title;
 			}
 			document.abplayer.validator.singleTrackBusy = false; // only allow one instance at a time...
 			document.abplayer.validator.singleTrackCounter++;

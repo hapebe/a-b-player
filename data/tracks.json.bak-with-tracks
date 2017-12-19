@@ -1,0 +1,1269 @@
+{
+"titleDict": {
+  "abschied-walde-s": "Abschied vom Walde SOPRAN",
+  "abschied-walde-a": "Abschied vom Walde ALT",
+  "abschied-walde-t": "Abschied vom Walde TENOR",
+  "abschied-walde-b": "Abschied vom Walde BASS",
+  "irish-blessing-s": "An Irish Blessing SOPRAN",
+  "irish-blessing-a": "An Irish Blessing ALT",
+  "irish-blessing-t": "An Irish Blessing TENOR",
+  "irish-blessing-b": "An Irish Blessing BASS",
+  "ave-verum-s": "Ave Verum Corpus SOPRAN",
+  "ave-verum-a": "Ave Verum Corpus ALT",
+  "ave-verum-t": "Ave Verum Corpus TENOR",
+  "ave-verum-b": "Ave Verum Corpus BASS (INSTRUMENTAL)",
+  "ave-verum-piano": "Ave Verum Corpus INSTRUMENTAL SATB",
+  "bohemian-rhapsody-s": "Bohemian Rhapsody SOPRAN",
+  "bohemian-rhapsody-a": "Bohemian Rhapsody ALT",
+  "bohemian-rhapsody-t": "Bohemian Rhapsody TENOR",
+  "bohemian-rhapsody-b": "Bohemian Rhapsody BASS",
+  "bbbb-s": "Bye, Bye Blackbird SOPRAN",
+  "bbbb-a": "Bye, Bye Blackbird ALT",
+  "bbbb-t": "Bye, Bye Blackbird TENOR",
+  "bbbb-b": "Bye, Bye Blackbird BASS",
+  "bbbb-satb": "Bye, Bye Blackbird ENSEMBLE",
+  "ciasaw-s1": "Come In And Stay A While SOPRAN 1",
+  "ciasaw-s2": "Come In And Stay A While SOPRAN 2",
+  "ciasaw-a": "Come In And Stay A While ALT",
+  "ciasaw-t": "Come In And Stay A While TENOR",
+  "ciasaw-b": "Come In And Stay A While BASS",
+  "down-in-s1": "Down In The River To Pray SOPRAN 1",
+  "down-in-s2": "Down In The River To Pray SOPRAN 2",
+  "down-in-a": "Down In The River To Pray ALT",
+  "down-in-t": "Down In The River To Pray TENOR",
+  "echo-s": "Echo-Kanon SOPRAN",
+  "echo-a": "Echo-Kanon ALT",
+  "echo-t": "Echo-Kanon TENOR",
+  "echo-b": "Echo-Kanon BASS",
+  "free-your-soul-s1": "Free Your Soul SOPRAN 1",
+  "free-your-soul-s2": "Free Your Soul SOPRAN 2",
+  "he-is-always-cty-s": "He Is Always Close To You SOPRAN",
+  "he-is-always-cty-a1": "He Is Always Close To You ALT 1",
+  "he-is-always-cty-a2": "He Is Always Close To You ALT 2",
+  "he-is-always-cty-t": "He Is Always Close To You TENOR",
+  "he-is-always-cty-satb": "He Is Always Close To You ENSEMBLE",
+  "ich-liebe-dich-s": "Ich Liebe Dich SOPRAN",
+  "ich-liebe-dich-a": "Ich Liebe Dich ALT",
+  "ich-liebe-dich-t": "Ich Liebe Dich TENOR",
+  "ich-liebe-dich-b": "Ich Liebe Dich BASS",
+  "ich-sag-ade-s": "Ich sag ade SOPRAN",
+  "ich-sag-ade-a": "Ich sag ade ALT",
+  "ich-sag-ade-t": "Ich sag ade TENOR",
+  "ich-sag-ade-b": "Ich sag ade BASS",
+  "in-the-mood-s": "In The Mood SOPRAN Instrumental",
+  "in-the-mood-a1": "In The Mood ALT 1 Instrumental",
+  "in-the-mood-a2": "In The Mood ALT 2 Instrumental",
+  "in-the-mood-t": "In The Mood TENOR Instrumental",
+  "in-the-mood-b": "In The Mood BASS Instrumental",
+  "in-the-mood-satb": "In The Mood ENSEMBLE Instrumental",
+  "kumbayah-s": "Kum Ba Yah SOPRAN",
+  "kumbayah-a": "Kum Ba Yah ALT",
+  "kumbayah-t": "Kum Ba Yah TENOR",
+  "kumbayah-b": "Kum Ba Yah BASS",
+  "ljuva-sommartid-s": "I denna ljuva sommartid SOPRAN",
+  "ljuva-sommartid-a": "I denna ljuva sommartid ALT",
+  "ljuva-sommartid-t": "I denna ljuva sommartid TENOR",
+  "ljuva-sommartid-b": "I denna ljuva sommartid BASS",
+  "royals-s": "Royals SOPRAN",
+  "royals-a": "Royals ALT",
+  "royals-tb": "Royals Tenor & Bass",
+  "shenandoah-s": "Shenandoah SOPRAN 1+2",
+  "shenandoah-a": "Shenandoah ALT 1+2",
+  "shenandoah-t1": "Shenandoah TENOR 1",
+  "shenandoah-t2": "Shenandoah TENOR 2",
+  "shenandoah-b1": "Shenandoah BASS 1",
+  "shenandoah-b2": "Shenandoah BASS 2",
+  "sittin-otd-s1": "Sittin' On The Dock Of The Bay SOPRAN 1",
+  "sittin-otd-s2": "Sittin' On The Dock Of The Bay SOPRAN 2",
+  "sittin-otd-a": "Sittin' On The Dock Of The Bay ALT",
+  "sittin-otd-t": "Sittin' On The Dock Of The Bay TENOR",
+  "sittin-otd-b": "Sittin' On The Dock Of The Bay BASS",
+  "spanische-t1": "Spanische Nächte INSTRUMENTAL TENOR 1",
+  "spanische-t2": "Spanische Nächte TENOR 2",
+  "spanische-b1": "Spanische Nächte BASS 1",
+  "spanische-b2": "Spanische Nächte BASS 2",
+  "lonesome-road-s": "That Lonesome Road SOPRAN",
+  "lonesome-road-a1": "That Lonesome Road ALT 1",
+  "lonesome-road-a2": "That Lonesome Road ALT 2",
+  "lonesome-road-t": "That Lonesome Road TENOR",
+  "lonesome-road-b1": "That Lonesome Road BASS 1",
+  "lonesome-road-b1-piano": "That Lonesome Road INSTRUMENTAL BASS 1",
+  "lonesome-road-b2": "That Lonesome Road BASS 2",
+  "lonesome-road-b2-piano": "That Lonesome Road INSTRUMENTAL BASS 2",
+  "lonesome-road-satb": "That Lonesome Road ENSEMBLE",
+  "waldesnacht-s": "Waldesnacht SOPRAN",
+  "waldesnacht-a": "Waldesnacht ALT",
+  "waldesnacht-t": "Waldesnacht TENOR",
+  "waldesnacht-b": "Waldesnacht BASS",
+  "waldesnacht-schluss-b1": "Waldesnacht (Schluss) BASS 1",
+  "waldesnacht-satb-live": "Waldesnacht SATB (LIVE)",
+  "we-pray-s": "We Pray SOPRAN",
+  "we-pray-a": "We Pray ALT",
+  "we-pray-t": "We Pray TENOR",
+  "we-pray-b": "We Pray BASS",
+  "god-rest-you-s": "God Rest You Merry, Gentlemen SOPRAN",
+  "god-rest-you-a": "God Rest You Merry, Gentlemen ALT",
+  "god-rest-you-t": "God Rest You Merry, Gentlemen TENOR",
+  "god-rest-you-b": "God Rest You Merry, Gentlemen BASS",
+  "god-rest-you-satb": "God Rest You Merry, Gentlemen ENSEMBLE",
+  "o-du-froehliche-s1": "O, du fröhliche SOPRAN 1",
+  "o-du-froehliche-s2": "O, du fröhliche SOPRAN 2",
+  "o-du-froehliche-a": "O, du fröhliche ALT",
+  "o-du-froehliche-t": "O, du fröhliche TENOR",
+  "o-du-froehliche-b": "O, du fröhliche BASS",
+  "silent-night-s1": "Silent Night SOPRAN 1",
+  "silent-night-s2": "Silent Night SOPRAN 2",
+  "silent-night-a": "Silent Night ALT",
+  "silent-night-t": "Silent Night TENOR",
+  "silent-night-b1": "Silent Night BASS 1",
+  "silent-night-b2": "Silent Night BASS 2",
+  "silent-night-satb-instr": "Silent Night INSTRUMENTAL SATB",
+  "silent-night-satb-live": "Silent Night LIVE 2012"
+},
+"tracks":[
+	{
+		"title":"Abschied vom Walde SOPRAN",
+		"dataURL":"abschied-walde-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Abschied vom Walde ALT",
+		"dataURL":"abschied-walde-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Abschied vom Walde TENOR",
+		"dataURL":"abschied-walde-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Abschied vom Walde BASS",
+		"dataURL":"abschied-walde-b.json",
+		"part":"B"
+	},
+
+	
+	{
+		"title":"An Irish Blessing SOPRAN 1+2",
+		"dataURL":"irish-blessing-s.json",
+		"part":"S"
+	},
+	{
+		"title":"An Irish Blessing ALT",
+		"dataURL":"irish-blessing-a.json",
+		"part":"A"
+	},
+	{
+		"title":"An Irish Blessing TENOR",
+		"dataURL":"irish-blessing-t.json",
+		"part":"T"
+	},
+	{
+		"title":"An Irish Blessing BASS",
+		"dataURL":"irish-blessing-b.json",
+		"part":"B"
+	},
+
+
+	{
+		"title":"Ave Verum Corpus SOPRAN",
+		"dataURL":"ave-verum-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Ave Verum Corpus ALT",
+		"dataURL":"ave-verum-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Ave Verum Corpus TENOR",
+		"dataURL":"ave-verum-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Ave Verum Corpus BASS (INSTRUMENTAL)",
+		"dataURL":"ave-verum-b.json",
+		"part":"B"
+	},
+	{
+		"title":"Ave Verum Corpus INSTRUMENTAL SATB",
+		"dataURL":"ave-verum-satb-piano.json",
+		"part":"SATB0"
+	},
+
+
+	{
+		"title":"Bohemian Rhapsody SOPRAN",
+		"dataURL":"bohemian-rhapsody-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Bohemian Rhapsody ALT",
+		"dataURL":"bohemian-rhapsody-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Bohemian Rhapsody TENOR",
+		"dataURL":"bohemian-rhapsody-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Bohemian Rhapsody BASS",
+		"dataURL":"bohemian-rhapsody-b.json",
+		"part":"B"
+	},
+
+	
+	{
+		"title":"Bye, Bye Blackbird SOPRAN",
+		"dataURL":"bbbb-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Bye, Bye Blackbird ALT",
+		"dataURL":"bbbb-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Bye, Bye Blackbird TENOR",
+		"dataURL":"bbbb-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Bye, Bye Blackbird BASS",
+		"dataURL":"bbbb-b.json",
+		"part":"B"
+	},
+	{
+		"title":"Bye, Bye Blackbird ENSEMBLE",
+		"dataURL":"bbbb-satb.json",
+		"part":"SATB0"
+	},
+	
+	
+	{
+		"title":"Come In And Stay A While SOPRAN 1",
+		"dataURL":"ciasaw-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Come In And Stay A While SOPRAN 2",
+		"dataURL":"ciasaw-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"Come In And Stay A While ALT",
+		"dataURL":"ciasaw-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Come In And Stay A While TENOR",
+		"dataURL":"ciasaw-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Come In And Stay A While BASS",
+		"dataURL":"ciasaw-b.json",
+		"part":"B"
+	},
+
+
+	{
+		"title":"Down In The River To Pray SOPRAN 1",
+		"dataURL":"down-in-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Down In The River To Pray SOPRAN 2",
+		"dataURL":"down-in-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"Down In The River To Pray ALT",
+		"dataURL":"down-in-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Down In The River To Pray TENOR",
+		"dataURL":"down-in-t.json",
+		"part":"T"
+	},
+
+
+	{
+		"title":"Echo-Kanon SOPRAN",
+		"dataURL":"echo-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Echo-Kanon ALT",
+		"dataURL":"echo-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Echo-Kanon TENOR",
+		"dataURL":"echo-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Echo-Kanon BASS",
+		"dataURL":"echo-b.json",
+		"part":"B"
+	},
+
+
+	{
+		"title":"Free Your Soul SOPRAN 1",
+		"dataURL":"free-your-soul-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Free Your Soul SOPRAN 2",
+		"dataURL":"free-your-soul-s2.json",
+		"part":"S2"
+	},
+
+
+	{
+		"title":"He Is Always Close To You SOPRAN",
+		"dataURL":"he-is-always-cty-s.json",
+		"part":"S"
+	},
+	{
+		"title":"He Is Always Close To You ALT 1",
+		"dataURL":"he-is-always-cty-a1.json",
+		"part":"A1"
+	},
+	{
+		"title":"He Is Always Close To You ALT 2",
+		"dataURL":"he-is-always-cty-a2.json",
+		"part":"A2"
+	},
+	{
+		"title":"He Is Always Close To You TENOR",
+		"dataURL":"he-is-always-cty-t.json",
+		"part":"T"
+	},
+	{
+		"title":"He Is Always Close To You ENSEMBLE",
+		"dataURL":"he-is-always-cty-satb.json",
+		"part":"SATB0"
+	},
+	
+	
+	{
+		"title":"I denna ljuva sommartid SOPRAN",
+		"dataURL":"ljuva-sommartid-s.json",
+		"part":"S"
+	},
+	{
+		"title":"I denna ljuva sommartid ALT",
+		"dataURL":"ljuva-sommartid-a.json",
+		"part":"A"
+	},
+	{
+		"title":"I denna ljuva sommartid TENOR",
+		"dataURL":"ljuva-sommartid-t.json",
+		"part":"T"
+	},
+	{
+		"title":"I denna ljuva sommartid BASS",
+		"dataURL":"ljuva-sommartid-b.json",
+		"part":"B"
+	},
+
+
+	{
+		"title":"Ich Liebe Dich SOPRAN",
+		"category":"kammerchor",
+		"dataURL":"ich-liebe-dich-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Ich Liebe Dich ALT",
+		"category":"kammerchor",
+		"dataURL":"ich-liebe-dich-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Ich Liebe Dich TENOR",
+		"category":"kammerchor",
+		"dataURL":"ich-liebe-dich-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Ich Liebe Dich BASS",
+		"category":"kammerchor",
+		"dataURL":"ich-liebe-dich-b.json",
+		"part":"B"
+	},
+	
+	
+	{
+		"title":"Ich sag ade SOPRAN",
+		"category":"kammerchor",
+		"dataURL":"ich-sag-ade-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Ich sag ade ALT",
+		"category":"kammerchor",
+		"dataURL":"ich-sag-ade-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Ich sag ade TENOR",
+		"category":"kammerchor",
+		"dataURL":"ich-sag-ade-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Ich sag ade BASS",
+		"category":"kammerchor",
+		"dataURL":"ich-sag-ade-b.json",
+		"part":"B"
+	},
+	
+	
+	{
+		"title":"In The Mood SOPRAN INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-s.json",
+		"part":"S"
+	},
+	{
+		"title":"In The Mood ALT 1 INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-a1.json",
+		"part":"A1"
+	},
+	{
+		"title":"In The Mood ALT 2 INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-a2.json",
+		"part":"A2"
+	},
+	{
+		"title":"In The Mood TENOR INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-t.json",
+		"part":"T"
+	},
+	{
+		"title":"In The Mood BASS INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-b.json",
+		"part":"B"
+	},
+	{
+		"title":"In The Mood ENSEMBLE INSTRUMENTAL",
+		"category":"kammerchor",
+		"dataURL":"in-the-mood-satb.json",
+		"part":"SATB0"
+	},
+	
+	
+	{
+		"title":"Kum Ba Yah SOPRAN",
+		"dataURL":"kumbayah-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Kum Ba Yah ALT",
+		"dataURL":"kumbayah-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Kum Ba Yah TENOR",
+		"dataURL":"kumbayah-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Kum Ba Yah BASS",
+		"dataURL":"kumbayah-b.json",
+		"part":"B"
+	},
+	
+	
+	{
+		"title":"Royals SOPRAN",
+		"dataURL":"royals-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Royals ALT",
+		"dataURL":"royals-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Royals TENOR + BASS",
+		"dataURL":"royals-tb.json",
+		"part":"T+B"
+	},
+
+
+	{
+		"title":"Shenandoah SOPRAN 1+2",
+		"dataURL":"shenandoah-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Shenandoah ALT 1+2",
+		"dataURL":"shenandoah-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Shenandoah TENOR 1",
+		"dataURL":"shenandoah-t1.json",
+		"part":"T1"
+	},
+	{
+		"title":"Shenandoah TENOR 2",
+		"dataURL":"shenandoah-t2.json",
+		"part":"T2"
+	},
+	{
+		"title":"Shenandoah BASS 1",
+		"dataURL":"shenandoah-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"Shenandoah BASS 2",
+		"dataURL":"shenandoah-b2.json",
+		"part":"B2"
+	},
+
+	
+	{
+		"title":"Sittin' On The Dock Of The Bay SOPRAN 1",
+		"dataURL":"sittin-otd-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Sittin' On The Dock Of The Bay SOPRAN 2",
+		"dataURL":"sittin-otd-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"Sittin' On The Dock Of The Bay ALT",
+		"dataURL":"sittin-otd-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Sittin' On The Dock Of The Bay TENOR",
+		"dataURL":"sittin-otd-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Sittin' On The Dock Of The Bay BASS",
+		"dataURL":"sittin-otd-b.json",
+		"part":"B"
+	},
+
+
+	{
+		"title":"Spanische Nächte INSTRUMENTAL TENOR 1",
+		"dataURL":"spanische-t1.json",
+		"part":"T1"
+	},
+	{
+		"title":"Spanische Nächte TENOR 2",
+		"dataURL":"spanische-t2.json",
+		"part":"T2"
+	},
+	{
+		"title":"Spanische Nächte BASS 1",
+		"dataURL":"spanische-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"Spanische Nächte BASS 2",
+		"dataURL":"spanische-b2.json",
+		"part":"B2"
+	},
+
+	
+	{
+		"title":"That Lonesome Road ENSEMBLE",
+		"dataURL":"lonesome-road-satb.json",
+		"comment": "see: https://www.youtube.com/watch?v=7N75BDfm1Ls",
+		"part":"SATB0"
+	},
+	{
+		"title":"That Lonesome Road SOPRAN",
+		"dataURL":"lonesome-road-s.json",
+		"part":"S"
+	},
+	{
+		"title":"That Lonesome Road ALT 1",
+		"dataURL":"lonesome-road-a1.json",
+		"part":"A1"
+	},
+	{
+		"title":"That Lonesome Road ALT 2",
+		"dataURL":"lonesome-road-a2.json",
+		"part":"A2"
+	},
+	{
+		"title":"That Lonesome Road TENOR",
+		"dataURL":"lonesome-road-t.json",
+		"part":"T"
+	},
+	{
+		"title":"That Lonesome Road INSTRUMENTAL BASS 1",
+		"dataURL":"lonesome-road-b1-piano.json",
+		"part":"B1"
+	},
+	{
+		"title":"That Lonesome Road BASS 1",
+		"dataURL":"lonesome-road-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"That Lonesome Road INSTRUMENTAL BASS 2",
+		"dataURL":"lonesome-road-b2-piano.json",
+		"part":"B2"
+	},
+	{
+		"title":"That Lonesome Road BASS 2",
+		"dataURL":"lonesome-road-b2.json",
+		"part":"B2"
+	},
+
+
+	{
+		"title":"Waldesnacht SOPRAN",
+		"dataURL":"waldesnacht-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Waldesnacht ALT",
+		"dataURL":"waldesnacht-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Waldesnacht TENOR",
+		"dataURL":"waldesnacht-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Waldesnacht BASS",
+		"dataURL":"waldesnacht-b.json",
+		"part":"B"
+	},
+	{
+		"title":"Waldesnacht (Schluss) BASS 1",
+		"dataURL":"waldesnacht-schluss-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"Waldesnacht SATB (LIVE)",
+		"dataURL":"waldesnacht-satb-live.json",
+		"part":"SATB0"
+	},
+	
+	
+	{
+		"title":"We Pray SOPRAN",
+		"dataURL":"we-pray-s.json",
+		"part":"S"
+	},
+	{
+		"title":"We Pray ALT",
+		"dataURL":"we-pray-a.json",
+		"part":"A"
+	},
+	{
+		"title":"We Pray TENOR",
+		"dataURL":"we-pray-t.json",
+		"part":"T"
+	},
+	{
+		"title":"We Pray BASS",
+		"dataURL":"we-pray-b.json",
+		"part":"B"
+	},
+
+	
+	{
+		"title":"Will you come and follow me SOPRAN",
+		"dataURL":"come-and-follow-s.json",
+		"part":"S"
+	},
+	{
+		"title":"Will you come and follow me ALT",
+		"dataURL":"come-and-follow-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Will you come and follow me TENOR",
+		"dataURL":"come-and-follow-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Will you come and follow me BASS",
+		"dataURL":"come-and-follow-b.json",
+		"part":"B"
+	},
+
+
+	
+	{
+		"title":"God Rest You Merry, Gentlemen SOPRAN",
+		"category":"xmas",
+		"dataURL":"god-rest-you-s.json",
+		"part":"S"
+	},
+	{
+		"title":"God Rest You Merry, Gentlemen ALT",
+		"category":"xmas",
+		"dataURL":"god-rest-you-a.json",
+		"part":"A"
+	},
+	{
+		"title":"God Rest You Merry, Gentlemen TENOR",
+		"category":"xmas",
+		"dataURL":"god-rest-you-t.json",
+		"part":"T"
+	},
+	{
+		"title":"God Rest You Merry, Gentlemen BASS",
+		"category":"xmas",
+		"dataURL":"god-rest-you-b.json",
+		"part":"B"
+	},
+	{
+		"title":"God Rest You Merry, Gentlemen ENSEMBLE",
+		"category":"xmas",
+		"dataURL":"god-rest-you-satb.json",
+		"part":"SATB0"
+	},
+	{
+		"title":"O, du fröhliche SOPRAN 1",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"O, du fröhliche SOPRAN 2",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"O, du fröhliche ALT",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-a.json",
+		"part":"A"
+	},
+	{
+		"title":"O, du fröhliche TENOR",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-t.json",
+		"part":"T"
+	},
+	{
+		"title":"O, du fröhliche BASS",
+		"category":"xmas",
+		"dataURL":"o-du-froehliche-b.json",
+		"part":"B"
+	},
+
+	{
+		"title":"Silent Night LIVE 2012",
+		"category":"xmas",
+		"dataURL":"silent-night-2012.json",
+		"part":"SATB0"
+	},
+	{
+		"title":"Silent Night SOPRAN 1",
+		"category":"xmas",
+		"dataURL":"silent-night-s1.json",
+		"part":"S1"
+	},
+	{
+		"title":"Silent Night SOPRAN 2",
+		"category":"xmas",
+		"dataURL":"silent-night-s2.json",
+		"part":"S2"
+	},
+	{
+		"title":"Silent Night ALT",
+		"category":"xmas",
+		"dataURL":"silent-night-a.json",
+		"part":"A"
+	},
+	{
+		"title":"Silent Night TENOR",
+		"category":"xmas",
+		"dataURL":"silent-night-t.json",
+		"part":"T"
+	},
+	{
+		"title":"Silent Night BASS 1",
+		"category":"xmas",
+		"dataURL":"silent-night-b1.json",
+		"part":"B1"
+	},
+	{
+		"title":"Silent Night BASS 2",
+		"category":"xmas",
+		"dataURL":"silent-night-b2.json",
+		"part":"B2"
+	},
+
+	{
+		"title":"Silent Night INSTRUMENTAL SATB",
+		"category":"xmas",
+		"dataURL":"silent-night-satb-flute.json",
+		"part":"SATB0"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL SOPRAN 1",
+		"category":"xmas",
+		"dataURL":"silent-night-s1-flute.json",
+		"part":"S1"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL SOPRAN 2",
+		"category":"xmas",
+		"dataURL":"silent-night-s2-flute.json",
+		"part":"S2"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL ALT",
+		"category":"xmas",
+		"dataURL":"silent-night-a-flute.json",
+		"part":"A"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL TENOR",
+		"category":"xmas",
+		"dataURL":"silent-night-t-flute.json",
+		"part":"T"
+	},
+	{
+		"title":"Silent Night INSTRUMENTAL BASS",
+		"category":"xmas",
+		"dataURL":"silent-night-b-flute.json",
+		"part":"B"
+	}
+	
+],
+
+
+
+
+
+
+
+
+"pieces": {
+	"abschied-vom-walde": {
+		"title": "Abschied vom Walde",
+		"key": "Eb major",
+		"tempo": "Andante non lento",
+		"info": "Op. 59 No. 3; aus: Sechs Lieder für SATB im Freien zu singen - Frau Henriette Benecke gewidmet - Drittes Heft; Edition Peters 8165 - Breitkopf & Härtel  Serie 16 No. 127 M.B.127",
+		"authorMusic": "Felix Mendelssohn-Bartholdy (1809-1847), 1843",
+		"authorText": "Josef von Eichendorff (1788-1857), 1810",
+		"sheetMusicURL": "https://imslp.nl/imglnks/usimg/3/35/IMSLP378937-PMLP29292-mendelssohnAbschiedOp59nr3.pdf",
+		"trackset": {
+			"S":"abschied-walde-s",
+			"A":"abschied-walde-a",
+			"T":"abschied-walde-t",
+			"B":"abschied-walde-b"
+		},
+		"renditions": [
+			{"desc": "YouTube: Rundfunk-Jugendchor Wernigerode", "url": "https://www.youtube.com/watch?v=tiB3uUlTCeQ"}
+		]
+	},
+	"irish-blessing": {
+		"title": "An Irish Blessing",
+		"key": "Bb major",
+		"tempo": "(1/4 = ca. 62)",
+		"info": "",
+		"authorMusic": "Trad. aus Irland, Arr. James E. Moore",
+		"authorText": "Trad.",
+		"sheetMusicURL": "http://www.askoe-bfi.at/sektionen/chor/Singalong/An%20Irish%20Blessing%20(SATB).pdf",
+		"trackset": {
+			"S":"irish-blessing-s",
+			"A":"irish-blessing-a",
+			"T":"irish-blessing-t",
+			"B":"irish-blessing-b"
+		}
+	},
+	"ave-verum": {
+		"title": "Ave Verum Corpus",
+		"key": "D major",
+		"tempo": "Adagio (1/4 = ca. 64)",
+		"info": "KV 618",
+		"authorMusic": "Wolfgang Amadeus Mozart (1756-1791), 1791",
+		"authorText": "(Eucharistische Hymne, 14. Jh.)",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"ave-verum-s",
+			"A":"ave-verum-a",
+			"T":"ave-verum-t",
+			"B":"ave-verum-b-instr",
+			"SATB":"ave-verum-satb-piano"
+		}
+	},
+	"bohemian-rhapsody": {
+		"title": "Bohemian Rhapsody",
+		"key": "Bb major",
+		"tempo": "With conviction (1/4 = 76)",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"bohemian-rhapsody-s",
+			"A":"bohemian-rhapsody-a",
+			"T":"bohemian-rhapsody-t",
+			"B":"bohemian-rhapsody-b"
+		}
+	},
+	"bbbb": {
+		"title": "Bye Bye, Blackbird",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"bbbb-s",
+			"A":"bbbb-a",
+			"T":"bbbb-t",
+			"B":"bbbb-b",
+			"SATB":"bbbb-satb"
+		}
+	},
+	"ciasaw": {
+		"title": "Come In And Stay A While",
+		"key": "C major",
+		"tempo": "Slow Rubato",
+		"info": "",
+		"authorMusic": "Rhonda Polay",
+		"authorText": "Rhonda Polay",
+		"sheetMusicURL": "http://oisteinr.com/Files/Kammerkoret/Noter/Come%20in%20and%20stay.pdf",
+		"trackset": {
+			"S1":"ciasaw-s1",
+			"S2":"ciasaw-s2",
+			"A":"ciasaw-a",
+			"T":"ciasaw-t",
+			"B":"ciasaw-b"
+		},
+		"renditions": [
+			{"desc": "YouTube: VOICES - Landesjugendchor Vorarlberg (2015)", "url": "https://www.youtube.com/watch?v=_nf02ZAFZ6Y"},
+			{"desc": "YouTube: Coro de Câmara do Orfeão de Leiria", "url": "https://www.youtube.com/watch?v=lkJyI10ivds"},
+			{"desc": "YouTube: Art'n'Voices (Poland)", "url": "https://www.youtube.com/watch?v=Q6TVgOqxS3Q"}
+		]
+	},
+	"down-in-the-river": {
+		"title": "Down In The River To Pray",
+		"key": "F major",
+		"tempo": "Freely with Reverence",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S1":"down-in-s1",
+			"S2":"down-in-s2",
+			"A":"down-in-a",
+			"T":"down-in-t"
+		}
+	},
+	"echo-kanon": {
+		"title": "Echo Kanon",
+		"key": "D major",
+		"tempo": "Lebhaft. (1/4 = ca. 94)",
+		"info": "",
+		"authorMusic": "Orlando di Lasso (1532-1594), 1581",
+		"authorText": "Orlando di Lasso (1532-1594), 1581",
+		"sheetMusicURL": "http://www2.cpdl.org/wiki/index.php/O_la,_o_che_bon_eccho!_(The_Echo_Song)_(Orlando_di_Lasso)",
+		"trackset": {
+			"S":"echo-s",
+			"A":"echo-a",
+			"T":"echo-t",
+			"B":"echo-b"
+		}
+	},
+	"free-your-soul": {
+		"title": "Free Your Soul",
+		"key": "C major",
+		"tempo": "1/2 = 110",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S1":"free-your-soul-s1",
+			"S2":"free-your-soul-s2"
+		}
+	},
+	"he-is-always-close": {
+		"title": "He Is Always Close To You",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"he-is-always-cty-s",
+			"A1":"he-is-always-cty-a1",
+			"A2":"he-is-always-cty-a2",
+			"T":"he-is-always-cty-t",
+			"SATB":"he-is-always-cty-satb"
+		}
+	},
+	"ich-liebe-dich": {
+		"title": "Ich Liebe Dich",
+		"key": "G dorisch",
+		"category":"kammerchor",
+		"info": "",
+		"authorMusic": "Orlando di Lasso (1532-1594)",
+		"authorText": "Orlando di Lasso (1532-1594)",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"ich-liebe-dich-s",
+			"A":"ich-liebe-dich-a",
+			"T":"ich-liebe-dich-t",
+			"B":"ich-liebe-dich-b"
+		}
+	},
+	"ich-sag-ade": {
+		"title": "Ich sag ade",
+		"key": "Bb major",
+		"category":"kammerchor",
+		"info": "",
+		"authorMusic": "Volksweise, vor 1540 - Tonsetzer unbekannt, 1540",
+		"authorText": "Volksweise, vor 1540",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"ich-sag-ade-s",
+			"A":"ich-sag-ade-a",
+			"T":"ich-sag-ade-t",
+			"B":"ich-sag-ade-b"
+		}
+	},
+	"in-the-mood": {
+		"title": "In The Mood",
+		"key": "G major",
+		"tempo": "(1/4 = ca. 160, Swing feel)",
+		"category":"kammerchor",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"in-the-mood-s",
+			"A1":"in-the-mood-a1",
+			"A2":"in-the-mood-a2",
+			"T":"in-the-mood-t",
+			"B":"in-the-mood-b",
+			"SATB":"in-the-mood-satb"
+		}
+	},
+	"kumbayah": {
+		"title": "Kumbayah",
+		"key": "C major",
+		"tempo": "(1/2 = 88)",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"kumbayah-s",
+			"A":"kumbayah-a",
+			"T":"kumbayah-t",
+			"B":"kumbayah-b"
+		}
+	},
+	"ljuva-sommartid": {
+		"title": "I denna ljuva sommartid",
+		"key": "F sharp minor",
+		"tempo": "1/4 = 60",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "http://www.choralmidisdigest.com/midis/popular%20europea/anonimo-i%20denna%20ljuva%20sommartid.pdf",
+		"trackset": {
+			"S":"ljuva-sommartid-s",
+			"A":"ljuva-sommartid-a",
+			"T":"ljuva-sommartid-t",
+			"B":"ljuva-sommartid-b"
+		}
+	},
+	"royals": {
+		"title": "Royals",
+		"key": "D minor",
+		"tempo": "Mysterious, 1/4 = ca. 85",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"royals-s",
+			"A":"royals-a",
+			"T+B":"royals-tb"
+		}
+	},
+	"shenandoah": {
+		"title": "Shenandoah",
+		"key": "E major",
+		"tempo": "Smoothly, tenderly (1/4 = 58-60)",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "http://frankbond.com/choirmusic/Shenandoah.pdf",
+		"trackset": {
+			"S":"shenandoah-s",
+			"A":"shenandoah-a",
+			"T1":"shenandoah-t1",
+			"T2":"shenandoah-t2",
+			"B1":"shenandoah-b1",
+			"B2":"shenandoah-b2"
+		}
+	},
+	"sittin-on-the-dock": {
+		"title": "Down In The River To Pray",
+		"key": "G major",
+		"tempo": "Straight Soul (1/4 = 106)",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S1":"sittin-otd-s1",
+			"S2":"sittin-otd-s2",
+			"A":"sittin-otd-a",
+			"T":"sittin-otd-t",
+			"B":"sittin-otd-b"
+		}
+	},
+	"spanische-naechte": {
+		"title": "Spanische Nächte",
+		"key": "F major",
+		"tempo": "Im Tango-Tempo",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"T1":"spanische-t1",
+			"T2":"spanische-t2",
+			"B1":"spanische-b1",
+			"B2":"spanische-b2"
+		}
+	},
+	"that-lonesome-road": {
+		"title": "That Lonesome Road",
+		"key": "A major",
+		"tempo": "Medium Country feel, 1/4 = ca. 96",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"lonesome-road-s",
+			"A1":"lonesome-road-a1",
+			"A2":"lonesome-road-a2",
+			"T":"lonesome-road-t",
+			"B1":"lonesome-road-b1",
+			"B1i":"lonesome-road-b1-piano",
+			"B2":"lonesome-road-b2",
+			"B2i":"lonesome-road-b2-piano",
+			"SATB":"lonesome-road-satb"
+		},
+		"renditions": [
+			{"desc": "YouTube: The King's Singers (2012)", "url": "https://www.youtube.com/watch?v=7N75BDfm1Ls"}
+		]
+	},
+	"waldesnacht": {
+		"title": "Waldesnacht",
+		"key": "D major",
+		"tempo": "Etwas langsam. (1/4 = ca. 64)",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"waldesnacht-s",
+			"A":"waldesnacht-a",
+			"T":"waldesnacht-t",
+			"B":"waldesnacht-b",
+			"B1 (Schluss)":"waldesnacht-schluss-b1",
+			"SATB (live)":"waldesnacht-satb-live"
+		}
+	},
+	"we-pray": {
+		"title": "We Pray",
+		"key": "G major",
+		"tempo": "(1/4 = ca. 114)",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"we-pray-s",
+			"A":"we-pray-a",
+			"T":"we-pray-t",
+			"B":"we-pray-b"
+		}
+	},
+	
+	"god-rest-you-merry": {
+		"title": "God Rest You Merry, Gentlemen",
+		"key": "E minor",
+		"tempo": "lt. Noten: 140; ausgeführt: ca. 128",
+		"category":"xmas",
+		"info": "",
+		"structure": "19 Takte (Strophe: 4A,4A,4B; Refrain: 4+3), 4 Strophen",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"god-rest-you-s",
+			"A":"god-rest-you-a",
+			"T":"god-rest-you-t",
+			"B":"god-rest-you-b",
+			"SATB":"god-rest-you-satb"
+		}
+	},
+	"o-du-froehliche": {
+		"title": "O du Fröhliche",
+		"key": "F major",
+		"category":"xmas",
+		"info": "",
+		"authorMusic": "",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S1":"o-du-froehliche-s1",
+			"S2":"o-du-froehliche-s2",
+			"A":"o-du-froehliche-a",
+			"T":"o-du-froehliche-t",
+			"B":"o-du-froehliche-b"
+		}
+	},
+	"silent-night": {
+		"title": "Silent Night",
+		"key": "Bb major",
+		"category":"xmas",
+		"info": "",
+		"authorMusic": "Arr. Jens Johansen",
+		"authorText": "",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S1":"silent-night-s1",
+			"S2":"silent-night-s2",
+			"A":"silent-night-a",
+			"T":"silent-night-t",
+			"B1":"silent-night-b1",
+			"B2":"silent-night-b2",
+			"SATB (instr)":"silent-night-satb-instr",
+			"SATB (live)":"silent-night-satb-live"
+		}
+	}
+}
+
+}
