@@ -101,7 +101,11 @@ register: true, // controll tracking: log activity or ignore it
 registerProgressTimestamp: -1,
 
 // overview / list:
-tracksData: [], // all available tracks (meta data file index)
+/**
+ * all available tracks, suitable for filtering and displaying links (buttons)
+ * see: document.abplayer.makeTracksData()
+ */
+tracksData: [],
 filterPart: '', // voice group selection in track selection view
 filterPartEnsemble: true, // track selection view: include ensemble tracks?
 fiterText: undefined, // text input filter for tracks
@@ -157,7 +161,7 @@ init: function() {
 	$('body').keydown(function(event) {document.abplayer.ui.registerKeyPress(event)});
 	
 	
-	ab.trackselection.loadTracksData('./data/tracks.json');
+	ab.dataSource.loadIndexData('./data/tracks.json');
 
 	// file input and DND handling:
 	$('#files').bind('change', handleFileSelect1);
@@ -543,7 +547,7 @@ renderRelatedTrackList: function() {
 			error = true;
 		} else {
 			// now, do we have a trackset?
-			if ((!piece.trackset) || (piece.trackset.length == 0)) {
+			if ((!piece.trackset) || (piece.trackset.length < 2)) {
 				error = true;
 			}
 		}
@@ -557,22 +561,24 @@ renderRelatedTrackList: function() {
 	
 	// huzzah!
 	var lines = [];
-	$.each(
-		piece.trackset, 
-		function (index, value) {
-			for (var prop in value) { // console.log(prop + ": " + value[prop]);
-				lines.push(
-					'<a type="button" class="btn btn-default" onclick="document.abplayer.ui.clickRelated(\''
-					+ 'data/' + value[prop] + '.json\''
-					+ ', '
-					+ '\'' + value[prop] + '\''
-					+ ')">' + prop + '</a>'
-				);
-			}
-		}
-	);
-	$('#relatedTrackDiv').html(lines.join(""));
-	$('#relatedTrackContainer').show();
+	var cnt = 0;
+	for (var part in piece.trackset) { // console.log(part + ": " + piece.trackset[part]);
+		lines.push(
+			'<a type="button" class="btn btn-default" onclick="document.abplayer.ui.clickRelated(\''
+			+ 'data/' + piece.trackset[part] + '.json\''
+			+ ', \'' + piece.trackset[part] + '\''
+			+ ')">' + part + '</a>'
+		);
+		cnt ++;
+	}
+	// only if we have at least 2 tracks (because 1 track is probably the current one):
+	if (cnt >= 2) {
+		$('#relatedTrackDiv').html(lines.join(""));
+		$('#relatedTrackContainer').show();
+	} else {
+		$('#relatedTrackDiv').html('');
+		$('#relatedTrackContainer').hide();
+	}
 },
 setActivePreset: function(preset) {
 	var o = document.abplayer;
@@ -727,6 +733,85 @@ formatTime: function (secondsIn) {
 
 }; // end definition of document.abplayer
 
+
+document.abplayer.dataSource = {
+/**
+ * loads central database from tracks.json file
+ */
+loadIndexData: function(url) {
+	$.getJSON(url)
+	.done(function(data) { // console.log(data);
+		document.abplayer.piecesData = data.pieces;
+		
+		// revision 2017-12-18: tracksData is now calculated from piecesData and titleDict:
+		// document.abplayer.tracksData = data.tracks;
+		document.abplayer.dataSource.makeTracksData(data);
+		
+		// plug in: data validation / testing / checking:
+		if (document.abplayer.validator) document.abplayer.validator.validateList();
+		
+		document.abplayer.trackselection.renderMenu();
+	})
+	.fail(function(jqxhr, textStatus, error ) {
+		var err = textStatus + ", " + error;
+		console.log( "Request Failed: " + err );
+		_paq.push(['trackEvent', 'Top', 'ERROR loadIndexData', err]);
+	});
+},
+/**
+ * generates abplayer.tracksData from tracks.json data
+ */
+makeTracksData: function(data) {
+	// source: data.pieces
+	// source: data.titleDict
+	
+	var o = document.abplayer;
+	o.tracksData = [];
+
+	for (var pieceCode in data.pieces) {
+		var piece = data.pieces[pieceCode];
+		
+		if (!piece.trackset) continue;
+		
+		for (var label in piece.trackset) {
+			var trackCode = piece.trackset[label]; // console.log(trackCode);
+			
+			var entry = {};
+			entry['trackCode'] = trackCode;
+			entry['title'] = data.titleDict[trackCode];
+			
+			var codeParts = trackCode.toUpperCase().split('-');
+			var suffix = codeParts.pop();
+			
+			// check if a special extra suffix is present:
+			if (suffix == 'LIVE') {
+				entry['isLive'] = true;
+				suffix = codeParts.pop();
+			} else if ((suffix == 'PIANO') || (suffix == 'INSTR') || (suffix == 'FLUTE')) {
+				entry['isInstrumental'] = true;
+				suffix = codeParts.pop();
+			}
+			
+			// now expect a part code:
+			if ((suffix == 'SATB') || (suffix == 'SAB')) {
+				entry['part'] = 'SATB0';
+				entry['isEnsemble'] = true;
+			} else {
+				entry['part'] = suffix;
+			}
+			
+			if (piece.category) entry['category'] = piece.category;
+			
+			o.tracksData.push(entry);
+		}
+	}
+	// debug output: resulting JSON:
+	// $('#devOutput').html('<code><pre>' + JSON.stringify(o.tracksData, null, 2) + '</pre></code>');
+	
+}, // end makeTracksData
+}; // end document.abplayer.dataSource
+
+
 // document.abplayer.ui
 document.abplayer.ui = {
 	regionColors: {
@@ -844,7 +929,7 @@ document.abplayer.ui = {
 			return 'rgba('+c.r+','+c.g+','+c.b+','+c.alpha+')'			
 		}
 	}
-};
+}; // end ui
 
 // document.abplayer.presetsFollower (added 2017-10-03)
 document.abplayer.presetsFollower = {
@@ -920,25 +1005,10 @@ document.abplayer.presetsFollower = {
 			o.presetsFollower.currentMatches = tMatches;
 		};
 	}, // end update()
-};
+}; // end presetsFollower
 
 // document.abplayer.trackselection
 document.abplayer.trackselection = {
-	loadTracksData: function(url) {
-		$.getJSON(url)
-		.done(function(data) { // console.log(data);
-			document.abplayer.tracksData = data.tracks;
-			if (data.pieces) document.abplayer.piecesData = data.pieces;
-			// plug in: data validation / testing / checking:
-			if (document.abplayer.validator) document.abplayer.validator.validateList();
-			document.abplayer.trackselection.renderMenu();
-		})
-		.fail(function(jqxhr, textStatus, error ) {
-			var err = textStatus + ", " + error;
-			console.log( "Request Failed: " + err );
-			_paq.push(['trackEvent', 'Top', 'ERROR loadTracksData', err]);
-		});
-	},
 	renderMenu: function() {
 		var matches = [];
 		
@@ -1028,8 +1098,7 @@ document.abplayer.trackselection = {
 			var additionalClasses = (o.category)?('btn-'+o.category+' '):('');
 			html[cursor] += 
 				'<button type="button" class="btn btn-default ' + additionalClasses + 'btn-block" onclick="document.abplayer.ui.clickOpenMeta(\''
-				+ 'data/' + o.dataURL 
-				+ '\')">'
+				+ 'data/' + o.trackCode + '.json\')">'
 				+ o.title
 				+ '</button>\n';
 		}
