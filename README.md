@@ -27,16 +27,17 @@ trying to switch to WaveSurfer.js (https://wavesurfer-js.org/) as the actual pla
 2017-12
 =======
 * replace the "trackset" data field in single track's JSON with a reference to the related pieces entry in tracks.json ("pieceID" - as to not duplicate the trackset for each single track any more)
+* guess / extract the voice part code from the suffix of the track code
+* create the track titles from their respective JSON files (via unique track code), display / save this as generated JSON code back to tracks.json
 
 
 TODOs:
-* guess / extract the voice part code from the suffix of the track code
-* create the track titles from their respective JSON files (via unique track code), display / save this as generated JSON code back to tracks.json
+* create an overview table of the tracks from tracks.json, pieces data field
 * add error message (pop-up? dialog?) if loading of track fails (e.g. when audio file is missing)
 * if the number of tracks is >50 / > 100 (?), prefix the list of tracks for each initial letter with this letter.
 * regions: allow creation of presets by dragging (selecting / marking) the waveform view
 * display sheetMusicURL property of track data, if set
-* create an overview table of the tracks from tracks.json, pieces data field
+* offer links to reference renditions from other performers (YouTube etc)
 
 
 

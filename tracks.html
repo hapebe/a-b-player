@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Übersicht der Mitsing-Tracks</title>
+	
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
+	<!-- jQuery UI CSS -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	
+	<link href="img/app-icons/apple-touch-icon.png" rel="apple-touch-icon" />
+	<link href="img/app-icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+	<link href="img/app-icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
+	<link href="img/app-icons/icon-hires.png" type="image/png" rel="icon" sizes="192x192" />
+	<link href="img/app-icons/icon-normal.png" type="image/png" rel="icon" sizes="128x128" />
+	
+	<link rel="stylesheet" type="text/css" href="./a-b-repeat-wavesurfer.css" media="screen" />
+	
+	<!-- Piwik -->
+	<script type="text/javascript">
+		var domain = 'hapebe.local'; var piwikUrl = '//piwik.local/'; var siteId = '1';
+		if ((window.location.hostname == 'www.hapebe.de') || (window.location.hostname == 'hapebe.de')) {
+			var domain = 'hapebe.de'; var piwikUrl = '//log.erp-berlin.com/'; var siteId = '4';
+		}
+	
+	  var _paq = _paq || [];
+	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+	  _paq.push(["setDomains", ["*." + domain]]);
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+		var u= piwikUrl;
+	  (function() {
+		_paq.push(['setTrackerUrl', u+'piwik.php']);
+		_paq.push(['setSiteId', siteId]);
+		var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<!-- End Piwik Code -->	
+	
+</head>
+<body> 
+	<div class="container-fluid">
+	
+		<!-- tracks table -->
+		<div class="row" id="panelTrackSelection">
+		
+			<div class="col-xs-12">
+				<h4>Übungstracks - The Melodetts</h4>
+			</div>
+			<div class="col-xs-12" id="trackSelection1">
+				(Bitte warten, Tracks werden geladen...)
+			</div>
+			<div class="col-xs-12">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th align="center"><span class="glyphicon glyphicon-paperclip"></span></th>
+								<th align="center">Titel</th>
+								<th align="center">Ensemble</th>
+								<th align="center" colspan="2">Sopran</th>
+								<th align="center" colspan="2">Alt</th>
+								<th align="center" colspan="2">Tenor</th>
+								<th align="center" colspan="2">Bass</th>
+								<th align="center">Live</th>
+								<th align="center">Vergleiche</th>
+							</tr>
+						</thead>
+						<tbody id="trackTableRows">
+							<tr>
+								<td><span class="glyphicon glyphicon-music"></span></td>
+								<td>Sample Song</td>
+								<td><span class="glyphicon glyphicon-play"></span></td>
+								<td>S1</td>
+								<td>S2</td>
+								<td>A1</td>
+								<td>A2</td>
+								<td>T1</td>
+								<td>T2</td>
+								<td>B1</td>
+								<td>B2</td>
+								<td>x</td>
+								<td>x</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<div id="devOutput" class="col-xs-12"></div>
+		</div><!-- /#panelTrackSelection -->
+		
+		<!-- Piwik noscript tracking: -->
+		<noscript><p><img src="//piwik.local/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
+	</div><!-- .container -->
+
+	<div class="busyIndicator" id="busyIndicator"></div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- script type="text/javascript" src="./js/jquery.fancybox-1.3.4.pack.js"></script -->
+	<!-- jQuery UI (for volume slider) -->
+	<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+	
+	<!-- Bootstrap: Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+	<!-- custom code -->
+	<script type="text/javascript" src="./tracks.body-bottom.js"></script>
+</body>
+</html>
