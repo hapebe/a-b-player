@@ -219,18 +219,6 @@
 			"B":"kumbayah-b"
 		}
 	},
-	"mamaliye": {
-		"title": "Mamaliye",
-		"key": "C major",
-		"tempo": "1/4 = 108",
-		"info": "",
-		"authorMusic": "Zulu Traditional, Arr. Wolfgang Thierfeldt",
-		"authorText": "Zulu Traditional",
-		"sheetMusicURL": "http://medien.cedis.fu-berlin.de/vetmed_we02/mitarbeiter/sommerer/medienfiles/008/008.pdf",
-		"trackset": {
-			"SATB0":"mamaliye-satb"
-		}
-	},
 	"ljuva-sommartid": {
 		"title": "I denna ljuva sommartid",
 		"key": "F sharp minor",
@@ -244,6 +232,36 @@
 			"A":"ljuva-sommartid-a",
 			"T":"ljuva-sommartid-t",
 			"B":"ljuva-sommartid-b"
+		}
+	},
+	"love": {
+		"title": "L.O.V.E.",
+		"key": "A major",
+		"tempo": "Swing, 1/4 = ca. 148",
+		"info": "",
+		"authorMusic": "Bert Kämpfert, Arr. Stefan Foidl",
+		"authorText": "Milt Gabler",
+		"sheetMusicURL": "http://www.naemi-vonorelli.ch/media/Love.pdf",
+		"trackset": {
+			"S":"love-s",
+			"A":"love-a",
+			"T":"love-t",
+			"B":"love-b"
+		},
+		"renditions": [
+			{"desc": "YouTube: Cantemus Chamber Choir - Romania \"Banatul\" Philharmonic - April 2013 Conductor - Cezar-Mihail Verlan", "url": "https://www.youtube.com/watch?v=jkUak5Kaf40"}
+		]
+	},
+	"mamaliye": {
+		"title": "Mamaliye",
+		"key": "C major",
+		"tempo": "1/4 = 108",
+		"info": "",
+		"authorMusic": "Zulu Traditional, Arr. Wolfgang Thierfeldt",
+		"authorText": "Zulu Traditional",
+		"sheetMusicURL": "http://medien.cedis.fu-berlin.de/vetmed_we02/mitarbeiter/sommerer/medienfiles/008/008.pdf",
+		"trackset": {
+			"SATB0":"mamaliye-satb"
 		}
 	},
 	"royals": {
@@ -481,11 +499,15 @@
   "kumbayah-a": "Kum Ba Yah ALT",
   "kumbayah-t": "Kum Ba Yah TENOR",
   "kumbayah-b": "Kum Ba Yah BASS",
-  "mamaliye-satb": "Mamaliye - ALLE STIMMEN",
   "ljuva-sommartid-s": "I denna ljuva sommartid SOPRAN",
   "ljuva-sommartid-a": "I denna ljuva sommartid ALT",
   "ljuva-sommartid-t": "I denna ljuva sommartid TENOR",
   "ljuva-sommartid-b": "I denna ljuva sommartid BASS",
+  "love-s": "L.O.V.E. SOPRAN",
+  "love-a": "L.O.V.E. ALT",
+  "love-t": "L.O.V.E. TENOR",
+  "love-b": "L.O.V.E. BASS",
+  "mamaliye-satb": "Mamaliye - ALLE STIMMEN",
   "royals-s": "Royals SOPRAN",
   "royals-a": "Royals ALT",
   "royals-tb": "Royals Tenor & Bass",

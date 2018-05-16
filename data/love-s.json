@@ -1,0 +1,12 @@
+{
+	"title": "L.O.V.E. SOPRAN",
+	"pieceID": "love",
+	"url": "audio/LOVE-S.mp3",
+	"presets": [
+		{"t0":8,"t1":39,"desc":"A","measure":5,"type":"verse"},
+		{"t0":36,"t1":69,"desc":"B","measure":21,"type":"verse"},
+		{"t0":65,"t1":97,"desc":"C","measure":37,"type":"verse"},
+		{"t0":93,"t1":127,"desc":"D","measure":53,"type":"verse"},
+		{"t0":121,"t1":144,"desc":"Coda","measure":69,"type":"bridge"}
+	]
+}

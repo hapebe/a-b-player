@@ -1,0 +1,13 @@
+{
+	"title": "L.O.V.E. BASS",
+	"pieceID": "love",
+	"url": "audio/LOVE-B.mp3",
+	"presets": [
+		{"t0":3,"t1":14,"desc":"Intro","measure":1,"type":"bridge"},
+		{"t0":10,"t1":41,"desc":"A","measure":5,"type":"verse"},
+		{"t0":37,"t1":69,"desc":"B","measure":21,"type":"verse"},
+		{"t0":65,"t1":97,"desc":"C","measure":37,"type":"verse"},
+		{"t0":94,"t1":126,"desc":"D","measure":53,"type":"verse"},
+		{"t0":120,"t1":145,"desc":"Coda","measure":69,"type":"bridge"}
+	]
+}

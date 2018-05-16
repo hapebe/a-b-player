@@ -1,0 +1,13 @@
+{
+	"title": "L.O.V.E. ALT",
+	"pieceID": "love",
+	"url": "audio/LOVE-A.mp3",
+	"presets": [
+		{"t0":3,"t1":15,"desc":"Intro","measure":1,"type":"bridge"},
+		{"t0":10,"t1":43,"desc":"A","measure":5,"type":"verse"},
+		{"t0":39,"t1":73,"desc":"B","measure":21,"type":"verse"},
+		{"t0":68,"t1":104,"desc":"C","measure":37,"type":"verse"},
+		{"t0":97,"t1":134,"desc":"D","measure":53,"type":"verse"},
+		{"t0":125,"t1":152,"desc":"Coda","measure":69,"type":"bridge"}
+	]
+}
