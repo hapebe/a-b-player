@@ -1,0 +1,11 @@
+{
+	"title": "La Mer TENOR",
+	"pieceID": "la-mer",
+	"url": "audio/La-Mer-T.mp3",
+	"presets": [
+		{"t0":2,"t1":28,"desc":"A+B (... Qu'on voit danser)","measure":13,"type":"verse"},
+		{"t0":24,"t1":60,"desc":"C+D (... Au ciel d'été)","measure":25,"type":"verse"},
+		{"t0":60,"t1":75,"desc":"E+F (Voyez)","measure":37,"type":"bridge"},
+		{"t0":70,"t1":105,"desc":"G+H (... Les a bercés)","measure":49,"type":"verse"}
+	]
+}

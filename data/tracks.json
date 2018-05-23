@@ -264,6 +264,25 @@
 			"SATB0":"mamaliye-satb"
 		}
 	},
+	"la-mer": {
+		"title": "La Mer",
+		"key": "C major",
+		"tempo": "1/4 = 120 (Swing-Achtel)",
+		"info": "",
+		"authorMusic": "Charles Trénet, A. Lasry, Arr.: Pierre-Gérard Verny",
+		"authorText": "Charles Trénet",
+		"sheetMusicURL": "https://www.sympaphonie.com/sympadoc/pdf/14259-A.pdf",
+		"trackset": {
+			"S1":"la-mer-s1",
+			"S2":"la-mer-s2",
+			"A":"la-mer-a",
+			"T":"la-mer-t",
+			"B":"la-mer-b"
+		},
+		"renditions": [
+			{"desc": "", "url": ""}
+		]
+	},
 	"royals": {
 		"title": "Royals",
 		"key": "D minor",
@@ -508,6 +527,11 @@
   "love-t": "L.O.V.E. TENOR",
   "love-b": "L.O.V.E. BASS",
   "mamaliye-satb": "Mamaliye - ALLE STIMMEN",
+  "la-mer-s1": "La Mer SOPRAN 1",
+  "la-mer-s2": "La Mer SOPRAN 2",
+  "la-mer-a": "La Mer ALT",
+  "la-mer-t": "La Mer TENOR",
+  "la-mer-b": "La Mer BASS",
   "royals-s": "Royals SOPRAN",
   "royals-a": "Royals ALT",
   "royals-tb": "Royals Tenor & Bass",

@@ -1,0 +1,11 @@
+{
+	"title": "La Mer ALT",
+	"pieceID": "la-mer",
+	"url": "audio/La-Mer-A.mp3",
+	"presets": [
+		{"t0":5,"t1":30,"desc":"A+B (... Qu'on voit danser)","measure":13,"type":"verse"},
+		{"t0":29,"t1":56,"desc":"C+D (... Au ciel d'été)","measure":25,"type":"verse"},
+		{"t0":50,"t1":78,"desc":"E+F (Voyez)","measure":37,"type":"bridge"},
+		{"t0":76,"t1":107,"desc":"G+H (... Les a bercés)","measure":49,"type":"verse"}
+	]
+}

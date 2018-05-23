@@ -1,0 +1,11 @@
+{
+	"title": "La Mer SOPRAN 1",
+	"pieceID": "la-mer",
+	"url": "audio/La-Mer-S1.mp3",
+	"presets": [
+		{"t0":3,"t1":28,"desc":"A+B (... Qu'on voit danser)","measure":13,"type":"verse"},
+		{"t0":28,"t1":53,"desc":"C+D (... Au ciel d'été)","measure":25,"type":"verse"},
+		{"t0":47,"t1":77,"desc":"E+F (Voyez)","measure":37,"type":"bridge"},
+		{"t0":76,"t1":107,"desc":"G+H (... Les a bercés)","measure":49,"type":"verse"}
+	]
+}
