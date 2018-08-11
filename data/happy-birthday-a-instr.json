@@ -1,0 +1,11 @@
+{
+	"title": "Happy Birthday ALT INSTRUMENTAL",
+	"pieceID": "happy-birthday-a-instr",
+	"url": "audio/Happy-Birthday-A-instr.mp3",
+	"presets": [
+		{"t0":0,"t1":24,"desc":"Thema","measure":1,"type":"chorus"},
+		{"t0":20,"t1":50,"desc":"Latin Feeling","measure":9,"type":"verse"},
+		{"t0":44,"t1":77,"desc":"Swing","measure":27,"type":"bridge"},
+		{"t0":67,"t1":97,"desc":"Thema (Reprise)","measure":1,"type":"chorus"}
+	]
+}

@@ -142,8 +142,20 @@
 			"S2":"free-your-soul-s2"
 		}
 	},
+	"happy-birthday": {
+		"title": "Happy Birthday",
+		"key": "G major",
+		"info": "",
+		"authorMusic": "Patty Smith Hill / Mildred Hill, Arr. Susanne Schempp",
+		"authorText": "Patty Smith Hill / Mildred Hill",
+		"sheetMusicURL": "",
+		"trackset": {
+			"A":"happy-birthday-a-instr"
+		}
+	},
 	"he-is-always-close": {
 		"title": "He Is Always Close To You",
+		"key": "F major",
 		"info": "",
 		"authorMusic": "",
 		"authorText": "",
@@ -495,6 +507,7 @@
   "echo-b": "Echo-Kanon BASS",
   "free-your-soul-s1": "Free Your Soul SOPRAN 1",
   "free-your-soul-s2": "Free Your Soul SOPRAN 2",
+  "happy-birthday-a-instr": "Happy Birthday ALT INSTRUMENTAL",
   "he-is-always-cty-s": "He Is Always Close To You SOPRAN",
   "he-is-always-cty-a1": "He Is Always Close To You ALT 1",
   "he-is-always-cty-a2": "He Is Always Close To You ALT 2",

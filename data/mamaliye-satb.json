@@ -4,9 +4,9 @@
 	"url": "audio/Mamaliye.mp3",
 	"presets": [
 		{"t0":1,"t1":18,"desc":"Bass","measure":1},
-		{"t0":16,"t1":38,"desc":"Bass + Tenor","measure":1},
-		{"t0":36,"t1":50,"desc":"Bass, Tenor + Alt","measure":1},
-		{"t0":48,"t1":67,"desc":"Bass, Tenor, Alt + Sopran","measure":1},
-		{"t0":65,"t1":84,"desc":"Alle, Take II","measure":1}
+		{"t0":16,"t1":35,"desc":"Bass + Tenor","measure":1},
+		{"t0":32,"t1":51,"desc":"Bass, Tenor + Alt","measure":1},
+		{"t0":49,"t1":68,"desc":"Bass, Tenor, Alt + Sopran","measure":1},
+		{"t0":66,"t1":84,"desc":"Alle, Take II","measure":1}
 	]
 }
