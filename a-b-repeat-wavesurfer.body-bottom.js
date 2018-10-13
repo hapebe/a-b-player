@@ -800,6 +800,7 @@ makeTracksData: function(data) {
 				entry['part'] = suffix;
 			}
 			
+			entry['category'] = 'track';
 			if (piece.category) entry['category'] = piece.category;
 			
 			o.tracksData.push(entry);

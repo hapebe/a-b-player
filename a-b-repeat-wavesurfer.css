@@ -3,6 +3,17 @@
 .dragover {background:#94c3e4;}
 
 /* track selection view: */
+/* default buttons: */
+.btn-default.btn-track {
+	background-color:#fcffb8;
+	border-color:#ccb866;
+	color:#331e00;
+}
+.btn-default.btn-track:hover {
+	background-color:#ff9c4c;
+	border-color:#ccb866;
+	color:#331e00;
+}
 .btn-default.btn-xmas {
 	background-color:#fad4de;
 	border-color:#c95f78;
@@ -14,14 +25,12 @@
 	color:#620319;
 }
 .btn-default.btn-kammerchor {
-	background-color:#cccccc;
-	border-color:#777;
-	/* color:#620319; */
+	background-color:#ccf2ff;
+	border-color:#66b2cc;
 }
 .btn-default.btn-kammerchor:hover {
-	background-color:#d7d7d7;
-	border-color:#bbb;
-	/* color:#620319; */
+	background-color:#7ddbfa;
+	border-color:#66b2cc;
 }
 #trackSelection1 button:first-child, #trackSelection2 button:first-child , #trackSelection3 button:first-child , #trackSelection4 button:first-child  { margin-top:5px; }
 
