@@ -88,9 +88,14 @@ $(function(){
 	// check whether file was specified in the URL/# part:
 	var hash = document.location.hash; // console.log(document.location.hash);
 	if (hash) {
-		var dataURL = 'data/' + hash.substring(1) + '.json';
-		document.abplayer.ui.clickOpenMeta(dataURL); // console.log(dataURL);
-		_paq.push(['trackEvent', 'Init', 'openByHash', hash.substring(1)]);
+		// hack: allow some time for the pieceData to be populated...
+		setTimeout(function(){ 
+				var dataURL = 'data/' + hash.substring(1) + '.json';
+				document.abplayer.ui.clickOpenMeta(dataURL); // console.log(dataURL);
+				_paq.push(['trackEvent', 'Init', 'openByHash', hash.substring(1)]);
+			}, 
+			500
+		);
 	}
 });
 
@@ -547,6 +552,8 @@ renderRelatedTrackList: function() {
 	
 	var error = false;
 	if (!o.fileInfo.pieceID) {
+		error = true;
+	} else if (!o.piecesData) {
 		error = true;
 	} else {
 		var piece = o.piecesData[o.fileInfo.pieceID];
