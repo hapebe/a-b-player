@@ -3,14 +3,14 @@
 	"pieceID": "in-the-mood",
 	"url": "audio/In The Mood.mp3",
 	"presets": [
-		{"t0":0,"t1":20,"desc":"Intro","measure":1},
-		{"t0":14,"t1":46,"desc":"Part A","measure":9},
-		{"t0":40,"t1":74,"desc":"Part B","measure":21},
-		{"t0":69,"t1":92,"desc":"Part C","measure":33},
-		{"t0":87,"t1":110,"desc":"Part D","measure":41},
-		{"t0":105,"t1":117,"desc":"Part E","measure":49},
-		{"t0":113,"t1":136,"desc":"Part F","measure":53},
-		{"t0":126,"t1":152,"desc":"Part G","measure":61},
-		{"t0":202,"t1":239,"desc":"Part K (Coda)","measure":69}
+		{"t0":0,"t1":20,"desc":"Intro","measure":1,"type":"alternative"},
+		{"t0":14,"t1":46,"desc":"Part A","measure":9,"type":"verse"},
+		{"t0":40,"t1":74,"desc":"Part B","measure":21,"type":"verse"},
+		{"t0":69,"t1":92,"desc":"Part C","measure":33,"type":"chorus"},
+		{"t0":87,"t1":110,"desc":"Part D","measure":41,"type":"chorus"},
+		{"t0":105,"t1":117,"desc":"Part E","measure":49,"type":"bridge"},
+		{"t0":113,"t1":136,"desc":"Part F","measure":53,"type":"bridge"},
+		{"t0":126,"t1":152,"desc":"Part G","measure":61,"type":"bridge"},
+		{"t0":202,"t1":239,"desc":"Part K (Coda)","measure":69,"type":"alternative"}
 	]
 }

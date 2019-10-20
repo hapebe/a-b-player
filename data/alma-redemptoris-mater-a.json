@@ -1,0 +1,12 @@
+{
+	"title": "Alma Redemptoris Mater ALT",
+	"pieceID": "alma-redemptoris-mater",
+	"url": "audio/Alma-Redemptoris-Mater-A.mp3",
+	"presets": [
+		{"t0":4,"t1":35,"desc":"Redemptoris Mater, quae...","measure":1,"type":"verse"},
+		{"t0":31,"t1":46,"desc":"... surgere qui ...","measure":12,"type":"verse"},
+		{"t0":42,"t1":67,"desc":"Tu quae genuisti, ...","measure":16,"type":"verse"},
+		{"t0":62,"t1":91,"desc":"Virgo prius ...","measure":24,"type":"verse"},
+		{"t0":86,"t1":124,"desc":" ... sumens illud ...","measure":33,"type":"verse"}
+	]
+}

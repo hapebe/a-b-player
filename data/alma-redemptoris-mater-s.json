@@ -1,0 +1,12 @@
+{
+	"title": "Alma Redemptoris Mater SOPRAN",
+	"pieceID": "alma-redemptoris-mater",
+	"url": "audio/Alma-Redemptoris-Mater-S.mp3",
+	"presets": [
+		{"t0":4,"t1":36,"desc":"Redemptoris Mater, quae...","measure":1,"type":"verse"},
+		{"t0":32,"t1":47,"desc":"... surgere qui ...","measure":12,"type":"verse"},
+		{"t0":43,"t1":69,"desc":"Tu quae genuisti, ...","measure":16,"type":"verse"},
+		{"t0":65,"t1":94,"desc":"Virgo prius ...","measure":24,"type":"verse"},
+		{"t0":90,"t1":129,"desc":" ... sumens illud ...","measure":33,"type":"verse"}
+	]
+}

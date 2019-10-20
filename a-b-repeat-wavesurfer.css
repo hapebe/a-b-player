@@ -66,6 +66,7 @@
 /* #favorlist_ul { border:1px solid #f0f0f0; padding:5px 5px; min-height:50px;} */
 #favorlist_ul li { /* list-style-type:none; */ cursor: pointer;}
 #presetListLarge .list-group-item { padding: 5px 15px; }
+.trackInfo { color: #aaa; font-weight:normal; font-size:80%; }
 /*
 #tips { float: right; }
 #tips li { font-size:0.8em;}

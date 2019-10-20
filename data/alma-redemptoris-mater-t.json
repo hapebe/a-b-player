@@ -1,0 +1,13 @@
+{
+	"title": "Alma Redemptoris Mater TENOR",
+	"pieceID": "alma-redemptoris-mater",
+	"url": "audio/Alma-Redemptoris-Mater-T.mp3",
+	"presets": [
+		{"t0":0,"t1":7,"desc":"A-a-a-a-alma","measure":0,"type":"verse"},
+		{"t0":7,"t1":33,"desc":"Redemptoris Mater, quae...","measure":1,"type":"verse"},
+		{"t0":30,"t1":50,"desc":"... surgere qui ...","measure":12,"type":"verse"},
+		{"t0":48,"t1":76,"desc":"Tu quae genuisti, ...","measure":16,"type":"verse"},
+		{"t0":73,"t1":98,"desc":"Virgo prius ...","measure":24,"type":"verse"},
+		{"t0":95,"t1":134,"desc":" ... sumens illud ...","measure":33,"type":"verse"}
+	]
+}

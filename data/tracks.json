@@ -18,6 +18,23 @@
 			{"desc": "YouTube: Rundfunk-Jugendchor Wernigerode", "url": "https://www.youtube.com/watch?v=tiB3uUlTCeQ"}
 		]
 	},
+	"alma-redemptoris-mater": {
+		"title": "Alma Redemptoris Mater",
+		"key": "D major",
+		"tempo": "Moderado (1/4 = 96..100)",
+		"info": "Motette für vierstimmigen gemischten Chor. Italienische Aussprache.",
+		"authorMusic": "G.P. da Palestrina",
+		"sheetMusicURL": "https://www.cpdl.org/wiki/images/5/5f/Palestrina-Alma_Redemptoris_Mater.pdf",
+		"trackset": {
+			"S":"alma-redemptoris-mater-s",
+			"A":"alma-redemptoris-mater-a",
+			"T":"alma-redemptoris-mater-t",
+			"B":"alma-redemptoris-mater-b"
+		},
+		"renditions": [
+			{"desc": "YouTube: Tallis Scholars", "url": "https://www.youtube.com/watch?v=6PSRWWBz61g"}
+		]
+	},
 	"irish-blessing": {
 		"title": "An Irish Blessing",
 		"key": "Bb major",
@@ -467,13 +484,16 @@
 		}
 	}
 },
-
 "titleDict": {
   "_comment": "This is a computer-generated dictionary of the titles of all single tracks IF they are registered in any {trackset} in {pieces}.",
   "abschied-walde-s": "Abschied vom Walde SOPRAN",
   "abschied-walde-a": "Abschied vom Walde ALT",
   "abschied-walde-t": "Abschied vom Walde TENOR",
   "abschied-walde-b": "Abschied vom Walde BASS",
+  "alma-redemptoris-mater-s": "Alma Redemptoris Mater SOPRAN",
+  "alma-redemptoris-mater-a": "Alma Redemptoris Mater ALT",
+  "alma-redemptoris-mater-t": "Alma Redemptoris Mater TENOR",
+  "alma-redemptoris-mater-b": "Alma Redemptoris Mater BASS",
   "irish-blessing-s": "An Irish Blessing SOPRAN",
   "irish-blessing-a": "An Irish Blessing ALT",
   "irish-blessing-t": "An Irish Blessing TENOR",
@@ -601,5 +621,4 @@
   "silent-night-satb-instr": "Silent Night INSTRUMENTAL SATB",
   "silent-night-satb-live": "Silent Night LIVE 2012"
 }
-
 }

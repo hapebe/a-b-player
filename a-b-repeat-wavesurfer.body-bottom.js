@@ -205,7 +205,14 @@ openMeta: function(url) {
 		o.resetPresets(); // includes rendering
 		
 		o.renderRelatedTrackList();
-		$("#filename").html(o.fileInfo.title);
+
+		var titleHtml = o.fileInfo.title;
+		var pieceData = o.piecesData[o.fileInfo.pieceID];
+		console.log(pieceData);
+		if (pieceData.info) {
+			titleHtml += ' <span class="trackInfo hidden-xs">' + pieceData.info + '</span>';
+		}
+		$("#filename").html(titleHtml);
 		
 		$('#linkAudio').attr('href', 'bootstrap.html#' + o.trackCode);
 		
@@ -1043,6 +1050,7 @@ document.abplayer.trackselection = {
 				// filterText:
 				if (filterText && (filterText.length > 0)) {
 					var regex = new RegExp(filterText, 'ig')
+					if (!value.title) return;
 					if (value.title.match(regex) == null) return;
 				}
 				
@@ -1065,9 +1073,10 @@ document.abplayer.trackselection = {
 		
 		var html = []; for (var i=0; i<targets.length; i++) { html[i] = ''; }
 		
-		// distribute the tracks to the columns:
+		// distribute div-by-4-able tracks to the columns:
 		var targetCounts = []; for (var i=0; i<targets.length; i++) { targetCounts[i] = Math.floor(matches.length / targets.length); }
 		var cursor = 0;
+		// round-robin remaining tracks to the columns:
 		while (arraySum(targetCounts) < matches.length) {
 			targetCounts[cursor] ++;
 			cursor = (cursor + 1) % targets.length;

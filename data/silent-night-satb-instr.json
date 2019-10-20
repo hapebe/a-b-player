@@ -6,6 +6,6 @@
 		{"t0":0,"t1":15,"desc":"Strophe, Teil I","measure":1}, 
 		{"t0":15,"t1":30,"desc":"Strophe, Teil II","measure":5}, 
 		{"t0":30,"t1":46,"desc":"Strophe, Teil III","measure":9},
-		{"t0":0,"t1":47,"desc":"ganze Strophe"}
+		{"t0":0,"t1":47,"desc":"ganze Strophe","type":"invisible"}
 	]
 }
