@@ -1,12 +1,12 @@
 a-b-player
 ==========
 
-An A-B Repeat/Loop Audio Player with HTML5, based on 
-https://github.com/holin/abRepeater, largely extended 
-for the practice / sing-along tracks of "The Melodetts" 
+An A-B Repeat/Loop Audio Player with HTML5, based on
+https://github.com/holin/abRepeater, largely extended
+for the practice / sing-along tracks of "The Melodetts"
 by hapebe@gmx.de
 
-2017-10 
+2017-10
 =======
 trying to switch to WaveSurfer.js (https://wavesurfer-js.org/) as the actual player element.
 
@@ -30,15 +30,21 @@ trying to switch to WaveSurfer.js (https://wavesurfer-js.org/) as the actual pla
 * guess / extract the voice part code from the suffix of the track code
 * create the track titles from their respective JSON files (via unique track code), display / save this as generated JSON code back to tracks.json
 
+2019-10 (v1.8)
+=======
+* display track-specific info field in the player headline
+* error handling in case audio file cannot be loaded
+* Upgraded WaveSurfer to v3.1.0
+* fixed async index data (tracks.json) loading bug when opening songs directly via URL hash
+* display sheetMusicURL property of track data, if set
+* offer links to reference renditions from other performers (YouTube etc): display renditions[0] property of track data, if set
+* add error message (pop-up? dialog?) if loading of track fails (e.g. when audio file is missing)
 
 TODOs:
+* allow for more than one rendition tag...
 * create an overview table of the tracks from tracks.json, pieces data field
-* add error message (pop-up? dialog?) if loading of track fails (e.g. when audio file is missing)
 * if the number of tracks is >50 / > 100 (?), prefix the list of tracks for each initial letter with this letter.
 * regions: allow creation of presets by dragging (selecting / marking) the waveform view
-* display sheetMusicURL property of track data, if set
-* offer links to reference renditions from other performers (YouTube etc)
-
 
 
 References / Acknowledgements:

@@ -5,27 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>A-B-Repeat Audio Player</title>
-	
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" crossorigin="anonymous">
 	<!-- jQuery UI CSS -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	
+
 	<link href="img/app-icons/apple-touch-icon.png" rel="apple-touch-icon" />
 	<link href="img/app-icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
 	<link href="img/app-icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180" />
 	<link href="img/app-icons/icon-hires.png" type="image/png" rel="icon" sizes="192x192" />
 	<link href="img/app-icons/icon-normal.png" type="image/png" rel="icon" sizes="128x128" />
-	
+
 	<link rel="stylesheet" type="text/css" href="./a-b-repeat-wavesurfer.css" media="screen" />
-	
+
 	<!-- Piwik -->
 	<script type="text/javascript">
 		var domain = 'hapebe.local'; var piwikUrl = '//piwik.local/'; var siteId = '1';
 		if ((window.location.hostname == 'www.hapebe.de') || (window.location.hostname == 'hapebe.de')) {
 			var domain = 'hapebe.de'; var piwikUrl = 'https://rx2asxeuy71gflmh.myfritz.net/mat/'; var siteId = '3';
 		}
-	
+
 	  var _paq = _paq || [];
 	  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
 	  _paq.push(["setDomains", ["*." + domain]]);
@@ -39,15 +39,15 @@
 		g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
 	  })();
 	</script>
-	<!-- End Piwik Code -->	
-	
+	<!-- End Piwik Code -->
+
 </head>
-<body> 
+<body>
 	<div class="container-fluid">
-	
+
 		<!-- track selection list -->
 		<div id="panelTrackSelection">
-		
+
 			<nav class="navbar navbar-default">
 				<ul class="nav navbar-nav">
 					<li class="dropdown">
@@ -76,7 +76,7 @@
 						</a>
 					</li>
 				</ul>
-				
+
 				<div class="col-xs-12 col-sm-6 col-md-3 pull-right">
 					<form id="filterTextForm" class="navbar-form" role="search" style="border-color:transparent;">
 					<div class="input-group">
@@ -85,10 +85,10 @@
 							<button id="btnResetFilterText" class="btn btn-default" type="button"><i class="glyphicon glyphicon-filter"></i></button>
 						</div>
 					</div>
-					</form>				
+					</form>
 				</div>
 			</nav>
-		
+
 			<div class="col-xs-12">
 				<h4>Wähle einen Track...</h4>
 			</div>
@@ -102,20 +102,20 @@
 			<div class="col-md-12 visible-md-block"><hr /></div>
 			<div class="col-xs-12 col-md-6 col-lg-3" id="trackSelection3"></div>
 			<div class="col-xs-12 col-md-6 col-lg-3" id="trackSelection4"></div>
-			
+
 			<div class="col-xs-12">&nbsp;</div>
-			
+
 			<div id="devOutput" class="col-xs-12"></div>
-			
+
 		</div><!-- /#panelTrackSelection -->
 
 
 
-		
-		
+
+
 		<!-- single track player interface -->
 		<div id="panelPlayer">
-		
+
 		<!-- title and player line -->
 		<div class="row">
 			<div class="col-xs-12">
@@ -126,11 +126,11 @@
 				<h4 id="filename" style="display:inline;">Audio-Player mit besonderem Schwerpunkt auf A-B-Loops</h4>
 			</div>
 		</div>
-		
+
 		<div class="row" style="margin-left:0px; margin-right:0px;">
 			<div class="col-xs-12" id="wavesurferTarget" style="padding-left:0; padding-right:0;"></div>
 		</div>
-	
+
 		<!-- 1 or 2 column design based on display width -->
 		<div class="row">
 			<div class="col-xs-12 col-md-6"><!-- playback and A/B controls -->
@@ -150,7 +150,7 @@
 										<div id="sliderVolume"></div>
 									</div>
 								</div>
-							</div>		
+							</div>
 							<!-- A/B line -->
 							<div class="row row-vspace">
 								<div class="col-xs-1 no-side-padding text-right">
@@ -164,7 +164,7 @@
 										<span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
 									</a>
 								</div>
-								
+
 								<div class="col-xs-1 no-side-padding text-right">
 									<a role="button" type="btn btn-link" id="btnPreB" style="display:inline-block; margin-top:6px;">
 										<span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
@@ -177,7 +177,7 @@
 									</a>
 								</div>
 							</div>
-						
+
 							<div class="row row-vspace">
 								<!-- A/B tools line -->
 								<div class="col-xs-12 text-center">
@@ -185,7 +185,7 @@
 									<button id="btnAddPreset" type="button" class="btn btn-default"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span> Loop auf die Liste</button>
 								</div>
 							</div>
-							
+
 							<!-- presetList: dropdown list (small screen layout) -->
 							<div class="row row-vspace">
 								<div class="col-xs-10 col-xs-offset-1 no-side-padding">
@@ -201,12 +201,12 @@
 									</div>
 								</div>
 							</div>
-							
+
 						</div><!-- #repeatControl -->
 					</div><!-- .panel-body -->
 					<div class="panel-footer"><small>Loop-Steuerung</small></div>
 				</div><!-- .panel -->
-				
+
 				<div class="row row-vspace"><!-- related tracks buttons -->
 					<div class="col-xs-12 text-right" id="relatedTrackContainer">
 						Verwandte Tracks:
@@ -220,15 +220,15 @@
 						</div>
 					</div>
 				</div><!-- .row -->
-				
+
 				<!-- additional tools line -->
-				<!-- 
+				<!--
 				(2015-11-21 temporarily hidden!)
 				<div class="col-xs-12 col-md-4" id="tips">
 					<img width="29px" height="32px" style="cursor:pointer" onclick="$('#files').click()" src="img/add.png" alt="Open file..." title="Open file..." />
 				</div>
 				 -->
-				
+
 			</div>
 			<div class="col-xs-12 col-md-6"><!-- preset list and controls -->
 				<div class="row">
@@ -249,8 +249,19 @@
 						<button id="btnClearPresets" type="button" class="btn btn-default"><span class="glyphicon glyphicon-erase" aria-hidden="true"></span> Alle Presets löschen</button>
 					</div>
 				</div>
-				
+
 			</div>
+		</div><!-- .row -->
+
+    <div id="furtherLinksDiv" class="row row-vspace">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+					<div class="panel-body">
+            <div id="youtubeLink"><span class="glyphicon glyphicon-expand" aria-hidden="true"></span>&nbsp;<a href="#" target="_blank">YouTube Link</a></div>
+            <div id="sheetMusicLink"><span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;<a href="#" target="_blank">Noten als PDF</a></div>
+          </div><!-- .panel-body -->
+				</div><!-- .panel -->
+			</div><!-- .col -->
 		</div><!-- .row -->
 
 		<div class="row row-vspace" style="margin-top:2.5em;">
@@ -262,11 +273,11 @@
 				</div><!-- .panel -->
 			</div><!-- .col -->
 		</div><!-- .row -->
-		
+
 		</div><!-- #panelPlayer -->
-		
-		<input type="file" id="files" name="files[]" /> 
-		
+
+		<input type="file" id="files" name="files[]" />
+
 		<!-- Piwik noscript tracking: -->
 		<noscript><p><img src="//piwik.local/piwik.php?idsite=1&rec=1" style="border:0;" alt="" /></p></noscript>
 	</div><!-- .container -->
@@ -278,19 +289,18 @@
 	<!-- script type="text/javascript" src="./js/jquery.fancybox-1.3.4.pack.js"></script -->
 	<!-- jQuery UI (for volume slider) -->
 	<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
-	
+
 	<!-- Bootstrap: Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-	<!-- WaveSurfer.js -->
-	<script type="text/javascript" src="./js/wavesurfer-1.4.0.min.js"></script>
-	<!-- wavesurfer.js regions -->
-	<script type="text/javascript" src="./js/wavesurfer-1.4.0.regions.min.js"></script>
-	
+	<!-- WaveSurfer.js + regions -->
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.min.js"></script>
+
 	<!-- custom code -->
 	<script type="text/javascript" src="./a-b-repeat-wavesurfer.body-bottom.js"></script>
 	<!-- testing / optional custom code: remove comment tags to make it active -->
 	<!-- script type="text/javascript" src="./a-b-repeat-validator.js"></script -->
-	
+
 </body>
 </html>
