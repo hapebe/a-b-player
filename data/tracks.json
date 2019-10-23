@@ -307,10 +307,7 @@
 			"A":"la-mer-a",
 			"T":"la-mer-t",
 			"B":"la-mer-b"
-		},
-		"renditions": [
-			{"desc": "", "url": ""}
-		]
+		}
 	},
 	"royals": {
 		"title": "Royals",

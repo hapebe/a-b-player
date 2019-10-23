@@ -1,7 +1,13 @@
 // do this even when complete loading fails...
+
+// hide all of the further links section:
 $('#furtherLinksDiv').hide();
+$('#sheetMusicLink').hide();
+$('#youtubeLink').hide();
 $('#panelPlayer').hide();
 $("#busyIndicator").hide();
+
+
 
 $(function(){
 
@@ -228,7 +234,7 @@ openMeta: function(url) {
 		// track successful opening:
 		_paq.push(['trackEvent', 'Top', 'openTrack', data.title]);
 
-		var pieceData = o.piecesData[data.pieceID]; console.log(pieceData);
+		var pieceData = o.piecesData[data.pieceID];
 
 		// add DOM ID to presets data:
 		for (var i=0; i<data.presets.length; i++) {
@@ -251,12 +257,12 @@ openMeta: function(url) {
 
 		// display additional links?
 		var any = false;
-		if (pieceData.sheetMusicURL) {
+		if (pieceData.sheetMusicURL && pieceData.sheetMusicURL != "") {
 			any = true;
 			$('#sheetMusicLink').show();
 			$('#sheetMusicLink a').attr('href', pieceData.sheetMusicURL);
 		}
-		if (pieceData.renditions) {
+		if (pieceData.renditions && pieceData.renditions[0].url != "") {
 			any = true;
 			$('#youtubeLink').show();
 			$('#youtubeLink a').attr('href', pieceData.renditions[0].url);
