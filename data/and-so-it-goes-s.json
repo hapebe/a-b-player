@@ -1,0 +1,15 @@
+{
+	"title": "And So It Goes SOPRAN",
+	"pieceID": "and-so-it-goes",
+	"url": "audio/And-So-It-Goes-S.mp3",
+	"presets": [
+		{"t0":4,"t1":31,"desc":"Verse 1 (In every heart...)","measure":1,"type":"verse"},
+		{"t0":28,"t1":56,"desc":"Verse 2 (I spoke to you...)","measure":9,"type":"verse"},
+		{"t0":51,"t1":80,"desc":"Chorus 1 (And every time...)","measure":17,"type":"chorus"},
+		{"t0":75,"t1":105,"desc":"Verse 3 (But if my silence...)","measure":25,"type":"verse"},
+		{"t0":101,"t1":130,"desc":"Chorus 2 (And this is why...)","measure":33,"type":"chorus"},
+		{"t0":125,"t1":155,"desc":"Verse 4 (So I would choose...)","measure":41,"type":"verse"},
+		{"t0":150,"t1":168,"desc":"Bridge","measure":49,"type":"bridge"},
+		{"t0":164,"t1":182,"desc":"Coda (And So It Goes)","measure":53,"type":"chorus"}
+	]
+}

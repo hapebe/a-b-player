@@ -35,6 +35,24 @@
 			{"desc": "YouTube: Tallis Scholars", "url": "https://www.youtube.com/watch?v=6PSRWWBz61g"}
 		]
 	},
+	"and-so-it-goes": {
+		"title": "And So It Goes",
+		"key": "D major",
+		"tempo": "Hymn-like, but with rubato (1/4 = ca. 60)",
+		"info": "7 mal 8 Takte, aber mit Taktwechseln und Synkopen",
+		"authorMusic": "Billy Joel, arr. Bob Chilcott",
+		"authorText": "Billy Joel",
+		"sheetMusicURL": "https://www.koorfortissimo.nl/wp-content/uploads/Repertoire/Arrangement/And-so-it-goes-SATB.pdf",
+		"trackset": {
+			"S":"and-so-it-goes-s",
+			"A":"and-so-it-goes-a",
+			"T":"and-so-it-goes-t"
+		},
+		"renditions": [
+			{"desc": "YouTube: King's Singers (neuere Besetzung)", "url": "https://www.youtube.com/watch?v=GVdt3x9jdOk"},
+			{"desc": "YouTube: King's Singers", "url": "https://www.youtube.com/watch?v=0D0mypn54iE"}
+		]
+	},
 	"irish-blessing": {
 		"title": "An Irish Blessing",
 		"key": "Bb major",
@@ -491,6 +509,9 @@
   "alma-redemptoris-mater-a": "Alma Redemptoris Mater ALT",
   "alma-redemptoris-mater-t": "Alma Redemptoris Mater TENOR",
   "alma-redemptoris-mater-b": "Alma Redemptoris Mater BASS",
+  "and-so-it-goes-s": "And So It Goes SOPRAN",
+  "and-so-it-goes-a": "And So It Goes ALT 1+2",
+  "and-so-it-goes-t": "And So It Goes TENOR 1+2",
   "irish-blessing-s": "An Irish Blessing SOPRAN",
   "irish-blessing-a": "An Irish Blessing ALT",
   "irish-blessing-t": "An Irish Blessing TENOR",

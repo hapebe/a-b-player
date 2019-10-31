@@ -1,0 +1,15 @@
+{
+	"title": "And So It Goes ALT 1+2",
+	"pieceID": "and-so-it-goes",
+	"url": "audio/And-So-It-Goes-A.mp3",
+	"presets": [
+		{"t0":3,"t1":32,"desc":"Verse 1 (In every heart...)","measure":1,"type":"verse"},
+		{"t0":28,"t1":58,"desc":"Verse 2 (I spoke to you...)","measure":9,"type":"verse"},
+		{"t0":53,"t1":82,"desc":"Chorus 1 (And every time...)","measure":17,"type":"chorus"},
+		{"t0":78,"t1":107,"desc":"Verse 3 (But if my silence...)","measure":25,"type":"verse"},
+		{"t0":102,"t1":132,"desc":"Chorus 2 (And this is why...)","measure":33,"type":"chorus"},
+		{"t0":127,"t1":158,"desc":"Verse 4 (So I would choose...)","measure":41,"type":"verse"},
+		{"t0":153,"t1":170,"desc":"Bridge","measure":49,"type":"bridge"},
+		{"t0":165,"t1":181,"desc":"Coda (And So It Goes)","measure":53,"type":"chorus"}
+	]
+}

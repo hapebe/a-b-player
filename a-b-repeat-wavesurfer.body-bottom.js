@@ -8,7 +8,6 @@ $('#panelPlayer').hide();
 $("#busyIndicator").hide();
 
 
-
 $(function(){
 
 	// route track selection filter clicks:
@@ -125,7 +124,7 @@ currentPresetDesc: undefined, // loop name of currently active "favorite" / "pre
 previousPresetDesc: undefined, // last actively selected preset, if any (regardless of automated clearing etc.)
 presetList: [], // preset loops, loaded from single track data (or managed manually)
 trackCode: undefined, // can hold the 'code' of the currently loaded track, i.e. the name of the JSON file without extension.
-fileInfo: {
+fileInfo: { // can hold data loaded from a single track JSON file
 	'title': 'Drag &amp; drop files or click &quot;Open file...&quot;',
 	'url': false,
 	'presets': []
@@ -439,7 +438,7 @@ repeatAB: function(modeParam) {
 
 
 clearPresets: function () {
-	console.log('clear presets');
+	if (document.abplayer.printEvents) console.log('clear presets');
 	document.abplayer.setActivePreset(undefined);
 	// document.abplayer.previousPresetDesc = undefined;
 
@@ -447,9 +446,14 @@ clearPresets: function () {
 	document.abplayer.renderPresetList();
 },
 resetPresets: function() {
-	console.log('reset presets');
-	document.abplayer.presetList = document.abplayer.fileInfo.presets;
-	document.abplayer.renderPresetList();
+	var o = document.abplayer;
+	if (o.printEvents) console.log('reset presets');
+	// clone the list instead of copying the reference (custom loops!)
+	o.presetList = [];
+	o.fileInfo.presets.forEach(function (el) {
+		o.presetList.push(el);
+	});
+	o.renderPresetList();
 },
 addPreset: function() {
 	var o = document.abplayer;
@@ -461,7 +465,7 @@ addPreset: function() {
 	if (target.preset) return; // TODO: error message
 
 	var p = {t0:o.aTime, t1:o.bTime, desc:"custom"};
-	p.domID = o.getPresetDomID(data.presets[i]);
+	p.domID = o.getPresetDomID(p);
 
 	document.abplayer.presetList.push(p);
 	document.abplayer.renderPresetList();

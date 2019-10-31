@@ -39,6 +39,7 @@ trying to switch to WaveSurfer.js (https://wavesurfer-js.org/) as the actual pla
 * display sheetMusicURL property of track data, if set
 * offer links to reference renditions from other performers (YouTube etc): display renditions[0] property of track data, if set
 * add error message (pop-up? dialog?) if loading of track fails (e.g. when audio file is missing)
+* fixed adding custom loop & reset to preset loops
 
 TODOs:
 * allow for more than one rendition tag...

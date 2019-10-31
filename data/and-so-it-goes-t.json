@@ -1,0 +1,15 @@
+{
+	"title": "And So It Goes TENOR 1+2",
+	"pieceID": "and-so-it-goes",
+	"url": "audio/And-So-It-Goes-T.mp3",
+	"presets": [
+		{"t0":3,"t1":32,"desc":"Verse 1 (In every heart...)","measure":1,"type":"verse"},
+		{"t0":28,"t1":57,"desc":"Verse 2 (I spoke to you...)","measure":9,"type":"verse"},
+		{"t0":53,"t1":81,"desc":"Chorus 1 (And every time...)","measure":17,"type":"chorus"},
+		{"t0":78,"t1":107,"desc":"Verse 3 (But if my silence...)","measure":25,"type":"verse"},
+		{"t0":103,"t1":134,"desc":"Chorus 2 (And this is why...)","measure":33,"type":"chorus"},
+		{"t0":130,"t1":160,"desc":"Verse 4 (So I would choose...)","measure":41,"type":"verse"},
+		{"t0":155,"t1":172,"desc":"Bridge","measure":49,"type":"bridge"},
+		{"t0":168,"t1":186,"desc":"Coda (And So It Goes)","measure":53,"type":"chorus"}
+	]
+}
