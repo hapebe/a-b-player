@@ -1,0 +1,9 @@
+{
+	"title": "Ding Dong Merrily On High ALT",
+	"pieceID": "ding-dong-merrily",
+	"url": "audio/Ding-Dong-A.mp3",
+	"presets": [
+		{"t0":2,"t1":17,"desc":"Strophe","measure":1,"type":"verse"}, 
+		{"t0":14,"t1":30,"desc":"Refrain","measure":9,"type":"chorus"}
+	]
+}

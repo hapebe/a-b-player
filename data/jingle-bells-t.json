@@ -1,0 +1,10 @@
+{
+	"title": "Jingle Bells TENOR",
+	"pieceID": "jingle-bells",
+	"url": "audio/Jingle-Bells-T.mp3",
+	"presets": [
+		{"t0":5,"t1":34,"desc":"Refrain A","measure":1,"type":"chorus"}, 
+		{"t0":29,"t1":63,"desc":"Refrain A'","measure":9,"type":"chorus"},
+		{"t0":57,"t1":73,"desc":"Coda","measure":18,"type":"alternative"}
+	]
+}

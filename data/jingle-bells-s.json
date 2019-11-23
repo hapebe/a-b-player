@@ -1,0 +1,10 @@
+{
+	"title": "Jingle Bells SOPRAN",
+	"pieceID": "jingle-bells",
+	"url": "audio/Jingle-Bells-S.mp3",
+	"presets": [
+		{"t0":4,"t1":34,"desc":"Refrain A","measure":1,"type":"chorus"}, 
+		{"t0":29,"t1":65,"desc":"Refrain A'","measure":9,"type":"chorus"},
+		{"t0":60,"t1":76,"desc":"Coda","measure":18,"type":"alternative"}
+	]
+}

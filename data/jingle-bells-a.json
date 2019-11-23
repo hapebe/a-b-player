@@ -1,0 +1,10 @@
+{
+	"title": "Jingle Bells ALT",
+	"pieceID": "jingle-bells",
+	"url": "audio/Jingle-Bells-A.mp3",
+	"presets": [
+		{"t0":4,"t1":36,"desc":"Refrain A","measure":1,"type":"chorus"}, 
+		{"t0":31,"t1":66,"desc":"Refrain A'","measure":9,"type":"chorus"},
+		{"t0":62,"t1":78,"desc":"Coda","measure":18,"type":"alternative"}
+	]
+}

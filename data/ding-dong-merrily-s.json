@@ -1,0 +1,9 @@
+{
+	"title": "Ding Dong Merrily On High SOPRAN",
+	"pieceID": "ding-dong-merrily",
+	"url": "audio/Ding-Dong-S.mp3",
+	"presets": [
+		{"t0":2,"t1":16,"desc":"Strophe","measure":1,"type":"verse"}, 
+		{"t0":14,"t1":29,"desc":"Refrain","measure":9,"type":"chorus"}
+	]
+}

@@ -445,6 +445,25 @@
 		}
 	},
 	
+	"ding-dong-merrily": {
+		"title": "Ding Dong Merrily On High",
+		"key": "G major",
+		"category":"xmas",
+		"info": "",
+		"structure": "16 Takte (Strophe: 4A,4A',8 Refrain), mal 3 Strophen",
+		"authorMusic": "Französisch aus dem 16. Jhd., Arr. Edward L. Stauff",
+		"authorText": "George Ratcliffe Woodward (1848-1934)",
+		"sheetMusicURL": "https://web.archive.org/web/20041119124005oe_/http://www.christmas-carol-music.org/SATB/DingDongMerrily.pdf",
+		"renditions": [
+			{"desc": "YouTube: Corala Universitas", "url": "https://www.youtube.com/watch?v=Wuo90Xwyz_w"}
+		],
+		"trackset": {
+			"S":"ding-dong-merrily-s",
+			"A":"ding-dong-merrily-a",
+			"T":"ding-dong-merrily-t",
+			"B":"ding-dong-merrily-b"
+		}
+	},	
 	"god-rest-you-merry": {
 		"title": "God Rest You Merry, Gentlemen",
 		"key": "E minor",
@@ -461,6 +480,26 @@
 			"T":"god-rest-you-t",
 			"B":"god-rest-you-b",
 			"SATB":"god-rest-you-satb"
+		}
+	},
+	"jingle-bells": {
+		"title": "Jingle Bells",
+		"key": "Eb major",
+		"tempo": "Warmly, with style 1/4 = ca. 82",
+		"category":"xmas",
+		"info": "",
+		"structure": "20 Takte (4A4B,4A4+1B',3 Coda)",
+		"authorMusic": "James Pierpoint",
+		"authorText": "James Pierpoint, Arr. Jay Rouse",
+		"sheetMusicURL": "",
+		"renditions": [
+			{"desc": "YouTube: Three Jazzy Bell Carols", "url": "https://www.youtube.com/watch?v=-GkIU5vcEus"}
+		],
+		"trackset": {
+			"S":"jingle-bells-s",
+			"A":"jingle-bells-a",
+			"T":"jingle-bells-t",
+			"B":"jingle-bells-b"
 		}
 	},
 	"o-du-froehliche": {
@@ -620,11 +659,19 @@
   "we-pray-a": "We Pray ALT",
   "we-pray-t": "We Pray TENOR",
   "we-pray-b": "We Pray BASS",
+  "ding-dong-merrily-s": "Ding Dong Merrily On High SOPRAN",
+  "ding-dong-merrily-a": "Ding Dong Merrily On High ALT",
+  "ding-dong-merrily-t": "Ding Dong Merrily On High TENOR",
+  "ding-dong-merrily-b": "Ding Dong Merrily On High BASS",
   "god-rest-you-s": "God Rest You Merry, Gentlemen SOPRAN",
   "god-rest-you-a": "God Rest You Merry, Gentlemen ALT",
   "god-rest-you-t": "God Rest You Merry, Gentlemen TENOR",
   "god-rest-you-b": "God Rest You Merry, Gentlemen BASS",
   "god-rest-you-satb": "God Rest You Merry, Gentlemen ENSEMBLE",
+  "jingle-bells-s": "Jingle Bells SOPRAN",
+  "jingle-bells-a": "Jingle Bells ALT",
+  "jingle-bells-t": "Jingle Bells TENOR",
+  "jingle-bells-b": "Jingle Bells BASS",
   "o-du-froehliche-s1": "O, du fröhliche SOPRAN 1",
   "o-du-froehliche-s2": "O, du fröhliche SOPRAN 2",
   "o-du-froehliche-a": "O, du fröhliche ALT",

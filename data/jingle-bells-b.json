@@ -1,0 +1,10 @@
+{
+	"title": "Jingle Bells BASS",
+	"pieceID": "jingle-bells",
+	"url": "audio/Jingle-Bells-B.mp3",
+	"presets": [
+		{"t0":4,"t1":32,"desc":"Refrain A","measure":1,"type":"chorus"}, 
+		{"t0":27,"t1":61,"desc":"Refrain A'","measure":9,"type":"chorus"},
+		{"t0":56,"t1":73,"desc":"Coda","measure":18,"type":"alternative"}
+	]
+}
