@@ -389,6 +389,24 @@
 			"B2":"spanische-b2"
 		}
 	},
+	"tauben-vergiften": {
+		"title": "Tauben vergiften im Park",
+		"key": "G major",
+		"tempo": "1/4 = 200",
+		"info": "aus dem Dunstkreis von &quot;Die Singphoniker&quot;",
+		"authorMusic": "Georg Kreisler, Arr. Bernhard Hofmann",
+		"authorText": "Georg Kreisler",
+		"sheetMusicURL": "https://de.schott-music.com/shop/tauben-vergiften-im-park-noq48005.html",
+		"trackset": {
+			"S":"tauben-vergiften-s",
+			"A":"tauben-vergiften-a",
+			"T":"tauben-vergiften-t",
+			"B":"tauben-vergiften-b"
+		},
+		"renditions": [
+			{"desc": "YouTube: Die Singphoniker (2015) - ist nicht ganz unser Satz, aber die SATB-Variante wurde nach diesem Arrangement geschrieben.", "url": "https://www.youtube.com/watch?v=CeV4lRowO8s"}
+		]
+	},
 	"that-lonesome-road": {
 		"title": "That Lonesome Road",
 		"key": "A major",
@@ -640,6 +658,10 @@
   "spanische-t2": "Spanische Nächte TENOR 2",
   "spanische-b1": "Spanische Nächte BASS 1",
   "spanische-b2": "Spanische Nächte BASS 2",
+  "tauben-vergiften-s": "Tauben vergiften im Park SOPRAN",
+  "tauben-vergiften-a": "Tauben vergiften im Park ALT",
+  "tauben-vergiften-t": "Tauben vergiften im Park TENOR",
+  "tauben-vergiften-b": "Tauben vergiften im Park BASS",
   "lonesome-road-s": "That Lonesome Road SOPRAN",
   "lonesome-road-a1": "That Lonesome Road ALT 1",
   "lonesome-road-a2": "That Lonesome Road ALT 2",

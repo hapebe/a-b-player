@@ -1,0 +1,16 @@
+{
+	"title": "Tauben vergiften im Park SOPRAN",
+	"pieceID": "tauben-vergiften",
+	"url": "audio/Tauben-vergiften-im-Park-S.mp3",
+	"presets": [
+		{"t0":4,"t1":25,"desc":"Ia (Schatz, das Wetter ...)","measure":9,"type":"verse"},
+		{"t0":22,"t1":47,"desc":"Ib (Jeder Bursch mit ...)","measure":25,"type":"verse"},
+		{"t0":43,"t1":70,"desc":"II (Schau die Sonne ...)","measure":43,"type":"chorus"},
+		{"t0":65,"t1":90,"desc":"III (Wir sitzen zusammen ...)","measure":61,"type":"bridge"},
+		{"t0":84,"t1":112,"desc":"Ia' (Schatz, geh, bring ...)","measure":77,"type":"verse"},
+		{"t0":107,"t1":133,"desc":"Ib' (Z'erst verjag'n ma ...)","measure":93,"type":"verse"},
+		{"t0":127,"t1":155,"desc":"II' (Ja, der Frühling, ...)","measure":111,"type":"chorus"},
+		{"t0":149,"t1":172,"desc":"III' (Der Hansl geht ...)","measure":129,"type":"bridge"},
+		{"t0":169,"t1":182,"desc":"Coda (Nimm für uns ...)","measure":145,"type":"coda"}
+	]
+}

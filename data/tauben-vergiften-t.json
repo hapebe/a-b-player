@@ -1,0 +1,16 @@
+{
+	"title": "Tauben vergiften im Park TENOR",
+	"pieceID": "tauben-vergiften",
+	"url": "audio/Tauben-vergiften-im-Park-T.mp3",
+	"presets": [
+		{"t0":4,"t1":24,"desc":"Ia (Schatz, das Wetter ...)","measure":9,"type":"verse"},
+		{"t0":21,"t1":46,"desc":"Ib (Jeder Bursch mit ...)","measure":25,"type":"verse"},
+		{"t0":42,"t1":67,"desc":"II (Schau die Sonne ...)","measure":43,"type":"chorus"},
+		{"t0":62,"t1":86,"desc":"III (Wir sitzen zusammen ...)","measure":61,"type":"bridge"},
+		{"t0":81,"t1":104,"desc":"Ia' (Schatz, geh, bring ...)","measure":77,"type":"verse"},
+		{"t0":100,"t1":125,"desc":"Ib' (Z'erst verjag'n ma ...)","measure":93,"type":"verse"},
+		{"t0":120,"t1":144,"desc":"II' (Ja, der Frühling, ...)","measure":111,"type":"chorus"},
+		{"t0":140,"t1":164,"desc":"III' (Der Hansl geht ...)","measure":129,"type":"bridge"},
+		{"t0":162,"t1":170,"desc":"Coda (Nimm für uns ...)","measure":145,"type":"coda"}
+	]
+}

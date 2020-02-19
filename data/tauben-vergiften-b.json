@@ -1,0 +1,16 @@
+{
+	"title": "Tauben vergiften im Park BASS",
+	"pieceID": "tauben-vergiften",
+	"url": "audio/Tauben-vergiften-im-Park-B.mp3",
+	"presets": [
+		{"t0":3,"t1":24,"desc":"Ia (Schatz, das Wetter ...)","measure":9,"type":"verse"},
+		{"t0":20,"t1":45,"desc":"Ib (Jeder Bursch mit ...)","measure":25,"type":"verse"},
+		{"t0":40,"t1":67,"desc":"II (Schau die Sonne ...)","measure":43,"type":"chorus"},
+		{"t0":62,"t1":85,"desc":"III (Wir sitzen zusammen ...)","measure":61,"type":"bridge"},
+		{"t0":80,"t1":106,"desc":"Ia' (Schatz, geh, bring ...)","measure":77,"type":"verse"},
+		{"t0":101,"t1":124,"desc":"Ib' (Z'erst verjag'n ma ...)","measure":93,"type":"verse"},
+		{"t0":120,"t1":141,"desc":"II' (Ja, der Frühling, ...)","measure":111,"type":"chorus"},
+		{"t0":137,"t1":158,"desc":"III' (Der Hansl geht ...)","measure":129,"type":"bridge"},
+		{"t0":157,"t1":166,"desc":"Coda (Nimm für uns ...)","measure":145,"type":"coda"}
+	]
+}
