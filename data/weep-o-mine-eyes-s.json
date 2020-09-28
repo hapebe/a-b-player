@@ -1,0 +1,11 @@
+{
+	"title": "Weep O Mine Eyes SOPRAN",
+	"pieceID": "weep-o-mine-eyes",
+	"url": "audio/Weep-O-Mine-Eyes-S.mp3",
+	"presets": [
+		{"t0":6,"t1":27,"desc":"A (Weep ...)","measure":3,"type":"verse"},
+		{"t0":25,"t1":49,"desc":"B (Alas ...)","measure":8,"type":"bridge"},
+		{"t0":45,"t1":78,"desc":"C (O when ...)","measure":14,"type":"chorus"},
+		{"t0":75,"t1":105,"desc":"C' (O when ...)","measure":14,"type":"coda"}
+	]
+}

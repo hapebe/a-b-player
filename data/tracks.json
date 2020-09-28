@@ -462,6 +462,22 @@
 			"B":"we-pray-b"
 		}
 	},
+	"weep-o-mine-eyes": {
+		"title": "Weep O Mine Eyes",
+		"key": "A minor",
+		"info": "Madrigal, ~1599",
+		"authorMusic": "John Bennet",
+		"sheetMusicURL": "http://stcpress.org/miscellaneous/weep_o_mine_eyes/weep_o_mine_eyes.pdf",
+		"trackset": {
+			"S":"weep-o-mine-eyes-s",
+			"A":"weep-o-mine-eyes-a",
+			"T":"weep-o-mine-eyes-t",
+			"B":"weep-o-mine-eyes-b"
+		},
+		"renditions": [
+			{"desc": "YouTube: Locus Amoenus", "url": "https://www.youtube.com/watch?v=udzu7lR3mLU"}
+		]
+	},
 	
 	"ding-dong-merrily": {
 		"title": "Ding Dong Merrily On High",
@@ -681,6 +697,10 @@
   "we-pray-a": "We Pray ALT",
   "we-pray-t": "We Pray TENOR",
   "we-pray-b": "We Pray BASS",
+  "weep-o-mine-eyes-s": "Weep O Mine Eyes SOPRAN",
+  "weep-o-mine-eyes-a": "Weep O Mine Eyes ALT",
+  "weep-o-mine-eyes-t": "Weep O Mine Eyes TENOR",
+  "weep-o-mine-eyes-b": "Weep O Mine Eyes BASS",
   "ding-dong-merrily-s": "Ding Dong Merrily On High SOPRAN",
   "ding-dong-merrily-a": "Ding Dong Merrily On High ALT",
   "ding-dong-merrily-t": "Ding Dong Merrily On High TENOR",

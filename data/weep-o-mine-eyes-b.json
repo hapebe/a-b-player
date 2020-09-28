@@ -1,0 +1,11 @@
+{
+	"title": "Weep O Mine Eyes BASS",
+	"pieceID": "weep-o-mine-eyes",
+	"url": "audio/Weep-O-Mine-Eyes-B.mp3",
+	"presets": [
+		{"t0":5,"t1":36,"desc":"A (Weep ...)","measure":1,"type":"verse"},
+		{"t0":30,"t1":54,"desc":"B (Alas ...)","measure":9,"type":"bridge"},
+		{"t0":49,"t1":81,"desc":"C (O when ...)","measure":14,"type":"chorus"},
+		{"t0":77,"t1":105,"desc":"C' (O when ...)","measure":14,"type":"coda"}
+	]
+}

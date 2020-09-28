@@ -1,0 +1,11 @@
+{
+	"title": "Weep O Mine Eyes TENOR",
+	"pieceID": "weep-o-mine-eyes",
+	"url": "audio/Weep-O-Mine-Eyes-T.mp3",
+	"presets": [
+		{"t0":5,"t1":31,"desc":"A (Weep ...)","measure":1,"type":"verse"},
+		{"t0":28,"t1":55,"desc":"B (Alas ...)","measure":7,"type":"bridge"},
+		{"t0":50,"t1":82,"desc":"C (O when ...)","measure":14,"type":"chorus"},
+		{"t0":76,"t1":104,"desc":"C' (O when ...)","measure":14,"type":"coda"}
+	]
+}

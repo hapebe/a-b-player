@@ -1,0 +1,11 @@
+{
+	"title": "Weep O Mine Eyes ALT",
+	"pieceID": "weep-o-mine-eyes",
+	"url": "audio/Weep-O-Mine-Eyes-A.mp3",
+	"presets": [
+		{"t0":4,"t1":29,"desc":"A (Weep ...)","measure":1,"type":"verse"},
+		{"t0":25,"t1":56,"desc":"B (Alas ...)","measure":7,"type":"bridge"},
+		{"t0":50,"t1":85,"desc":"C (O when ...)","measure":14,"type":"chorus"},
+		{"t0":80,"t1":112,"desc":"C' (O when ...)","measure":14,"type":"coda"}
+	]
+}

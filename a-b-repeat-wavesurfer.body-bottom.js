@@ -16,7 +16,7 @@ $(function(){
 		document.abplayer.filterPartEnsemble = flag;
 		document.abplayer.trackselection.renderMenu();
 
-		_paq.push(['trackEvent', 'Top', 'clickFilterPartEnsemble', (flag?'withEnsemble':'withoutEnsemble')]);
+		// paq.push(['trackEvent', 'Top', 'clickFilterPartEnsemble', (flag?'withEnsemble':'withoutEnsemble')]);
 	});
 	// route track selection filter text:
 	$('#filterText').bind('input', function() {
@@ -26,12 +26,12 @@ $(function(){
 			document.abplayer.filterText = txt;
 			$('#btnResetFilterText').html('<i class="glyphicon glyphicon-remove"></i>');
 
-			_paq.push(['trackEvent', 'Top', 'filterText', txt]);
+			// paq.push(['trackEvent', 'Top', 'filterText', txt]);
 		} else {
 			document.abplayer.filterText = undefined;
 			$('#btnResetFilterText').html('<i class="glyphicon glyphicon-filter"></i>');
 
-			_paq.push(['trackEvent', 'Top', 'filterText', '(EMPTY)']);
+			// paq.push(['trackEvent', 'Top', 'filterText', '(EMPTY)']);
 		}
 
 		document.abplayer.trackselection.renderMenu();
@@ -43,7 +43,7 @@ $(function(){
 		$('#btnResetFilterText').html('<i class="glyphicon glyphicon-filter"></i>');
 		document.abplayer.trackselection.renderMenu();
 
-		_paq.push(['trackEvent', 'Top', 'filterText', '(CLEARED)']);
+		// paq.push(['trackEvent', 'Top', 'filterText', '(CLEARED)']);
 	});
 	// no form submission:
 	$('#filterTextForm').submit(function(e) {e.preventDefault();});
@@ -72,7 +72,7 @@ $(function(){
 		$('#btnResetFilterText').html('<i class="glyphicon glyphicon-remove"></i>');
 		document.abplayer.trackselection.renderMenu();
 
-		_paq.push(['trackEvent', 'Top', 'filterText', filterText]);
+		// paq.push(['trackEvent', 'Top', 'filterText', filterText]);
 	}
 
 	// set up volume slider:
@@ -204,7 +204,7 @@ openByHash: function() {
 	var code = document.location.hash.substring(1);
 	var dataURL = 'data/' + code + '.json';
 	document.abplayer.ui.clickOpenMeta(dataURL); // console.log(dataURL);
-	_paq.push(['trackEvent', 'Init', 'openByHash', code]);
+	// paq.push(['trackEvent', 'Init', 'openByHash', code]);
 },
 
 /**
@@ -231,7 +231,7 @@ openMeta: function(url) {
 
 		if (o.printEvents) // console.log('meta data received: ', data);
 		// track successful opening:
-		_paq.push(['trackEvent', 'Top', 'openTrack', data.title]);
+		// paq.push(['trackEvent', 'Top', 'openTrack', data.title]);
 
 		var pieceData = o.piecesData[data.pieceID];
 
@@ -296,7 +296,7 @@ openMeta: function(url) {
 	.fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
 		console.log( "Request Failed: " + err );
-		_paq.push(['trackEvent', 'Top', 'ERROR openTrack', document.abplayer.trackCode + ': ' + err]);
+		// paq.push(['trackEvent', 'Top', 'ERROR openTrack', document.abplayer.trackCode + ': ' + err]);
 		$("#busyIndicator").hide();
 	});
 }, // end function openMeta()
@@ -347,16 +347,16 @@ clearAB: function() {
 	// o.previousPresetDesc = undefined; // also, forget it (in case we load a different track)
 
 	if (o.register) {
-		_paq.push(['trackEvent', 'Track', 'clearAB', o.fileInfo.title]);
+		// paq.push(['trackEvent', 'Track', 'clearAB', o.fileInfo.title]);
 	}
 },
 setA: function() {
 	document.abplayer.setAB('A', parseInt(document.abplayer.getCurrentTime()), 1);
-	_paq.push(['trackEvent', 'Track', 'setA', document.abplayer.fileInfo.title]);
+	// paq.push(['trackEvent', 'Track', 'setA', document.abplayer.fileInfo.title]);
 },
 setB: function() {
 	document.abplayer.setAB('B', parseInt(document.abplayer.getCurrentTime()), 1);
-	_paq.push(['trackEvent', 'Track', 'setB', document.abplayer.fileInfo.title]);
+	// paq.push(['trackEvent', 'Track', 'setB', document.abplayer.fileInfo.title]);
 
 	document.abplayer.repeatAB(); // just in case B is now before the current position
 },
@@ -419,7 +419,7 @@ repeatAB: function(modeParam) {
 
 	var globalRegister = document.abplayer.register;
 	if (globalRegister) {
-		_paq.push(['trackEvent', 'Track', mode, document.abplayer.fileInfo.title]);
+		// paq.push(['trackEvent', 'Track', mode, document.abplayer.fileInfo.title]);
 	}
 	// even if globalRegister is active, we don't want to see our own sub-routine re-start:
 	document.abplayer.register = false;
@@ -479,7 +479,7 @@ playPreset: function(t0, t1) {
 
 	o.setActivePreset(p);
 
-	_paq.push(['trackEvent', 'Track', 'selectLoop', o.currentPresetDesc]);
+	// paq.push(['trackEvent', 'Track', 'selectLoop', o.currentPresetDesc]);
 
 	o.register = false;
 
@@ -774,7 +774,7 @@ registerSeek: function(fraction) {
 		console.log('seek to ' + msg );
 	}
 	if (document.abplayer.register) {
-		_paq.push(['trackEvent', 'Track', 'seek to', msg]);
+		// paq.push(['trackEvent', 'Track', 'seek to', msg]);
 	}
 
 	document.abplayer.registerProgress(); // mainly in order to update the current time display
@@ -842,7 +842,7 @@ loadIndexData: function(url) {
 	.fail(function(jqxhr, textStatus, error ) {
 		var err = textStatus + ", " + error;
 		console.log( "Request Failed: " + err );
-		_paq.push(['trackEvent', 'Top', 'ERROR loadIndexData', err]);
+		// paq.push(['trackEvent', 'Top', 'ERROR loadIndexData', err]);
 	});
 },
 /**
@@ -921,9 +921,9 @@ document.abplayer.ui = {
 		var o = document.abplayer;
 
 		// ... a track has been requested via the related tracks widget -
-		_paq.push(['trackEvent', 'Track', 'relatedTrackFromTo', o.trackCode + ' to ' + code]);
-		_paq.push(['trackEvent', 'Track', 'relatedTrackFrom', o.trackCode]);
-		_paq.push(['trackEvent', 'Track', 'relatedTrackTo', code]);
+		// paq.push(['trackEvent', 'Track', 'relatedTrackFromTo', o.trackCode + ' to ' + code]);
+		// paq.push(['trackEvent', 'Track', 'relatedTrackFrom', o.trackCode]);
+		// paq.push(['trackEvent', 'Track', 'relatedTrackTo', code]);
 
 		o.stop();
 
@@ -935,7 +935,7 @@ document.abplayer.ui = {
 	closePlayer: function() {
 		var o = document.abplayer;
 
-		_paq.push(['trackEvent', 'Track', 'closeTrack', o.fileInfo.title]);
+		// paq.push(['trackEvent', 'Track', 'closeTrack', o.fileInfo.title]);
 
 		o.register = false;
 
@@ -964,16 +964,16 @@ document.abplayer.ui = {
 		$('#filterPartLabel').html(label);
 		document.abplayer.trackselection.renderMenu();
 
-		_paq.push(['trackEvent', 'Top', 'clickFilterPart', code]);
+		// paq.push(['trackEvent', 'Top', 'clickFilterPart', code]);
 	},
 	clickPlayPause: function() {
 		if (document.abplayer.wavesurfer.isPlaying()) {
 			// pause:
-			_paq.push(['trackEvent', 'Track', 'pause', document.abplayer.fileInfo.title]);
+			// paq.push(['trackEvent', 'Track', 'pause', document.abplayer.fileInfo.title]);
 			document.abplayer.pause();
 		} else {
 			// play:
-			_paq.push(['trackEvent', 'Track', 'playing', document.abplayer.fileInfo.title]);
+			// paq.push(['trackEvent', 'Track', 'playing', document.abplayer.fileInfo.title]);
 			document.abplayer.play();
 		}
 	},
