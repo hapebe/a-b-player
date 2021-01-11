@@ -84,6 +84,24 @@
 			"SATB":"ave-verum-satb-piano"
 		}
 	},
+	"pavane": {
+		"title": "Pavane (Belle qui tiens ma vie)",
+		"key": "G dorian",
+		"authorMusic": "Thoinot Arbeau (1519-1595)",
+		"sheetMusicURL": "https://www.cpdl.org/wiki/images/5/59/Pavane.pdf",
+		"trackset": {
+			"S":"pavane-s",
+			"A":"pavane-a",
+			"T":"pavane-t",
+			"B":"pavane-b"
+		},
+		"renditions": [
+			{"desc": "YouTube: Solo Sopran", "url": "https://www.youtube.com/watch?v=Emw3POvrU34"},
+			{"desc": "YouTube: Solo Alt", "url": "https://www.youtube.com/watch?v=u5BnrSsQM28"},
+			{"desc": "YouTube: Solo Tenor", "url": "https://www.youtube.com/watch?v=YiCXXnPjiLA"},
+			{"desc": "YouTube: Solo Bass", "url": "https://www.youtube.com/watch?v=wwJs6s_iaY0"}
+		]
+	},
 	"bohemian-rhapsody": {
 		"title": "Bohemian Rhapsody",
 		"key": "Bb major",
@@ -594,6 +612,10 @@
   "ave-verum-t": "Ave Verum Corpus TENOR",
   "ave-verum-b-instr": "Ave Verum Corpus BASS (INSTRUMENTAL)",
   "ave-verum-satb-piano": "Ave Verum Corpus INSTRUMENTAL SATB",
+  "pavane-s": "Pavane (Belle qui tiens ma vie) SOPRAN",
+  "pavane-a": "Pavane (Belle qui tiens ma vie) ALT",
+  "pavane-t": "Pavane (Belle qui tiens ma vie) TENOR",
+  "pavane-b": "Pavane (Belle qui tiens ma vie) BASS",
   "bohemian-rhapsody-s": "Bohemian Rhapsody SOPRAN",
   "bohemian-rhapsody-a": "Bohemian Rhapsody ALT",
   "bohemian-rhapsody-t": "Bohemian Rhapsody TENOR",

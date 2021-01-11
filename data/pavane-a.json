@@ -1,0 +1,9 @@
+{
+	"title": "Pavane (Belle qui tiens ma vie) ALT",
+	"pieceID": "pavane",
+	"url": "audio/Pavane-A.mp3",
+	"presets": [
+		{"t0":4,"t1":26,"desc":"Belle, qui tiens...","measure":1,"type":"verse"},
+		{"t0":22,"t1":47,"desc":"viens tôt me secourir ...","measure":5,"type":"chorus"}
+	]
+}

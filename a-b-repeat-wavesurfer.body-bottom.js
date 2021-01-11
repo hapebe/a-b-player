@@ -254,6 +254,9 @@ openMeta: function(url) {
 
 		$('#linkAudio').attr('href', 'bootstrap.html#' + o.trackCode);
 
+		$('#youtubeLink').html('');
+		$('#youtubeLink').hide();
+
 		// display additional links?
 		var any = false;
 		if (pieceData.sheetMusicURL && pieceData.sheetMusicURL != "") {
@@ -261,11 +264,23 @@ openMeta: function(url) {
 			$('#sheetMusicLink').show();
 			$('#sheetMusicLink a').attr('href', pieceData.sheetMusicURL);
 		}
-		if (pieceData.renditions && pieceData.renditions[0].url != "") {
-			any = true;
-			$('#youtubeLink').show();
-			$('#youtubeLink a').attr('href', pieceData.renditions[0].url);
-			$('#youtubeLink a').html(pieceData.renditions[0].desc);
+		if (pieceData.renditions) {
+			for (var i=0; i<pieceData.renditions.length; i++) {
+				if (!pieceData.renditions[i]) continue;
+				
+				any = true;
+				$('#youtubeLink').show();
+				
+				$('#youtubeLink').append( 
+					$(
+						'<div><span class="glyphicon glyphicon-expand" aria-hidden="true"></span>&nbsp;<a href="'
+						+pieceData.renditions[i].url
+						+'" target="_blank">'
+						+pieceData.renditions[i].desc
+						+'</a></div>'
+					)
+				);
+			}
 		}
 		if (any) {
 			$('#furtherLinksDiv').show();

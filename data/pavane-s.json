@@ -1,0 +1,9 @@
+{
+	"title": "Pavane (Belle qui tiens ma vie) SOPRAN",
+	"pieceID": "pavane",
+	"url": "audio/Pavane-S.mp3",
+	"presets": [
+		{"t0":4,"t1":25,"desc":"Belle, qui tiens...","measure":1,"type":"verse"},
+		{"t0":22,"t1":46,"desc":"viens tôt me secourir ...","measure":5,"type":"chorus"}
+	]
+}

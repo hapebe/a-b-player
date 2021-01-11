@@ -1,0 +1,9 @@
+{
+	"title": "Pavane (Belle qui tiens ma vie) BASS",
+	"pieceID": "pavane",
+	"url": "audio/Pavane-B.mp3",
+	"presets": [
+		{"t0":2,"t1":29,"desc":"Belle, qui tiens...","measure":1,"type":"verse"},
+		{"t0":22,"t1":51,"desc":"viens tôt me secourir ...","measure":5,"type":"chorus"}
+	]
+}
