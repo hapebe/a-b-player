@@ -1142,7 +1142,7 @@ document.abplayer.trackselection = {
 				if (filterSubGroup.length > 0) {
 					if (value.part.indexOf(filterGroup) == -1) return; // not even group match...
 					if (value.part.match(/[1-9]/g) != null) { // the tracks itself IS for a sub-voice group!
-						if (value.part.indexOf(filterSubGroup) != -1) { // not a sub-group match:
+						if (value.part.indexOf(filterSubGroup) == -1) { // not a sub-group match:
 							return;
 						}
 					}
