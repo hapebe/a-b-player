@@ -93,7 +93,8 @@
 			"S":"pavane-s",
 			"A":"pavane-a",
 			"T":"pavane-t",
-			"B":"pavane-b"
+			"B":"pavane-b",
+			"INSTR":"pavane-instr"
 		},
 		"renditions": [
 			{"desc": "YouTube: Solo Sopran", "url": "https://www.youtube.com/watch?v=Emw3POvrU34"},
@@ -282,6 +283,19 @@
 			"A":"kumbayah-a",
 			"T":"kumbayah-t",
 			"B":"kumbayah-b"
+		}
+	},
+	"lachkanon": {
+		"title": "Lachkanon (Kuhlau)",
+		"key": "D major",
+		"tempo": "",
+		"info": "",
+		"authorMusic": "Friedrich Kuhlau (1786-1832)",
+		"authorText": "Friedrich Kuhlau (1786-1832)",
+		"sheetMusicURL": "",
+		"trackset": {
+			"U":"lachkanon",
+			"K":"lachkanon-2stimmig"
 		}
 	},
 	"ljuva-sommartid": {
@@ -616,6 +630,7 @@
   "pavane-a": "Pavane (Belle qui tiens ma vie) ALT",
   "pavane-t": "Pavane (Belle qui tiens ma vie) TENOR",
   "pavane-b": "Pavane (Belle qui tiens ma vie) BASS",
+  "pavane-instr": "Pavane (Belle qui tiens ma vie) INSTRUMENTAL, 4 Strophen",
   "bohemian-rhapsody-s": "Bohemian Rhapsody SOPRAN",
   "bohemian-rhapsody-a": "Bohemian Rhapsody ALT",
   "bohemian-rhapsody-t": "Bohemian Rhapsody TENOR",
@@ -664,6 +679,8 @@
   "kumbayah-a": "Kum Ba Yah ALT",
   "kumbayah-t": "Kum Ba Yah TENOR",
   "kumbayah-b": "Kum Ba Yah BASS",
+  "lachkanon": "Lachkanon (Kuhlau) UNISONO",
+  "lachkanon-2stimmig": "Lachkanon (Kuhlau) ZWEISTIMMIG",
   "ljuva-sommartid-s": "I denna ljuva sommartid SOPRAN",
   "ljuva-sommartid-a": "I denna ljuva sommartid ALT",
   "ljuva-sommartid-t": "I denna ljuva sommartid TENOR",

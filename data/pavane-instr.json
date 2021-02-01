@@ -1,0 +1,11 @@
+{
+	"title": "Pavane (Belle qui tiens ma vie) INSTRUMENTAL, 4 Strophen",
+	"pieceID": "pavane",
+	"url": "audio/Pavane-instr.mp3",
+	"presets": [
+		{"t0":7,"t1":47,"desc":"1. Strophe","measure":1,"type":"verse"},
+		{"t0":47,"t1":85,"desc":"2. Strophe","measure":5,"type":"verse"},
+		{"t0":85,"t1":120,"desc":"3. Strophe","measure":5,"type":"verse"},
+		{"t0":120,"t1":159,"desc":"4. Strophe","measure":5,"type":"verse"}
+	]
+}

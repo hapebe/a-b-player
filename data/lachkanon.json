@@ -1,0 +1,10 @@
+{
+	"title": "Lachkanon (Kuhlau) UNISONO",
+	"pieceID": "lachkanon",
+	"url": "audio/Lachkanon-Kuhlau.mp3",
+	"presets": [
+		{"t0":3,"t1":16,"desc":"Hohohoho...","measure":1,"type":"verse"},
+		{"t0":13,"t1":34,"desc":"Kalt bewundert...","measure":8,"type":"verse"},
+		{"t0":31,"t1":44,"desc":"aber wer zu lachen...","measure":17,"type":"verse"}
+	]
+}

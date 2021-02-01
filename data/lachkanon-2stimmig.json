@@ -1,0 +1,8 @@
+{
+	"title": "Lachkanon (Kuhlau) ZWEISTIMMIG",
+	"pieceID": "lachkanon",
+	"url": "audio/Lachkanon-2stimmig.mp3",
+	"presets": [
+		{"t0":4,"t1":46,"desc":"Kanon","measure":1,"type":"chorus"}
+	]
+}
