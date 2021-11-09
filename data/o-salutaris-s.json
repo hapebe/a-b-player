@@ -1,0 +1,12 @@
+{
+	"title": "O Salutaris Hostia SOPRAN",
+	"pieceID": "o-salutaris",
+	"url": "audio/O-Salutaris-Hostia-S.mp3",
+	"presets": [
+		{"t0":11,"t1":35,"desc":"O salutaris hostia","measure":1,"type":"verse"},
+		{"t0":31,"t1":47,"desc":"quae caeli pandis...","measure":7,"type":"verse"},
+		{"t0":42,"t1":71,"desc":"Bella premunt...","measure":15,"type":"verse"},
+		{"t0":65,"t1":101,"desc":"Da robur...","measure":24,"type":"verse"},
+		{"t0":92,"t1":193,"desc":"2. (Uni trinoque...) + Coda","measure":1,"type":"verse"}
+	]
+}

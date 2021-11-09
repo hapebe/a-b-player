@@ -359,6 +359,21 @@
 			"B":"la-mer-b"
 		}
 	},
+	"o-salutaris": {
+		"title": "O Salutaris Hostia",
+		"key": "F major / D minor / A phrygian",
+		"tempo": "",
+		"info": "",
+		"authorMusic": "Pierre De La Rue (ca. 1460-1518)",
+		"authorText": "",
+		"sheetMusicURL": "https://www.cpdl.org/wiki/images/2/22/Ws-rue-osa1.pdf",
+		"trackset": {
+			"S":"o-salutaris-s",
+			"A":"o-salutaris-a",
+			"T":"o-salutaris-t",
+			"B":"o-salutaris-b"
+		}
+	},
 	"royals": {
 		"title": "Royals",
 		"key": "D minor",
@@ -695,6 +710,10 @@
   "la-mer-a": "La Mer ALT",
   "la-mer-t": "La Mer TENOR",
   "la-mer-b": "La Mer BASS",
+  "o-salutaris-s": "O Salutaris Hostia SOPRAN",
+  "o-salutaris-a": "O Salutaris Hostia ALT",
+  "o-salutaris-t": "O Salutaris Hostia TENOR",
+  "o-salutaris-b": "O Salutaris Hostia BASS",
   "royals-s": "Royals SOPRAN",
   "royals-a": "Royals ALT",
   "royals-tb": "Royals Tenor & Bass",

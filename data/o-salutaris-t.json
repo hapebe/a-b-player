@@ -1,0 +1,12 @@
+{
+	"title": "O Salutaris Hostia TENOR",
+	"pieceID": "o-salutaris",
+	"url": "audio/O-Salutaris-Hostia-T.mp3",
+	"presets": [
+		{"t0":12,"t1":36,"desc":"O salutaris hostia","measure":1,"type":"verse"},
+		{"t0":31,"t1":50,"desc":"quae caeli pandis...","measure":7,"type":"verse"},
+		{"t0":44,"t1":72,"desc":"Bella premunt...","measure":15,"type":"verse"},
+		{"t0":68,"t1":101,"desc":"Da robur...","measure":24,"type":"verse"},
+		{"t0":95,"t1":190,"desc":"2. (Uni trinoque...) + Coda","measure":1,"type":"verse"}
+	]
+}
