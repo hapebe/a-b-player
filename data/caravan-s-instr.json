@@ -1,0 +1,17 @@
+{
+	"title": "Caravan of Love SOPRAN INSTRUMENTAL",
+	"pieceID": "caravan-of-love",
+	"url": "audio/Caravan of Love-S-instr.mp3",
+	"presets": [
+		{"t0":0,"t1":20,"desc":"Intro","measure":1,"type":"intro"},
+		{"t0":17,"t1":61,"desc":"Solo Verse (Are you ready for...)","measure":9,"type":"verse"},
+		{"t0":56,"t1":81,"desc":"Verse 1 (Now the children...)","measure":25,"type":"verse"},
+		{"t0":76,"t1":101,"desc":"Chorus 1","measure":33,"type":"chorus"},
+		{"t0":95,"t1":120,"desc":"Bridge 1","measure":41,"type":"bridge"},
+		{"t0":117,"t1":140,"desc":"Verse 2 (We'll be living...)","measure":49,"type":"verse"},
+		{"t0":136,"t1":160,"desc":"Chorus 2","measure":57,"type":"chorus"},
+		{"t0":155,"t1":180,"desc":"Bridge 2","measure":65,"type":"bridge"},
+		{"t0":177,"t1":200,"desc":"Ready-Outro","measure":73,"type":"intro"},
+		{"t0":197,"t1":225,"desc":"Live-Outro","measure":81,"type":"alternative"}
+	]
+}

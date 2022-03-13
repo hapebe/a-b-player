@@ -918,12 +918,13 @@ makeTracksData: function(data) {
 // document.abplayer.ui
 document.abplayer.ui = {
 	regionColors: {
-		DEFAULT: {r: 125, g: 194, b: 255, alpha: 0.2},
-		alternative: {r: 162, g: 111, b: 255, alpha: 0.2},
-		verse: {r: 255, g: 241, b: 125, alpha: 0.2},
-		chorus: {r: 255, g: 125, b: 125, alpha: 0.2},
-		bridge: {r: 162, g: 255, b: 162, alpha: 0.2},
-		invisible: {r: 255, g: 255, b: 255, alpha: 0.0}
+		DEFAULT: {r: 125, g: 194, b: 255, alpha: 0.2}, // #7DC2FF - hellblau
+		alternative: {r: 162, g: 111, b: 255, alpha: 0.2}, // #A26FFF - lila
+		verse: {r: 255, g: 241, b: 125, alpha: 0.2}, // #FFF17D - gelb
+		chorus: {r: 255, g: 125, b: 125, alpha: 0.2}, // #FF7D7D - lachsrot
+		intro: {r: 224, g: 255, b: 128, alpha: 0.2}, // #E0FF80 - gelbgrün
+		bridge: {r: 162, g: 255, b: 162, alpha: 0.2}, // #A2FFA2 - hellgrün
+		invisible: {r: 255, g: 255, b: 255, alpha: 0.0} // (weiß)
 	},
 	clickOpenMeta: function(url) {
 		// TODO: loading... message, show player only on success.
