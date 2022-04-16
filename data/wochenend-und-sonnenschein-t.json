@@ -1,0 +1,14 @@
+{
+	"title": "Wochenend und Sonnenschein TENOR",
+	"pieceID": "wochenend-und-sonnenschein",
+	"url": "audio/Wochenend-und-Sonnenschein-T.mp3",
+	"presets": [
+		{"t0":5,"t1":27,"desc":"Intro","measure":1,"type":"intro"},
+		{"t0":22,"t1":83,"desc":"1. Refrain","measure":8,"type":"chorus"},
+		{"t0":54,"t1":67,"desc":"Bridge im Refrain","measure":18,"type":"bridge"},
+		{"t0":78,"t1":100,"desc":"1. Strophe","measure":30,"type":"verse"},
+		{"t0":94,"t1":115,"desc":"2. Strophe","measure":30,"type":"verse"},
+		{"t0":110,"t1":171,"desc":"2. Refrain","measure":8,"type":"chorus"},
+		{"t0":165,"t1":179,"desc":"Coda","measure":39,"type":"intro"}
+	]
+}

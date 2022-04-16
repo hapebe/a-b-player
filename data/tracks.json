@@ -139,11 +139,15 @@
 		"authorText": "Ernest Isley, Chris Jasper, Marvin Isley",
 		"sheetMusicURL": "https://www.hapebe.de/f/public/sheet-music/Caravan%20of%20Love%20-%20SATB.pdf",
 		"trackset": {
-			"S":"caravan-s-instr",
-			"A":"caravan-a-instr",
-			"T":"caravan-t-instr",
-			"B":"caravan-b-instr",
-			"SATB":"caravan-satb-instr"
+			"S (instr)":"caravan-s-instr",
+			"S":"caravan-s",
+			"A (instr)":"caravan-a-instr",
+			"A":"caravan-a",
+			"T (instr)":"caravan-t-instr",
+			"T":"caravan-t",
+			"B (instr)":"caravan-b-instr",
+			"B":"caravan-b",
+			"SATB (instr)":"caravan-satb-instr"
 		}
 	},
 	"ciasaw": {
@@ -539,6 +543,21 @@
 			{"desc": "YouTube: Locus Amoenus", "url": "https://www.youtube.com/watch?v=udzu7lR3mLU"}
 		]
 	},
+	"wochenend-und-sonnenschein": {
+		"title": "Wochenend und Sonnenschein",
+		"key": "Bb major",
+		"structure": "Strophenlied: 7 Intro, (8A8A4B8A')Refrain, 8C Strophe, 28 Refrain, 8 Strophe, 28 Refrain + 5D Coda",
+		"authorMusic": "Milton Ager, Bearb. Willy Parten",
+		"trackset": {
+			"S":"wochenend-und-sonnenschein-s",
+			"A":"wochenend-und-sonnenschein-a",
+			"T":"wochenend-und-sonnenschein-t",
+			"B":"wochenend-und-sonnenschein-b"
+		},
+		"renditions": [
+			{"desc": "YouTube: Sotto Voce - Popchor Würzburg", "url": "https://www.youtube.com/watch?v=j3GuyWcXlz4"}
+		]
+	},
 	
 	"ding-dong-merrily": {
 		"title": "Ding Dong Merrily On High",
@@ -778,6 +797,10 @@
   "weep-o-mine-eyes-a": "Weep O Mine Eyes ALT",
   "weep-o-mine-eyes-t": "Weep O Mine Eyes TENOR",
   "weep-o-mine-eyes-b": "Weep O Mine Eyes BASS",
+  "wochenend-und-sonnenschein-s": "Wochenend und Sonnenschein SOPRAN",
+  "wochenend-und-sonnenschein-a": "Wochenend und Sonnenschein ALT",
+  "wochenend-und-sonnenschein-t": "Wochenend und Sonnenschein TENOR",
+  "wochenend-und-sonnenschein-b": "Wochenend und Sonnenschein BASS",
   "ding-dong-merrily-s": "Ding Dong Merrily On High SOPRAN",
   "ding-dong-merrily-a": "Ding Dong Merrily On High ALT",
   "ding-dong-merrily-t": "Ding Dong Merrily On High TENOR",

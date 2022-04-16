@@ -1,0 +1,14 @@
+{
+	"title": "Wochenend und Sonnenschein SOPRAN",
+	"pieceID": "wochenend-und-sonnenschein",
+	"url": "audio/Wochenend-und-Sonnenschein-S.mp3",
+	"presets": [
+		{"t0":6,"t1":25,"desc":"Intro","measure":1,"type":"intro"},
+		{"t0":23,"t1":84,"desc":"1. Refrain","measure":8,"type":"chorus"},
+		{"t0":55,"t1":68,"desc":"Bridge im Refrain","measure":18,"type":"bridge"},
+		{"t0":79,"t1":100,"desc":"1. Strophe","measure":30,"type":"verse"},
+		{"t0":95,"t1":116,"desc":"2. Strophe","measure":30,"type":"verse"},
+		{"t0":111,"t1":171,"desc":"2. Refrain","measure":8,"type":"chorus"},
+		{"t0":167,"t1":180,"desc":"Coda","measure":39,"type":"intro"}
+	]
+}

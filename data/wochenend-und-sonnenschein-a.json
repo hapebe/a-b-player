@@ -1,0 +1,14 @@
+{
+	"title": "Wochenend und Sonnenschein ALT",
+	"pieceID": "wochenend-und-sonnenschein",
+	"url": "audio/Wochenend-und-Sonnenschein-A.mp3",
+	"presets": [
+		{"t0":5,"t1":28,"desc":"Intro","measure":1,"type":"intro"},
+		{"t0":23,"t1":85,"desc":"1. Refrain","measure":8,"type":"chorus"},
+		{"t0":56,"t1":68,"desc":"Bridge im Refrain","measure":18,"type":"bridge"},
+		{"t0":80,"t1":101,"desc":"1. Strophe","measure":30,"type":"verse"},
+		{"t0":96,"t1":117,"desc":"2. Strophe","measure":30,"type":"verse"},
+		{"t0":112,"t1":172,"desc":"2. Refrain","measure":8,"type":"chorus"},
+		{"t0":167,"t1":181,"desc":"Coda","measure":39,"type":"intro"}
+	]
+}

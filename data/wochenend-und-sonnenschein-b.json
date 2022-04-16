@@ -1,0 +1,13 @@
+{
+	"title": "Wochenend und Sonnenschein BASS",
+	"pieceID": "wochenend-und-sonnenschein",
+	"url": "audio/Wochenend-und-Sonnenschein-B.mp3",
+	"presets": [
+		{"t0":4,"t1":32,"desc":"Intro","measure":1,"type":"intro"},
+		{"t0":24,"t1":88,"desc":"1. Refrain","measure":8,"type":"chorus"},
+		{"t0":59,"t1":72,"desc":"Bridge im Refrain","measure":18,"type":"bridge"},
+		{"t0":83,"t1":105,"desc":"1. Strophe","measure":30,"type":"verse"},
+		{"t0":99,"t1":119,"desc":"2. Refrain","measure":8,"type":"chorus"},
+		{"t0":114,"t1":129,"desc":"Coda","measure":39,"type":"intro"}
+	]
+}
