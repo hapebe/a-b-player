@@ -495,6 +495,20 @@
 			{"desc": "YouTube: The King's Singers (2012)", "url": "https://www.youtube.com/watch?v=7N75BDfm1Ls"}
 		]
 	},
+	"tumbalalaika": {
+		"title": "Tumbalalaika",
+		"key": "D minor",
+		"info": "Jiddisches Volkslied",
+		"structure": "Strophenlied (durchkomponierte Strophen): (8+8 Takte Strophe, 16T Refrain) mal 3, 16T Coda",
+		"authorMusic": "Satz: Sylke Zimpel",
+		"sheetMusicURL": "http://www.berndkoenig.net/vigholin/Lieder-pdf/201-250/221-224.pdf",
+		"trackset": {
+			"S":"tumbalalaika-s",
+			"A":"tumbalalaika-a",
+			"T":"tumbalalaika-t",
+			"B":"tumbalalaika-b"
+		}
+	},
 	"waldesnacht": {
 		"title": "Waldesnacht",
 		"key": "D major",
@@ -689,9 +703,13 @@
   "bbbb-b": "Bye, Bye Blackbird BASS",
   "bbbb-satb": "Bye, Bye Blackbird ENSEMBLE",
   "caravan-s-instr": "Caravan of Love SOPRAN INSTRUMENTAL",
+  "caravan-s": "Caravan of Love SOPRAN",
   "caravan-a-instr": "Caravan of Love ALT INSTRUMENTAL",
+  "caravan-a": "Caravan of Love ALT",
   "caravan-t-instr": "Caravan of Love TENOR INSTRUMENTAL",
+  "caravan-t": "Caravan of Love TENOR",
   "caravan-b-instr": "Caravan of Love BASS INSTRUMENTAL",
+  "caravan-b": "Caravan of Love BASS",
   "caravan-satb-instr": "Caravan of Love INSTRUMENTAL",
   "ciasaw-s1": "Come In And Stay A While SOPRAN 1",
   "ciasaw-s2": "Come In And Stay A While SOPRAN 2",
@@ -783,6 +801,10 @@
   "lonesome-road-b2": "That Lonesome Road BASS 2",
   "lonesome-road-b2-piano": "That Lonesome Road INSTRUMENTAL BASS 2",
   "lonesome-road-satb": "That Lonesome Road ENSEMBLE",
+  "tumbalalaika-s": "Tumbalalaika SOPRAN",
+  "tumbalalaika-a": "Tumbalalaika ALT",
+  "tumbalalaika-t": "Tumbalalaika TENOR",
+  "tumbalalaika-b": "Tumbalalaika BASS",
   "waldesnacht-s": "Waldesnacht SOPRAN",
   "waldesnacht-a": "Waldesnacht ALT",
   "waldesnacht-t": "Waldesnacht TENOR",

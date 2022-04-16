@@ -1,0 +1,14 @@
+{
+	"title": "Tumbalalaika SOPRAN",
+	"pieceID": "tumbalalaika",
+	"url": "audio/Tumbalalaika-S.mp3",
+	"presets": [
+		{"t0":7,"t1":35,"desc":"1. Strophe (Schtejt a bocher...)","measure":1,"type":"verse"},
+		{"t0":30,"t1":60,"desc":"Refrain","measure":17,"type":"chorus"},
+		{"t0":55,"t1":83,"desc":"2. Strophe (Mejdl, mejdl 'chwel...)","measure":33,"type":"verse"},
+		{"t0":77,"t1":107,"desc":"Refrain","measure":17,"type":"chorus"},
+		{"t0":102,"t1":131,"desc":"3. Strophe (Narrischer bocher...)","measure":49,"type":"verse"},
+		{"t0":126,"t1":155,"desc":"Refrain","measure":17,"type":"chorus"},
+		{"t0":150,"t1":179,"desc":"Coda","measure":65,"type":"intro"}
+	]
+}

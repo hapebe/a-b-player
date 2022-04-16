@@ -1,0 +1,14 @@
+{
+	"title": "Tumbalalaika TENOR",
+	"pieceID": "tumbalalaika",
+	"url": "audio/Tumbalalaika-T.mp3",
+	"presets": [
+		{"t0":7,"t1":36,"desc":"1. Strophe (Schtejt a bocher...)","measure":1,"type":"verse"},
+		{"t0":31,"t1":60,"desc":"Refrain","measure":17,"type":"chorus"},
+		{"t0":55,"t1":85,"desc":"2. Strophe (Mejdl, mejdl 'chwel...)","measure":33,"type":"verse"},
+		{"t0":80,"t1":111,"desc":"Refrain","measure":17,"type":"chorus"},
+		{"t0":104,"t1":135,"desc":"3. Strophe (Narrischer bocher...)","measure":49,"type":"verse"},
+		{"t0":127,"t1":156,"desc":"Refrain","measure":17,"type":"chorus"},
+		{"t0":152,"t1":182,"desc":"Coda","measure":65,"type":"intro"}
+	]
+}
