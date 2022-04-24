@@ -1,0 +1,13 @@
+{
+	"title": "The Rose BASS 1",
+	"pieceID": "the-rose",
+	"url": "audio/The-Rose-B1.mp3",
+	"presets": [
+		{"t0":7,"t1":42,"desc":"Verse 1 (The lily has ...)","measure":3,"type":"verse"},
+		{"t0":35,"t1":66,"desc":"Chorus / Verse 3a (When with moss ...)","measure":13,"type":"chorus"},
+		{"t0":57,"t1":89,"desc":"Verse 2 (There's sweetness ...)","measure":21,"type":"verse"},
+		{"t0":83,"t1":111,"desc":"Chorus / Verse 3b (When with moss ...)","measure":30,"type":"chorus"},
+		{"t0":103,"t1":133,"desc":"Bridge","measure":38,"type":"bridge"},
+		{"t0":123,"t1":174,"desc":"Chorus / Verse 3c (When with moss ...)","measure":44,"type":"intro"}
+	]
+}

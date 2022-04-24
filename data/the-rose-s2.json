@@ -1,0 +1,13 @@
+{
+	"title": "The Rose SOPRAN 2",
+	"pieceID": "the-rose",
+	"url": "audio/The-Rose-S2.mp3",
+	"presets": [
+		{"t0":12,"t1":46,"desc":"Verse 1 (The lily has ...)","measure":3,"type":"verse"},
+		{"t0":41,"t1":71,"desc":"Chorus / Verse 3a (When with moss ...)","measure":13,"type":"chorus"},
+		{"t0":62,"t1":93,"desc":"Verse 2 (There's sweetness ...)","measure":21,"type":"verse"},
+		{"t0":87,"t1":114,"desc":"Chorus / Verse 3b (When with moss ...)","measure":30,"type":"chorus"},
+		{"t0":109,"t1":134,"desc":"Bridge","measure":38,"type":"bridge"},
+		{"t0":126,"t1":181,"desc":"Chorus / Verse 3c (When with moss ...)","measure":44,"type":"intro"}
+	]
+}

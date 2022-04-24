@@ -406,6 +406,27 @@
 			"T+B":"royals-tb"
 		}
 	},
+	"the-rose": {
+		"title": "The Rose",
+		"key": "E minor",
+		"tempo": "3/8 = 60",
+		"info": "",
+		"authorMusic": "Ola Gjeilo",
+		"authorText": "Christina Rossetti (1830-1894)",
+		"sheetMusicURL": "http://ekladata.com/rRlh24dDloWysDhev_ecMhjo0go/The-Rose-Ola-Gjeilo.pdf",
+		"trackset": {
+			"S1":"the-rose-s1",
+			"S2":"the-rose-s2",
+			"A":"the-rose-a",
+			"T1":"the-rose-t1",
+			"T2":"the-rose-t2",
+			"B1":"the-rose-b1",
+			"B2":"the-rose-b2"
+		},
+		"renditions": [
+			{"desc": "YouTube: Decca Music demo with score video", "url": "https://www.youtube.com/watch?v=Ph44oJ7WpGU"}
+		]
+	},
 	"shenandoah": {
 		"title": "Shenandoah",
 		"key": "E major",
@@ -773,6 +794,13 @@
   "royals-s": "Royals SOPRAN",
   "royals-a": "Royals ALT",
   "royals-tb": "Royals Tenor & Bass",
+  "the-rose-s1": "The Rose SOPRAN 1",
+  "the-rose-s2": "The Rose SOPRAN 2",
+  "the-rose-a": "The Rose ALT",
+  "the-rose-t1": "The Rose TENOR 1",
+  "the-rose-t2": "The Rose TENOR 2",
+  "the-rose-b1": "The Rose BASS 1",
+  "the-rose-b2": "The Rose BASS 2",
   "shenandoah-s": "Shenandoah SOPRAN 1+2",
   "shenandoah-a": "Shenandoah ALT 1+2",
   "shenandoah-t1": "Shenandoah TENOR 1",

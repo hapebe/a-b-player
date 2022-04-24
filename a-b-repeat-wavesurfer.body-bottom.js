@@ -233,7 +233,7 @@ openMeta: function(url) {
 		// track successful opening:
 		// paq.push(['trackEvent', 'Top', 'openTrack', data.title]);
 
-		var pieceData = o.piecesData[data.pieceID];
+		var pieceData = o.piecesData[data.pieceID]; // console.log("pieceData: ", pieceData);
 
 		// add DOM ID to presets data:
 		for (var i=0; i<data.presets.length; i++) {
