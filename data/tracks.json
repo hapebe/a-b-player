@@ -214,6 +214,27 @@
 			"S2":"free-your-soul-s2"
 		}
 	},
+	"happy": {
+		"title": "Happy",
+		"key": "Eb major",
+		"tempo": "1/4 = ca. 130",
+		"structure": "Strophenlied, Blöcke von 16 Takten: S1,C,S2,C,Bridge,C,Coda(4+1T)",
+		"info": "mit Schnipsen, Klatschen, Vocal- und Body-Percussion",
+		"authorMusic": "Pharrell Williams, arr. Clemens Schäfer",
+		"authorText": "Pharrell Williams",
+		"sheetMusicURL": "",
+		"trackset": {
+			"S":"happy-s",
+			"S2":"happy-s2",
+			"A":"happy-a",
+			"A1":"happy-a1",
+			"T":"happy-t",
+			"B":"happy-b"
+		},
+		"renditions": [
+			{"desc": "YouTube: Der PopJazzChor Wiesbaden live: Happy", "url": "https://www.youtube.com/watch?v=FzRrCiajn_w"}
+		]
+	},
 	"happy-birthday": {
 		"title": "Happy Birthday",
 		"key": "G major",
@@ -747,6 +768,12 @@
   "echo-b": "Echo-Kanon BASS",
   "free-your-soul-s1": "Free Your Soul SOPRAN 1",
   "free-your-soul-s2": "Free Your Soul SOPRAN 2",
+  "happy-s": "Happy SOPRAN",
+  "happy-s2": "Happy SOPRAN 2 (ab T. 50)",
+  "happy-a": "Happy ALT",
+  "happy-a1": "Happy ALT 1 (ab T. 50)",
+  "happy-t": "Happy TENOR (bis T. 50)",
+  "happy-b": "Happy BASS (bis T. 50)",
   "happy-birthday-a-instr": "Happy Birthday ALT INSTRUMENTAL",
   "he-is-always-cty-s": "He Is Always Close To You SOPRAN",
   "he-is-always-cty-a1": "He Is Always Close To You ALT 1",

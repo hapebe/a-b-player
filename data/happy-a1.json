@@ -1,0 +1,10 @@
+{
+	"title": "Happy ALT 1 (ab T. 50)",
+	"pieceID": "happy",
+	"url": "audio/Happy-A1.mp3",
+	"presets": [
+		{"t0":7,"t1":44,"desc":"Bridge","measure":50,"type":"bridge"},
+		{"t0":36,"t1":76,"desc":"Chorus","measure":66,"type":"chorus"},
+		{"t0":70,"t1":84,"desc":"Coda","measure":82,"type":"bridge"}
+	]
+}

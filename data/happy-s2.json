@@ -1,0 +1,10 @@
+{
+	"title": "Happy SOPRAN 2 (ab T. 50)",
+	"pieceID": "happy",
+	"url": "audio/Happy-S2.mp3",
+	"presets": [
+		{"t0":7,"t1":48,"desc":"Bridge","measure":50,"type":"bridge"},
+		{"t0":42,"t1":80,"desc":"Chorus","measure":66,"type":"chorus"},
+		{"t0":74,"t1":89,"desc":"Coda","measure":82,"type":"bridge"}
+	]
+}

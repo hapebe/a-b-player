@@ -1,0 +1,11 @@
+{
+	"title": "Happy BASS (bis T. 50)",
+	"pieceID": "happy",
+	"url": "audio/Happy-B.mp3",
+	"presets": [
+		{"t0":7,"t1":48,"desc":"Verse 1","measure":1,"type":"verse"},
+		{"t0":38,"t1":96,"desc":"Chorus","measure":18,"type":"chorus"},
+		{"t0":85,"t1":127,"desc":"Verse 2","measure":34,"type":"verse"},
+		{"t0":127,"t1":133,"desc":"Bridge","measure":50,"type":"bridge"}
+	]
+}

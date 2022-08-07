@@ -1,0 +1,13 @@
+{
+	"title": "Happy ALT",
+	"pieceID": "happy",
+	"url": "audio/Happy-A.mp3",
+	"presets": [
+		{"t0":8,"t1":43,"desc":"Verse 1","measure":1,"type":"verse"},
+		{"t0":38,"t1":76,"desc":"Chorus","measure":18,"type":"chorus"},
+		{"t0":70,"t1":107,"desc":"Verse 2","measure":34,"type":"verse"},
+		{"t0":106,"t1":140,"desc":"Bridge","measure":50,"type":"bridge"},
+		{"t0":135,"t1":172,"desc":"Chorus","measure":66,"type":"chorus"},
+		{"t0":166,"t1":181,"desc":"Coda","measure":82,"type":"bridge"}
+	]
+}
