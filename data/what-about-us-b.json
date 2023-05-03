@@ -1,0 +1,14 @@
+{
+	"title": "What About Us BASS",
+	"pieceID": "what-about-us",
+	"url": "audio/What-About-Us-B.mp3",
+	"presets": [
+		{"t0":7,"t1":47,"desc":"Verse 1 (We are searchlights...)","measure":5,"type":"verse"},
+		{"t0":39,"t1":85,"desc":"Chorus 1","measure":21,"type":"chorus"},
+		{"t0":77,"t1":122,"desc":"Verse 2 (We are problems...)","measure":37,"type":"verse"},
+		{"t0":118,"t1":161,"desc":"Chorus 2","measure":53,"type":"chorus"},
+		{"t0":159,"t1":181,"desc":"Bridge (I don't want control...)","measure":69,"type":"bridge"},
+		{"t0":175,"t1":216,"desc":"Chorus 3","measure":77,"type":"chorus"},
+		{"t0":209,"t1":234,"desc":"Coda","measure":93,"type":"intro"}
+	]
+}

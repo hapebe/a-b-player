@@ -1,0 +1,14 @@
+{
+	"title": "What About Us SOPRAN 2",
+	"pieceID": "what-about-us",
+	"url": "audio/What-About-Us-S2.mp3",
+	"presets": [
+		{"t0":4,"t1":43,"desc":"Verse 1 (We are searchlights...)","measure":5,"type":"verse"},
+		{"t0":36,"t1":80,"desc":"Chorus 1","measure":21,"type":"chorus"},
+		{"t0":73,"t1":117,"desc":"Verse 2 (We are problems...)","measure":37,"type":"verse"},
+		{"t0":113,"t1":155,"desc":"Chorus 2","measure":53,"type":"chorus"},
+		{"t0":147,"t1":173,"desc":"Bridge (I don't want control...)","measure":69,"type":"bridge"},
+		{"t0":167,"t1":209,"desc":"Chorus 3","measure":77,"type":"chorus"},
+		{"t0":203,"t1":227,"desc":"Coda","measure":93,"type":"intro"}
+	]
+}

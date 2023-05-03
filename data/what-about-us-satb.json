@@ -1,0 +1,15 @@
+{
+	"title": "What About Us SATB (Hal Leonard)",
+	"pieceID": "what-about-us",
+	"url": "audio/What-About-Us-SATB.mp3",
+	"presets": [
+		{"t0":0,"t1":9,"desc":"Intro","measure":1,"type":"intro"},
+		{"t0":7,"t1":42,"desc":"Verse 1 (We are searchlights...)","measure":5,"type":"verse"},
+		{"t0":37,"t1":75,"desc":"Chorus 1","measure":21,"type":"chorus"},
+		{"t0":69,"t1":109,"desc":"Verse 2 (We are problems...)","measure":37,"type":"verse"},
+		{"t0":105,"t1":142,"desc":"Chorus 2","measure":53,"type":"chorus"},
+		{"t0":135,"t1":158,"desc":"Bridge (I don't want control...)","measure":69,"type":"bridge"},
+		{"t0":153,"t1":191,"desc":"Chorus 3","measure":77,"type":"chorus"},
+		{"t0":185,"t1":211,"desc":"Coda","measure":93,"type":"intro"}
+	]
+}

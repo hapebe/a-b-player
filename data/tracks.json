@@ -599,6 +599,27 @@
 			{"desc": "YouTube: Locus Amoenus", "url": "https://www.youtube.com/watch?v=udzu7lR3mLU"}
 		]
 	},
+	"what-about-us": {
+		"title": "What About Us",
+		"key": "Ab major",
+		"tempo": "1/4 = ca. 116 (with conviction)",
+		"structure": "Strophenlied mit Bridge: 4I-16A-16B-16A'-16B-8C-16B-8B'",
+		"info": "The 2017 pop hit by Pink",
+		"authorMusic": "Alecia Moore, Steve Mac, Johnny McDaid; Arr. Mark Brymer",
+		"authorText": "Alecia Moore, Steve Mac, Johnny McDaid",
+		"sheetMusicURL": "https://www.sheetmusicdirect.com/en-US/se/ID_No/251013/Product.aspx",
+		"trackset": {
+			"S1": "what-about-us-s1",
+			"S2": "what-about-us-s2",
+			"A": "what-about-us-a",
+			"T": "what-about-us-t",
+			"B": "what-about-us-b",
+			"SATB (fremd)": "what-about-us-satb"
+		},
+		"renditions": [
+			{"desc": "YouTube: What About Us (SATB Choir) - Arranged by Mark Brymer", "url": "https://www.youtube.com/watch?v=LgbsrYLo7UQ"}
+		]
+	},
 	"wochenend-und-sonnenschein": {
 		"title": "Wochenend und Sonnenschein",
 		"key": "Bb major",
@@ -874,6 +895,12 @@
   "weep-o-mine-eyes-a": "Weep O Mine Eyes ALT",
   "weep-o-mine-eyes-t": "Weep O Mine Eyes TENOR",
   "weep-o-mine-eyes-b": "Weep O Mine Eyes BASS",
+  "what-about-us-s1": "What About Us SOPRAN 1",
+  "what-about-us-s2": "What About Us SOPRAN 2",
+  "what-about-us-a": "What About Us ALT",
+  "what-about-us-t": "What About Us TENOR",
+  "what-about-us-b": "What About Us BASS",
+  "what-about-us-satb": "What About Us SATB (Hal Leonard)",
   "wochenend-und-sonnenschein-s": "Wochenend und Sonnenschein SOPRAN",
   "wochenend-und-sonnenschein-a": "Wochenend und Sonnenschein ALT",
   "wochenend-und-sonnenschein-t": "Wochenend und Sonnenschein TENOR",

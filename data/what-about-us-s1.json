@@ -1,0 +1,14 @@
+{
+	"title": "What About Us SOPRAN 1",
+	"pieceID": "what-about-us",
+	"url": "audio/What-About-Us-S1.mp3",
+	"presets": [
+		{"t0":6,"t1":46,"desc":"Verse 1 (We are searchlights...)","measure":5,"type":"verse"},
+		{"t0":38,"t1":81,"desc":"Chorus 1","measure":21,"type":"chorus"},
+		{"t0":74,"t1":117,"desc":"Verse 2 (We are problems...)","measure":37,"type":"verse"},
+		{"t0":113,"t1":153,"desc":"Chorus 2","measure":53,"type":"chorus"},
+		{"t0":145,"t1":170,"desc":"Bridge (I don't want control...)","measure":69,"type":"bridge"},
+		{"t0":165,"t1":205,"desc":"Chorus 3","measure":77,"type":"chorus"},
+		{"t0":199,"t1":222,"desc":"Coda","measure":93,"type":"intro"}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"title": "What About Us ALT",
+	"pieceID": "what-about-us",
+	"url": "audio/What-About-Us-A.mp3",
+	"presets": [
+		{"t0":6,"t1":46,"desc":"Verse 1 (We are searchlights...)","measure":5,"type":"verse"},
+		{"t0":38,"t1":83,"desc":"Chorus 1","measure":21,"type":"chorus"},
+		{"t0":73,"t1":120,"desc":"Verse 2 (We are problems...)","measure":37,"type":"verse"},
+		{"t0":116,"t1":157,"desc":"Chorus 2","measure":53,"type":"chorus"},
+		{"t0":149,"t1":175,"desc":"Bridge (I don't want control...)","measure":69,"type":"bridge"},
+		{"t0":168,"t1":212,"desc":"Chorus 3","measure":77,"type":"chorus"},
+		{"t0":205,"t1":229,"desc":"Coda","measure":93,"type":"intro"}
+	]
+}
